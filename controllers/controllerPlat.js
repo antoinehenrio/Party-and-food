@@ -1,5 +1,5 @@
 var User = require('./modelePlat.js');
-exports.createUser = function (req, res, next) {
+exports.createPlat = function (req, res, next) {
     var plat = {
         idPlat: req.body.name,
         nomPlat: req.body.name

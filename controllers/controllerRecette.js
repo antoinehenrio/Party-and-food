@@ -1,5 +1,5 @@
-var User = require('./modeleSoiree.js');
-exports.createSoiree = function (req, res, next) {
+var User = require('./modeleRecette.js');
+exports.createRecette = function (req, res, next) {
     var recette = {
         idRecette: req.body.idRecette,
         quantite: req.body.quantite,
