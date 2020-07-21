@@ -1,4 +1,4 @@
-var Soiree = require('../modeleSoiree.js');
+var Soiree = require('../models/modeleSoiree.js');
 exports.createSoiree = function (req, res, next) {
     var soiree = {
         idSoiree: req.body.idSoiree,
