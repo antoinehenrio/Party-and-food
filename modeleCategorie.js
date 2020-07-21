@@ -6,7 +6,13 @@ const mongoose = require("mongoose"),
 // create a schema for Dish
 let categorieSchema = new Schema({
 	idCategorie  : Int16Array,
-	nomCategorie : String
+  nomCategorie : String,
+  plats: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Plat"
+    }
+  ]
 });
 
 // Create a model using schema

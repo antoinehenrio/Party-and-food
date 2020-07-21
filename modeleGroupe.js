@@ -6,7 +6,13 @@ const mongoose = require("mongoose"),
 // create a schema for Dish
 let groupeSchema = new Schema({
 	idGroupe : Int16Array,
-	participantsGroupe : String
+  nomGroupe : String,
+  utilisateurs: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    }
+  ]
 });
 
 // Create a model using schema
