@@ -1,4 +1,4 @@
-var User = require('./modeleUsers.js');
+var User = require('../modeleUsers.js');
 exports.createUser = function (req, res, next) {
     var user = {
         id: req.body.name,

@@ -1,13 +1,12 @@
 /*globals require, module */
 
-const { stringify } = require("querystring");
-
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
 let soireeSchema = new Schema({
-	  idSoiree : Int16Array,
+	  idSoiree : ObjectId,
     descriptionSoiree : String,
     dateSoiree : Date,
     adresseSoiree1 : String,

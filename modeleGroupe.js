@@ -1,11 +1,12 @@
 /*globals require, module */
 
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
 let groupeSchema = new Schema({
-	idGroupe : Int16Array,
+	idGroupe : ObjectId,
   nomGroupe : String,
   utilisateurs: [
     {

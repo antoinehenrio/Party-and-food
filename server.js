@@ -5,12 +5,12 @@ var bodyParser = require("body-parser");
 var properties = require("./config/properties");
 var db = require("./config/database");
 //hero routes
-var categorieRoutes = require('routes/routeCategorie');
-var groupeRoutes = require('routes/routeGroupe');
-var ingredientRoutes = require('routes/routeIngredient');
-var platRoutes = require('routes/routePlat');
-var recetteRoutes = require('routes/routeRecette');
-var soireeRoutes = require('routes/routeSoiree');
+var categorieRoutes = require('./routes/routeCategorie');
+var groupeRoutes = require('./routes/routeGroupe');
+var ingredientRoutes = require('./routes/routeIngredient');
+var platRoutes = require('./routes/routePlat');
+var recetteRoutes = require('./routes/routeRecette');
+var soireeRoutes = require('./routes/routeSoiree');
 var app = express();
 
 //configure bodyparser
@@ -53,3 +53,5 @@ soireeRoutes(router)
 app.listen(properties.PORT, (req, res) => {
 	console.log(`Server is running on ${properties.PORT} port.`);
 });
+
+module.exports = app

@@ -1,4 +1,4 @@
-var Cateogrie = require('./controllers/controllerCategorie.js');
+var Cateogrie = require('../controllers/controllerCategorie.js');
 
 module.exports = function(router) {
     router.post('/category/create', Cateogrie.createCategorie);

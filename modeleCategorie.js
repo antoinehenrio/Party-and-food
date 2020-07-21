@@ -1,11 +1,12 @@
 /*globals require, module */
 
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
 let categorieSchema = new Schema({
-	idCategorie  : Int16Array,
+	idCategorie  : {type: ObjectId, auto: true, required: true, index: true},
   nomCategorie : String,
   plats: [
     {
@@ -14,9 +15,6 @@ let categorieSchema = new Schema({
     }
   ]
 });
-
-// Create a model using schema
-let Categorie = mongoose.model("Categories", categorieSchema);
 
 //CRUD du schéma
 categorieSchema.statics = {
@@ -38,6 +36,9 @@ categorieSchema.statics = {
       this.findOneAndDelete(query,cb);
     }
 }
+
+// Create a model using schema
+let Categorie = mongoose.model("Categories", categorieSchema);
 
 // make this model available
 module.exports = Categorie;

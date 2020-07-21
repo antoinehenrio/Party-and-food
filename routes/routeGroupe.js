@@ -1,4 +1,4 @@
-var Groupe = require('./controllers/controllerGroupe.js');
+var Groupe = require('../controllers/controllerGroupe.js');
 
 module.exports = function(router) {
     router.post('/group/create', Groupe.createGroupe);

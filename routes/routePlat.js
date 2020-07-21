@@ -1,4 +1,4 @@
-var Plat = require('./controllers/controllerPlat.js');
+var Plat = require('../controllers/controllerPlat.js');
 
 module.exports = function(router) {
     router.post('/dish/create', Plat.createPlat);
