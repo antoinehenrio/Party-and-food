@@ -13,12 +13,11 @@ let recetteSchema = new Schema({
           ref: "Ingredient"
         }
       ],
-    plats: [
+    plats: 
         {
           type: mongoose.Schema.Types.ObjectId,
           ref: "Plat"
         }
-    ]
 });
 
 // Create a model using schema

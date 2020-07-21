@@ -20,12 +20,17 @@ let soireeSchema = new Schema({
           ref: "Categorie"
         }
     ],
-    groupe: [
+    groupe: 
         {
           type: mongoose.Schema.Types.ObjectId,
           ref: "Groupe"
-        }
-    ]
+        },
+    plat:
+    {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Plat"
+    }
+    
 });
 
 // Create a model using schema
