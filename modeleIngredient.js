@@ -12,5 +12,26 @@ let ingredientSchema = new Schema({
 // Create a model using schema
 let Ingredient = mongoose.model("Ingredients", ingredientSchema);
 
+//CRUD du schéma
+ingredientSchema.statics = {
+    create : function(data, cb) {
+      var ingredient = new this(data);
+      ingredient.save(cb);
+    },     
+    get: function(query, cb) {
+      this.find(query, cb);
+    },
+    getByName: function(query, cb) {
+      this.find(query, cb);
+    },
+    update: function(query, updateData, cb) { 
+      this.findOneAndUpdate(query, 
+           {$set: updateData},{new: true}, cb);
+    },
+    delete: function(query, cb) {    
+      this.findOneAndDelete(query,cb);
+    }
+}
+
 // make this model available
 module.exports = Ingredient;
