@@ -1,0 +1,23 @@
+/*globals require, module */
+
+const { stringify } = require("querystring");
+
+const mongoose = require("mongoose"),
+	Schema = mongoose.Schema;
+
+// create a schema for Dish
+let soireeSchema = new Schema({
+	idSoiree : Int16Array,
+    descriptionSoiree : String,
+    dateSoiree : Date,
+    adresseSoiree1 : String,
+    adresseSoiree2 : String,
+    codePostalSoiree : String,
+    villeSoiree : String
+});
+
+// Create a model using schema
+let Soiree = mongoose.model("Soirees", soireeSchema);
+
+// make this model available
+module.exports = Soiree;
