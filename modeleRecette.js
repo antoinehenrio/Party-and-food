@@ -5,8 +5,9 @@ const mongoose = require("mongoose"),
 
 // create a schema for Dish
 let recetteSchema = new Schema({
+    idRecette: Int16Array,
     quantite : Int16Array,
-	description  : String,
+  	description  : String,
     ingredients: [
         {
           type: mongoose.Schema.Types.ObjectId,
