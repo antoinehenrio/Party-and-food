@@ -1,4 +1,4 @@
-var User = require('./modeleIngredient.js');
+var Ingredient = require('./modeleIngredient.js');
 exports.createIngredient = function (req, res, next) {
     var ingredient = {
         idIngredient: req.body.idIngredient,
