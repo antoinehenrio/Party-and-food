@@ -4,7 +4,7 @@ exports.createPlat = function (req, res, next) {
         idPlat: req.body.name,
         nomPlat: req.body.name
     };
-    Categorie.create(user, function(err, plat) {
+    Plat.create(user, function(err, plat) {
         if(err) {
             res.json({
                 error : err

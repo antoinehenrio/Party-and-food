@@ -1,23 +1,17 @@
 var User = require('./modeleIngredient.js');
 exports.createIngredient = function (req, res, next) {
-    var user = {
-        id: req.body.name,
-        name: req.body.name,
-        firstname: req.body.firstname,
-        email: req.body.email,
-        telephone: req.body.telephone,
-        password: req.body.password,
-        ingredients: req.body.ingredients,
-        groupes: req.body.groupes
+    var ingredient = {
+        idIngredient: req.body.idIngredient,
+        nomIngredient: req.body.nomIngredient
     };
-    Categorie.create(user, function(err, user) {
+    Ingredient.create(ingredient, function(err, ingredient) {
         if(err) {
             res.json({
                 error : err
             })
         }
         res.json({
-            message : "Utilisateur créé avec succès"
+            message : "Ingrédient créé avec succès"
         })
     })
 }

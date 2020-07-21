@@ -12,7 +12,7 @@ exports.createSoiree = function (req, res, next) {
         groupe: req.body.groupe,
         plat: req.body.plat
     };
-    Plat.create(soiree, function(err, soiree) {
+    Soiree.create(soiree, function(err, soiree) {
         if(err) {
             res.json({
                 error : err

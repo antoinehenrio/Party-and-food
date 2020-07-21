@@ -10,7 +10,7 @@ exports.createUser = function (req, res, next) {
         ingredients: req.body.ingredients,
         groupes: req.body.groupes
     };
-    Categorie.create(user, function(err, user) {
+    User.create(user, function(err, user) {
         if(err) {
             res.json({
                 error : err
@@ -22,7 +22,7 @@ exports.createUser = function (req, res, next) {
     })
 }
 exports.getAllUsers = function(req, res, next) {
-    Categorie.get({}, function(err, categorie) {
+    User.get({}, function(err, categorie) {
         if(err) {
             res.json({
                 error: err
@@ -35,7 +35,7 @@ exports.getAllUsers = function(req, res, next) {
 }
 
 exports.getUserByName = function(req, res, next) {
-    Categorie.get({name: req.params.name}, function(err, user) {
+    User.get({name: req.params.name}, function(err, user) {
         if(err) {
             res.json({
                 error: err
@@ -48,7 +48,7 @@ exports.getUserByName = function(req, res, next) {
 }
 
 exports.getUserByFirstName = function(req, res, next) {
-    Categorie.get({firstname: req.params.firstname}, function(err, user) {
+    User.get({firstname: req.params.firstname}, function(err, user) {
         if(err) {
             res.json({
                 error: err
@@ -61,7 +61,7 @@ exports.getUserByFirstName = function(req, res, next) {
 }
 
 exports.getUserByEmail = function(req, res, next) {
-    Categorie.get({email: req.params.email}, function(err, user) {
+    User.get({email: req.params.email}, function(err, user) {
         if(err) {
             res.json({
                 error: err
@@ -74,7 +74,7 @@ exports.getUserByEmail = function(req, res, next) {
 }
 
 exports.getUserByPhone = function(req, res, next) {
-    Categorie.get({telephone: req.params.telephone}, function(err, user) {
+    User.get({telephone: req.params.telephone}, function(err, user) {
         if(err) {
             res.json({
                 error: err
@@ -97,7 +97,7 @@ exports.updateUser = function(req, res, next) {
         ingredients: req.body.ingredients,
         groupes: req.body.groupes
     }
-    Categorie.update({_id: req.params.id}, categorie, function(err, user) {
+    User.update({_id: req.params.id}, categorie, function(err, user) {
         if(err) {
             res.json({
                 error : err
@@ -110,7 +110,7 @@ exports.updateUser = function(req, res, next) {
 }
 
 exports.removeUser = function(req, res, next) {
-    Categorie.delete({_id: req.params.id}, function(err, user) {
+    User.delete({_id: req.params.id}, function(err, user) {
         if(err) {
             res.json({
                 error : err
