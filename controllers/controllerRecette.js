@@ -79,7 +79,7 @@ exports.updateRecette = function(req, res, next) {
         ingredients: req.body.ingredientsRecette,
         plats: req.body.plats
     }
-    Recette.update({_idRecette: req.params.idRecette}, categorie, function(err, recette) {
+    Recette.update({_idRecette: req.params.idRecette}, recette, function(err, recette) {
         if(err) {
             res.json({
                 error : err

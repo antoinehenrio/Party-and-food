@@ -47,7 +47,7 @@ exports.updatePlat = function(req, res, next) {
         idPlat: req.body.name,
         nomPlat: req.body.name
     }
-    Plat.update({_idPlat: req.params.idPlat}, categorie, function(err, plat) {
+    Plat.update({_idPlat: req.params.idPlat}, plat, function(err, plat) {
         if(err) {
             res.json({
                 error : err

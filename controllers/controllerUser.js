@@ -97,7 +97,7 @@ exports.updateUser = function(req, res, next) {
         ingredients: req.body.ingredients,
         groupes: req.body.groupes
     }
-    User.update({_id: req.params.id}, categorie, function(err, user) {
+    User.update({_id: req.params.id}, user, function(err, user) {
         if(err) {
             res.json({
                 error : err

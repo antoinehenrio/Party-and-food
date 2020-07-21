@@ -89,7 +89,7 @@ exports.updateSoiree = function(req, res, next) {
         groupe: req.body.groupe,
         plat: req.body.plat
     }
-    Soiree.update({_idSoiree: req.params.idSoiree}, categorie, function(err, soiree) {
+    Soiree.update({_idSoiree: req.params.idSoiree}, soiree, function(err, soiree) {
         if(err) {
             res.json({
                 error : err
