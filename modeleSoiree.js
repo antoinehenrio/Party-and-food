@@ -13,7 +13,19 @@ let soireeSchema = new Schema({
     adresseSoiree1 : String,
     adresseSoiree2 : String,
     codePostalSoiree : String,
-    villeSoiree : String
+    villeSoiree : String,
+    categories: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Categorie"
+        }
+    ],
+    groupe: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Groupe"
+        }
+    ]
 });
 
 // Create a model using schema

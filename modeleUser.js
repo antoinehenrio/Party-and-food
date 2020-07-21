@@ -11,6 +11,12 @@ let userSchema = new Schema({
 	email : String,
     telephone : String,
     password : String,
+    ingredients: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Ingredients"
+        }
+    ],
     groupes: [
         {
           type: mongoose.Schema.Types.ObjectId,
