@@ -7,14 +7,15 @@
     <title>Inscription - Party n'food</title>
 </head>
 <body>
+    <h1>Party n'food</h1>
     <div class="inscription-body">
-        <h1>Inscription</h1>
+        <h3>Inscription</h3>
         <form class="inscription-form">
-            <input class="inputInscription" placeholder="Nom" type="text">
-            <input class="inputInscription" placeholder="Prénom" type="text">
-            <input class="inputInscription" placeholder="Numéro de téléphone" type="tel">
-            <input class="inputInscription" placeholder="Adresse-Mail" type="email">
-            <input class="inputInscription" placeholder="Mot de passe" type="password">
+            <input class="inputInscription" placeholder="Nom" type="text" required>
+            <input class="inputInscription" placeholder="Prénom" type="text" required>
+            <input class="inputInscription" placeholder="Numéro de téléphone" type="tel" pattern="[0-9]{10}" required>
+            <input class="inputInscription" placeholder="Adresse-Mail" type="email" pattern=".+@+.com" required>
+            <input class="inputInscription" placeholder="Mot de passe" type="password" required>
             <input class="buttonSubmitInscription" type="submit">
         </form>
     </div>
