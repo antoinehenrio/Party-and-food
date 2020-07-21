@@ -1,11 +1,13 @@
 /*globals require, module */
 
+const { ObjectID } = require("bson");
+
 const mongoose = require("mongoose"),
 	Schema = mongoose.Schema;
 
 // create a schema for Dish
 let platSchema = new Schema({
-	idPlat : Int16Array,
+	idPlat : ObjectID,
 	nomPlat : String,
 	categorie: [
         {

@@ -7,6 +7,7 @@ exports.createUser = function (req, res, next) {
         email: req.body.email,
         telephone: req.body.telephone,
         password: req.body.password,
+        photo: req.body.photo,
         ingredients: req.body.ingredients,
         groupes: req.body.groupes
     };
@@ -94,6 +95,7 @@ exports.updateUser = function(req, res, next) {
         email: req.body.email,
         telephone: req.body.telephone,
         password: req.body.password,
+        photo: req.body.photo,
         ingredients: req.body.ingredients,
         groupes: req.body.groupes
     }
