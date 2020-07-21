@@ -5,7 +5,12 @@ var bodyParser = require("body-parser");
 var properties = require("./config/properties");
 var db = require("./config/database");
 //hero routes
-//var herosRoutes = require('./api/heros/heros.routes');
+var categorieRoutes = require('routes/routeCategorie');
+var groupeRoutes = require('routes/routeGroupe');
+var ingredientRoutes = require('routes/routeIngredient');
+var platRoutes = require('routes/routePlat');
+var recetteRoutes = require('routes/routeRecette');
+var soireeRoutes = require('routes/routeSoiree');
 var app = express();
 
 //configure bodyparser
@@ -37,8 +42,12 @@ app.use(function (req, res, next) {
 
 // use express router
 app.use("/api", router);
-//call heros routing
-//herosRoutes(router);
+categorieRoutes(router)
+groupeRoutes(router)
+ingredientRoutes(router)
+platRoutes(router)
+recetteRoutes(router)
+soireeRoutes(router)
 
 // intialise server
 app.listen(properties.PORT, (req, res) => {
