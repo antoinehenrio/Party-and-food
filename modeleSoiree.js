@@ -1,6 +1,7 @@
 /*globals require, module */
 
 const { stringify } = require("querystring");
+const { Timestamp } = require("bson");
 
 const mongoose = require("mongoose"),
 	Schema = mongoose.Schema;
@@ -14,6 +15,7 @@ let soireeSchema = new Schema({
     adresseSoiree2 : String,
     codePostalSoiree : String,
     villeSoiree : String,
+    deadLine : Date,
     categories: [
         {
           type: mongoose.Schema.Types.ObjectId,
