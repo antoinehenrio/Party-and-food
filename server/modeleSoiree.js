@@ -1,19 +1,21 @@
 /*globals require, module */
 
 const { stringify } = require("querystring");
+const { Timestamp } = require("bson");
 
 const mongoose = require("mongoose"),
 	Schema = mongoose.Schema;
 
 // create a schema for Dish
 let soireeSchema = new Schema({
-	idSoiree : Int16Array,
+	  idSoiree : Number,
     descriptionSoiree : String,
     dateSoiree : Date,
     adresseSoiree1 : String,
     adresseSoiree2 : String,
     codePostalSoiree : String,
     villeSoiree : String,
+    deadLine : Date,
     categories: [
         {
           type: mongoose.Schema.Types.ObjectId,

@@ -5,12 +5,13 @@ const mongoose = require("mongoose"),
 
 // create a schema for Dish
 let userSchema = new Schema({
-    id : Int16Array,
-	name  : String,
-	firstname   : String,
-	email : String,
+    id : Number,
+	  name  : String,
+	  firstname   : String,
+  	email : String,
     telephone : String,
     password : String,
+    photo : String,
     ingredients: [
         {
           type: mongoose.Schema.Types.ObjectId,
