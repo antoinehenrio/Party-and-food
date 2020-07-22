@@ -1,9 +1,9 @@
 var Ingredient = require('../controllers/controllerIngredient.js');
 
 module.exports = function(router) {
-    router.post('/category/create', Ingredient.createIngredient);
-    router.get('/category/get', Ingredient.getAllIngredients);
-    router.get('/category/get/:nomIngredient', Ingredient.getIngredientByName);
-    router.put('/category/update/:id', Ingredient.updateIngredient);
-    router.delete('/category/remove/:id', Ingredient.removeIngredient);
+    router.post('/ingredient/create', Ingredient.createIngredient);
+    router.get('/ingredient/get', Ingredient.getAllIngredients);
+    router.get('/ingredient/get/:nomIngredient', Ingredient.getIngredientByName);
+    router.put('/ingredient/update/:id', Ingredient.updateIngredient);
+    router.delete('/ingredient/remove/:id', Ingredient.removeIngredient);
 }

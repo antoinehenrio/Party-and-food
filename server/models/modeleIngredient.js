@@ -6,12 +6,9 @@ const mongoose = require("mongoose"),
 
 // create a schema for Dish
 let ingredientSchema = new Schema({
-	idIngredient : ObjectId,
+	idIngredient : {type: ObjectId, auto: true, required: true, index: true},
 	nomIngredient : String
 });
-
-// Create a model using schema
-let Ingredient = mongoose.model("Ingredients", ingredientSchema);
 
 //CRUD du schéma
 ingredientSchema.statics = {
@@ -33,6 +30,9 @@ ingredientSchema.statics = {
       this.findOneAndDelete(query,cb);
     }
 }
+
+// Create a model using schema
+let Ingredient = mongoose.model("Ingredients", ingredientSchema);
 
 // make this model available
 module.exports = Ingredient;
