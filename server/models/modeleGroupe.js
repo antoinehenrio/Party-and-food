@@ -6,7 +6,7 @@ const mongoose = require("mongoose"),
 
 // create a schema for Dish
 let groupeSchema = new Schema({
-	idGroupe : ObjectId,
+	idGroupe : {type: ObjectId, auto: true, required: true, index: true},
   nomGroupe : String,
   utilisateurs: [
     {
@@ -15,9 +15,6 @@ let groupeSchema = new Schema({
     }
   ]
 });
-
-// Create a model using schema
-let Groupe = mongoose.model("Groupes", groupeSchema);
 
 //CRUD du schéma
 groupeSchema.statics = {
@@ -39,6 +36,8 @@ groupeSchema.statics = {
       this.findOneAndDelete(query,cb);
     }
 }
+// Create a model using schema
+let Groupe = mongoose.model("Groupes", groupeSchema);
 
 // make this model available
 module.exports = Groupe;

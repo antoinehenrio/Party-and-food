@@ -1,10 +1,12 @@
+
 var Plat = require('../models/modelePlat.js');
+
 exports.createPlat = function (req, res, next) {
     var plat = {
         idPlat: req.body.name,
         nomPlat: req.body.name
     };
-    Plat.create(user, function(err, plat) {
+    Plat.create(plat, function(err, plat) {
         if(err) {
             res.json({
                 error : err
@@ -44,8 +46,8 @@ exports.getPlatByName = function(req, res, next) {
 
 exports.updatePlat = function(req, res, next) {
     var plat = {
-        idPlat: req.body.name,
-        nomPlat: req.body.name
+        idPlat: req.body.idPlat,
+        nomPlat: req.body.nomPlat
     }
     Plat.update({_idPlat: req.params.idPlat}, plat, function(err, plat) {
         if(err) {
