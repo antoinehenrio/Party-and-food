@@ -35,10 +35,10 @@ let userSchema = new Schema({
           ref: "Ingredients"
         }
     ],
-    groupes: [
+    soirees: [
         {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Groupe"
+          ref: "Soirees"
         }
       ]
 });

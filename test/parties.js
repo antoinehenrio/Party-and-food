@@ -21,131 +21,32 @@ describe('User', () => {
         User.deleteMany({}, (err) => {
             
         })
+
         Soiree.deleteMany({}, (err) => {
             done();
         })
     })
 
-    describe('/POST user', () => {
-        it('it should REGISTER a user with mail', (done) => {
-            let user = {
-                username: "jourdain.thibaud@gmail.com",
-                password: "test"
-            }
-            chai.request(server)
-                .post('/api/user/register')
-                .send(user)
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.to.have.property('token')
-                    done();
-            });
-        });
-    })
-
-    describe('/POST user', () => {
-        it('it should REGISTER a user with phone', (done) => {
-            let user = {
-                username: "06.49.80.87.46",
-                password: "test"
-            }
-            chai.request(server)
-                .post('/api/user/register')
-                .send(user)
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.to.have.property('token')
-                    done();
-            });
-        });
-    })
-
-    describe('/POST user', () => {
-        it('it should NOT REGISTER a user with anything else', (done) => {
-            let user = {
-                username: "blabla",
-                password: "test"
-            }
-            chai.request(server)
-                .post('/api/user/register')
-                .send(user)
-                .end((err, res) => {
-                    res.should.have.status(500);
-                    res.body.should.to.not.have.property('token')
-                    done();
-            });
-        });
-    })
-
-    describe('/POST user', () => {
-        it('it should LOGIN a user with email', (done) => {
-            let user = new User({
+    describe('/GET parties', () => {
+        it('it should GET parties by user', (done) => {
+            let user1 = new User({
                 username: "jourdain.thibaud@gmail.com",
                 email: "jourdain.thibaud@gmail.com",
             })
 
-            User.register(user, "test", (err, user) => {
-                chai.request(server)
-                .post('/api/user/login')
-                .send({username: "jourdain.thibaud@gmail.com", password: "test"})
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.to.have.property('token')
-                    done();
-                });
-            })
-        });
-    })
-
-    describe('/POST user', () => {
-        it('it should UPDATE a user\'s photo', (done) => {
-            let user = new User({
-                username: "jourdain.thibaud@gmail.com",
-                email: "jourdain.thibaud@gmail.com",
+            let user2 = new User({
+                username: "blabla@gmail.com",
             })
 
-            User.register(user, "test", (err, user) => {
-                chai.request(server)
-                .post('/api/user/login')
-                .send({username: "jourdain.thibaud@gmail.com", password: "test"})
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.to.have.property('token')
-
-                    let token = res.body.token
-
-                    chai.request(server)
-                    .put('/api/user/update')
-                    .set('Authorization', 'bearer ' + token)
-                    .send({email: "jourdain.thibaud@gmail.com", photo: image})
-                    .end((err, res) => {
-                        done();
-                    })
-                });
-            })
-        });
-    })
-
-    describe('/GET user', () => {
-        it('it should GET user\'s parties', (done) => {
-            let user = new User({
-                username: "jourdain.thibaud@gmail.com",
-                email: "jourdain.thibaud@gmail.com",
-            })
-
-            User.register(user, "test", (err, user) => {
-                new Soiree({
-                    descriptionSoiree : "Soirée test",
-                    dateSoiree : new Date(),
-                    deadline : new Date(),
-                    organisateur : user._id
-                }).save((err, soiree1) => {
+            User.register(user1, "test", (err, theUser1) => {
+                User.register(user2, "test", (err, theUser2) => {
                     new Soiree({
-                        descriptionSoiree : "Soirée test 2",
+                        descriptionSoiree : "Soirée test",
                         dateSoiree : new Date(),
                         deadline : new Date(),
-                        organisateur : user._id
-                    }).save((err, soiree2) => {
+                        organisateur : theUser1._id,
+                        utilisateurs : [theUser1._id, theUser2._id]
+                    }).save((err, soiree) => {
                         chai.request(server)
                         .post('/api/user/login')
                         .send({username: "jourdain.thibaud@gmail.com", password: "test"})
@@ -156,18 +57,109 @@ describe('User', () => {
                             let token = res.body.token
 
                             chai.request(server)
-                            .put('/api/user/update')
+                            .get('/api/party/get')
                             .set('Authorization', 'bearer ' + token)
-                            .send({soirees: [soiree1._id, soiree2._id]})
                             .end((err, res) => {
-                                chai.request(server)
-                                .get('/api/user/get')
-                                .set('Authorization', 'bearer ' + token)
-                                .end((err, res) => {
-                                    done()
-                                })
+                                res.body.should.have.nested.property("soiree[0].utilisateurs[1]")
+                                done();
                             })
-                        });
+                        })
+                    })
+                })
+            })
+        });
+    })
+
+    describe('/POST party', () => {
+        it('it should POST a party', (done) => {
+            let soiree = {
+                descriptionSoiree: "Soirée débauche chez Camille",
+                dateSoiree: new Date("2020-07-25T18:00:00"),
+                adresseSoiree1: "15 rue Charlemagne",
+                codePostalSoiree: "76000",
+                villeSoiree: "ROUEN"
+            }
+
+            let user = new User({
+                username: "jourdain.thibaud@gmail.com",
+                email: "jourdain.thibaud@gmail.com",
+            })
+
+            User.register(user, "test", (err, user) => {
+                chai.request(server)
+                .post('/api/user/login')
+                .send({username: "jourdain.thibaud@gmail.com", password: "test"})
+                .end((err, res) => {
+
+                    let token = res.body.token
+
+                    chai.request(server)
+                    .post('/api/party/create')
+                    .send(soiree)
+                    .set('Authorization', 'bearer ' + token)
+                    .end((err, res) => {
+                        console.log(res.body);
+                        res.should.have.status(200);
+                        res.body.should.to.deep.include({message: "Soirée créée avec succès"})
+
+                        chai.request(server)
+                        .get('/api/party/get')
+                        .set('Authorization', 'bearer ' + token)
+                        .end((err, res) => {
+                            res.should.have.status(200);
+                            res.body.should.to.nested.include({'soiree[0].descriptionSoiree' : "Soirée débauche chez Camille"});
+                            done();
+                        })
+                    });
+                })
+            })
+
+            
+        });
+    })
+
+    describe('/PUT party', () => {
+        it('it should PUT a party', (done) => {
+            let soiree = {
+                descriptionSoiree: "Soirée débauche chez Camille",
+                dateSoiree: new Date(2020, 7, 25, 18, 0, 0),
+                adresseSoiree1: "15 rue Charlemagne",
+                codePostalSoiree: "76000",
+                villeSoiree: "ROUEN"
+            }
+
+            let user = new User({
+                username: "jourdain.thibaud@gmail.com",
+                email: "jourdain.thibaud@gmail.com",
+            })
+
+            User.register(user, "test", (err, user) => {
+                soiree.organisateur = user._id
+                chai.request(server)
+                .post('/api/user/login')
+                .send({username: "jourdain.thibaud@gmail.com", password: "test"})
+                .end((err, res) => {
+
+                    let token = res.body.token
+
+                    new Soiree(soiree).save((err, soiree) => {
+                        console.log("error " + err)
+                        chai.request(server)
+                        .put(encodeURI('/api/party/update/' + soiree._id))
+                        .send({descriptionSoiree: "blablabla"})
+                        .set('Authorization', 'bearer ' + token)
+                        .end((err, res) => {
+                            res.should.have.status(200);
+                            res.body.should.to.nested.include({'message' : "Soirée modifiée avec succès"});
+                                
+                            chai.request(server)
+                            .get('/api/party/get')
+                            .set('Authorization', 'bearer ' + token)
+                            .end((err, res) => {
+                                res.body.should.to.nested.include({'soiree[0].descriptionSoiree' : "blablabla"});
+                                done();
+                            })
+                        })
                     })
                 })
             })

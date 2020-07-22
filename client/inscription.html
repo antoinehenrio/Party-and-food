@@ -12,19 +12,21 @@
     <div class="nomAppli">Party n'food</div>
     <div class="inscription-body">
         <!-- <h3>Inscription</h3> -->
-        <form class="inscription-form" action="/inscription">
+        <form class="inscription-form">
             <h1>BIENVENUE</h1>
             <h3>S'INSCRIRE</h3>
             <!-- <input class="inputInscription" placeholder="Nom" type="text" required>
             <input class="inputInscription" placeholder="Prénom" type="text" required>
             <input class="inputInscription" placeholder="Numéro de téléphone" type="tel" pattern="[0-9]{10}" required> -->
-            <input class="inputInscription" placeholder="E-Mail / Téléphone" required>
-            <input class="inputInscription" placeholder="Mot de passe" type="password" required><br>
-            <a class="coRegister" href="#">J'ai déjà un compte, me connecter</a><br>
+            <input id="username" name="username" class="inputInscription" placeholder="E-Mail / Téléphone" required>
+            <input id="password" name="password" class="inputInscription" placeholder="Mot de passe" type="password" required><br>
+            <a class="coRegister" href="login.html">J'ai déjà un compte, me connecter</a><br>
             <!-- <input class="buttonSubmitInscription" type="submit"> -->
             <button type="submit"><i class="fa fa-check submitCheck"></i></button>
             
         </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>

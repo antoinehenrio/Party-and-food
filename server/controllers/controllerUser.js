@@ -37,17 +37,8 @@ exports.getAllUsers = function(req, res, next) {
     })
 }
 
-exports.getUserByName = function(req, res, next) {
-    User.get({name: req.params.name}, function(err, user) {
-        if(err) {
-            res.json({
-                error: err
-            })
-        }
-        res.json({
-            user
-        })
-    })
+exports.getSelf = function(req, res, next) {
+    res.json({user : req.user})
 }
 
 exports.getUserByFirstName = function(req, res, next) {

@@ -1,21 +1,11 @@
-
 var Soiree = require('../models/modeleSoiree.js');
+const { equal } = require('assert');
 
 exports.createSoiree = function (req, res, next) {
-    var soiree = {
-        idSoiree: req.body.idSoiree,
-        descriptionSoiree: req.body.descriptionSoiree,
-        dateSoiree: req.body.dateSoiree,
-        adresseSoiree1: req.body.adresseSoiree1,
-        adresseSoiree2: req.body.adresseSoiree2,
-        codePostalSoiree: req.body.codePostalSoiree,
-        villeSoiree: req.body.villeSoiree,
-        deadLine: req.body.deadLine,
-        categories: req.body.categories,
-        groupe: req.body.groupe,
-        plat: req.body.plat
-    };
-    Soiree.create(soiree, function(err, soiree) {
+    //l'organisateur est le créateur de la soirée et participe à la soirée
+    req.body.organisateur = req.user._id
+    req.body.utilisateurs = [req.user._id]
+    Soiree.create(req.body, function(err, soiree) {
         if(err) {
             res.json({
                 error : err
@@ -28,7 +18,7 @@ exports.createSoiree = function (req, res, next) {
 }
 
 exports.getAllSoirees = function(req, res, next) {
-    Soiree.get({}, function(err, soiree) {
+    Soiree.get({utilisateurs: req.user._id}, function(err, soiree) {
         if(err) {
             res.json({
                 error: err
@@ -80,20 +70,7 @@ exports.getSoireeByGroupe = function(req, res, next) {
 }
 
 exports.updateSoiree = function(req, res, next) {
-    var soiree = {
-        idSoiree: req.body.idSoiree,
-        descriptionSoiree: req.body.descriptionSoiree,
-        dateSoiree: req.body.dateSoiree,
-        adresseSoiree1: req.body.adresseSoiree1,
-        adresseSoiree2: req.body.adresseSoiree2,
-        codePostalSoiree: req.body.codePostalSoiree,
-        villeSoiree: req.body.villeSoiree,
-        deadLine: req.body.deadLine,
-        categories: req.body.categories,
-        groupe: req.body.groupe,
-        plat: req.body.plat
-    }
-    Soiree.update({_idSoiree: req.params.idSoiree}, soiree, function(err, soiree) {
+    Soiree.update({_id: req.params.id}, {$set: req.body}, function(err, soiree) {
         if(err) {
             res.json({
                 error : err
@@ -106,7 +83,7 @@ exports.updateSoiree = function(req, res, next) {
 }
 
 exports.removeSoiree = function(req, res, next) {
-    Soiree.delete({_idSoiree: req.params.idSoiree}, function(err, soiree) {
+    Soiree.delete({_id: req.params.idSoiree}, function(err, soiree) {
         if(err) {
             res.json({
                 error : err
