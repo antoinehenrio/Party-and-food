@@ -1,37 +1,35 @@
 @font-face {
   font-family: "Lemon Milk";
-  src: url("../Party-and-food/fonts/Lemon Milk/LEMONMILK-regular.otf");
+  src: url("fonts/Lemon Milk/LEMONMILK-regular.otf");
 }
 @font-face {
   font-family: "Inter";
-  src: url("../Party-and-food/fonts/Inter/Inter-Regular-slnt=0.ttf");
+  src: url("fonts/Inter/Inter-Regular-slnt=0.ttf");
 }
 body {
   font-family: Inter;
   height: 100vh;
   text-align: center;
 }
-
+.bluetext{
+    color: #2685ba;
+}
 h1 {
   font-family: Lemon Milk;
 }
-
 .login-body, .inscription-body {
   text-align: center;
 }
-
 .inputLogin, .inputInscription {
   margin-top: 10px;
   width: 100%;
   height: 10%;
 }
-
 .login-form, .inscription-form {
   width: 70%;
   margin: auto;
 }
-
-.buttonSubmitLogin, .buttonSubmitInscription {
+.buttonSubmitLogin, .buttonSubmitInscription, .NewParty {
   margin-top: 10px;
   border-radius: 10px;
   width: 60%;
@@ -42,51 +40,6 @@ h1 {
   border: 0px;
   box-shadow: 4px 4px 20px -4px black;
 }
-
-.cell {
-    border-width: 0.2rem;
-    border-style: solid;
-    border-color: white;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    align-content: center;
-    color: black;
-    background-color: white;
-}
-
-.cell:hover {
-    border-color: #029EE6;
-}
-
-
-.image {
-    width: auto;
-    height: 15rem;
-    margin-top: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-
-}
-
-.name {
-    text-align: center;
-    font-size: 3rem;
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-    font-family: Punk;
-}
-
-.description {
-    float: right;
-    text-align: justify;
-    vertical-align: middle;
-    height: auto;
-    font-family: Candara;
-}
-
 .header {
     height: 10rem;
     width: auto;
@@ -94,58 +47,28 @@ h1 {
     justify-content: space-between;
     background-color: #ff0e4e;
     padding-bottom: 1rem;
-}
 
-.header-search {
-    text-align: center;
 }
-
 .shop {
-    color: black;
+    color: white;
     width: 100%;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 2.5%;
     font-size: 4rem;
+    font-family: "Lemon Milk";
 }
-
-#site-search {
-    background-color: #AAD9EE;
-    border-radius: 1rem;
-    border-style: none;
-    height: 3rem;
-    width: 15rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    color: black;
-    text-indent: 1rem;
-}
-
-#site-search::placeholder {
-    color: black;
-}
-
-#site-search:focus {
-    outline: none;
-}
-
-body {
-    font-size: 16px;
-    margin: 0 0 0 0;
-    background-color: white;
+.profil{
+    width: auto;
+    height: auto;
 }
 .grid-footer{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem 1rem;
-    width: 95%;
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-    margin-bottom: 2.5%;
-
+    text-align:center;
 }
-
+.imagefooter:hover{
+    background-color: #ff0e4e;
+}
 @media only screen and (min-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
