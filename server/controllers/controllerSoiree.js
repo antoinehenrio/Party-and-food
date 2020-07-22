@@ -1,4 +1,6 @@
+
 var Soiree = require('../models/modeleSoiree.js');
+
 exports.createSoiree = function (req, res, next) {
     var soiree = {
         idSoiree: req.body.idSoiree,
@@ -8,6 +10,7 @@ exports.createSoiree = function (req, res, next) {
         adresseSoiree2: req.body.adresseSoiree2,
         codePostalSoiree: req.body.codePostalSoiree,
         villeSoiree: req.body.villeSoiree,
+        deadLine: req.body.deadLine,
         categories: req.body.categories,
         groupe: req.body.groupe,
         plat: req.body.plat
@@ -85,6 +88,7 @@ exports.updateSoiree = function(req, res, next) {
         adresseSoiree2: req.body.adresseSoiree2,
         codePostalSoiree: req.body.codePostalSoiree,
         villeSoiree: req.body.villeSoiree,
+        deadLine: req.body.deadLine,
         categories: req.body.categories,
         groupe: req.body.groupe,
         plat: req.body.plat

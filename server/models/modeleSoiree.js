@@ -13,6 +13,7 @@ let soireeSchema = new Schema({
     adresseSoiree2 : String,
     codePostalSoiree : String,
     villeSoiree : String,
+    deadLine : Date,
     categories: [
         {
           type: mongoose.Schema.Types.ObjectId,

@@ -6,7 +6,7 @@ const mongoose = require("mongoose"),
 
 // create a schema for Dish
 let groupeSchema = new Schema({
-	idGroupe : ObjectId,
+	idGroupe : {type: ObjectId, auto: true, required: true, index: true},
   nomGroupe : String,
   utilisateurs: [
     {
