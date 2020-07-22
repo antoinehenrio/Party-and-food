@@ -14,20 +14,28 @@
         <span class="navLogo"><img src="client/images/LogoPartyAndFood.svg" width="50" height="50"/></span>
         <span class="navTitle">CRÉER MA SOIRÉE</span>
     </div>
-    <span class="bricolage"><i class="fa fa-arrow-left returnArrow"></i></span>
+    <span class="bricolage"><a href="accueil.html"><i class="fa fa-arrow-left returnArrow"></i></a></span>
     <div class="subTitle return">
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Informations</span></p>
         <hr>
     </div>
+    <div class="modalHidden" id="modal1">
+        <span class="textModal">Voici un texte de test pour ma fenêtre modale</span>
+        <span class="closeModal" onclick="clickCross1();"><span class="cross"><a>X</a></span></span>
+    </div>
+    <div class="modalHidden" id="modal2">
+        <span class="textModal">Voici un texte de test pour ma fenêtre modale</span>
+        <span class="closeModal" onclick="clickCross2();"><span class="cross"><a>X</a></span></span>
+    </div>
     <div class="gridInfosSoiree">
         <span class="texteInfoSoiree">DATE DE LA SOIREE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="date"/></span>
         <span class="texteInfoSoiree">HEURE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
-        <span class="texteInfoSoiree">DEADLINE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
-        <span class="texteInfoSoiree">FIN DES VOTES <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="time"/></span>
+        <span class="texteInfoSoiree">FIN DES </br> PREFERENCES <span class="red">*<span class="tooltipCircle" id="tooltip1" onclick="clickModal1();">i</span></span></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="date"/><input class="inputSoiree" type="time"/></span>
+        <span class="texteInfoSoiree">FIN DES VOTES <span class="red">*<span class="tooltipCircle" id="tooltip2" onclick="clickModal2();">i</span></span></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="date"/><input class="inputSoiree" type="time"/></span>
         <span class="texteInfoSoiree">NOTES</span>
         <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
         <span class="texteInfoSoiree">ADRESSE <span class="red">*</span></span>

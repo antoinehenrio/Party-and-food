@@ -18,3 +18,23 @@ function clickCheck2(){
         p.className = "checkIcone";
     }
 }
+
+function clickModal1(){
+    var p = document.getElementById("modal1");
+    p.className = "modal";
+}
+
+function clickModal2(){
+    var p = document.getElementById("modal2");
+    p.className = "modal";
+}
+
+function clickCross1(){
+    var p = document.getElementById("modal1");
+    p.className = "modalHidden";
+}
+
+function clickCross2(){
+    var p = document.getElementById("modal2");
+    p.className = "modalHidden";
+}

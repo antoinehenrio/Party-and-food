@@ -127,7 +127,7 @@ hr {
 
 .gridInfosSoiree {
     display: grid;
-    width: 90vw;
+    width: 95vw;
     grid-template-columns: 1fr 1fr;
     font-family: Inter;
     color: $blue;
@@ -146,7 +146,6 @@ hr {
 .inputInfoSoiree {
     grid-column-start: 2;
     grid-column-end: 3;
-    // display: inline-grid;
 }
 
 .return {
@@ -188,16 +187,12 @@ hr {
 .contenantLogo1 {
     grid-column-start: 1;
     grid-column-end: 2;
-    // display: flex;
-    // align-content: center;
     margin: auto;
 }
 
 .contenantLogo2 {
     grid-column-start: 2;
     grid-column-end: 3;
-    // display: flex;
-    // align-content: center;
     margin: auto;
 }
 
@@ -273,4 +268,78 @@ hr {
 .inputSoiree {
     border: none;
     border-bottom: 1px solid $blue;
+}
+
+input {
+    color: $blue;
+    text-align: center !important;
+}
+
+.tooltipCircle {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    background-color: $red;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    margin-left: 1vw;
+  }
+
+.modalHidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.modal {
+    width: 80vw;
+    height: 30vh;
+    color: $blue;
+    z-index: 100;
+    position: fixed;
+    top: 25%;
+    left: 8%;
+    background-color: white;
+    border: 1.5px solid $blue;
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    font-family: Inter;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.textModal {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.closeModal {
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    background-color: $red;
+    position: absolute;
+    bottom: 94%;
+    right: -2%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.closeModal:hover {
+    cursor: pointer;
+}
+
+.cross {
+    position: absolute;
+    top: 9%;
+    left: 28%;
 }

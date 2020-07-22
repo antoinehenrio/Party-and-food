@@ -118,7 +118,7 @@ hr {
 
 .gridInfosSoiree {
   display: grid;
-  width: 90vw;
+  width: 95vw;
   grid-template-columns: 1fr 1fr;
   font-family: Inter;
   color: #2685ba;
@@ -256,6 +256,80 @@ hr {
 .inputSoiree {
   border: none;
   border-bottom: 1px solid #2685ba;
+}
+
+input {
+  color: #2685ba;
+  text-align: center !important;
+}
+
+.tooltipCircle {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  background-color: #ff0e4e;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  margin-left: 1vw;
+}
+
+.modalHidden {
+  visibility: hidden;
+  height: 0;
+}
+
+.modal {
+  width: 80vw;
+  height: 30vh;
+  color: #2685ba;
+  z-index: 100;
+  position: fixed;
+  top: 25%;
+  left: 8%;
+  background-color: white;
+  border: 1.5px solid #2685ba;
+  text-align: center;
+  vertical-align: middle;
+  display: table;
+  font-family: Inter;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.textModal {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.closeModal {
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 22px;
+  height: 22px;
+  background-color: #ff0e4e;
+  position: absolute;
+  bottom: 94%;
+  right: -2%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.closeModal:hover {
+  cursor: pointer;
+}
+
+.cross {
+  position: absolute;
+  top: 9%;
+  left: 28%;
 }
 
 /*# sourceMappingURL=style2.css.map */
