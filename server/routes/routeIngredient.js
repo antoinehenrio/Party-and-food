@@ -1,4 +1,4 @@
-var Ingredient = require('../server/controllers/controllerIngredient.js');
+var Ingredient = require('../controllers/controllerIngredient.js');
 
 module.exports = function(router) {
     router.post('/category/create', Ingredient.createIngredient);

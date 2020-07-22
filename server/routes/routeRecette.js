@@ -1,4 +1,4 @@
-var Recette = require('../server/controllers/controllerRecette.js');
+var Recette = require('../controllers/controllerRecette.js');
 
 module.exports = function(router) {
     router.post('/recipe/create', Recette.createRecette);

@@ -1,4 +1,4 @@
-var Soiree = require('../server/controllers/controllerSoiree.js');
+var Soiree = require('../controllers/controllerSoiree.js');
 
 module.exports = function(router) {
     router.post('/recipe/create', Soiree.createSoiree);
