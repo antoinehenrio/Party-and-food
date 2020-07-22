@@ -37,7 +37,7 @@ html, body {
   text-align: center;
   font-family: Lemon Milk;
   margin-top: 5vh;
-  margin-bottom: 7vh;
+  margin-bottom: 6vh;
 }
 
 hr {
@@ -118,7 +118,7 @@ hr {
 
 .gridInfosSoiree {
   display: grid;
-  width: 80vw;
+  width: 90vw;
   grid-template-columns: 1fr 1fr;
   font-family: Inter;
   color: #2685ba;
@@ -130,14 +130,12 @@ hr {
 .texteInfoSoiree {
   grid-column-start: 1;
   grid-column-end: 2;
-  display: inline-grid;
   font-weight: bold;
 }
 
 .inputInfoSoiree {
   grid-column-start: 2;
   grid-column-end: 3;
-  display: inline-grid;
 }
 
 .return {
@@ -147,7 +145,7 @@ hr {
 .returnArrow {
   color: #ff0e4e;
   margin-left: 3vw;
-  padding-top: 3vh;
+  padding-top: 2vh;
 }
 
 .bricolage {
@@ -159,6 +157,8 @@ hr {
   grid-template-columns: 1fr 1fr;
   width: 80vw !important;
   margin: auto;
+  color: #2685ba;
+  font-family: Inter;
 }
 
 .logoLivDrive {
@@ -202,6 +202,60 @@ hr {
   grid-column-start: 2;
   grid-column-end: 3;
   margin: auto;
+}
+
+.btnValider {
+  background-color: #2685ba;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 42vw;
+  height: 4vh;
+}
+
+.conteneurValider {
+  padding-top: 3vh;
+  margin: auto;
+  width: 42vw;
+}
+
+.bricolage2 {
+  font-size: 20px;
+}
+
+.red {
+  color: red;
+  display: inline;
+}
+
+.checkIcone {
+  background-color: #2685ba;
+  color: white;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  margin-left: 65px;
+  margin-top: 30px;
+}
+
+.check {
+  margin-left: 0.5vw;
+}
+
+.checkIconeHidden {
+  visibility: hidden;
+}
+
+.logos {
+  margin-bottom: 3vh !important;
+}
+
+.inputSoiree {
+  border: none;
+  border-bottom: 1px solid #2685ba;
 }
 
 /*# sourceMappingURL=style2.css.map */
