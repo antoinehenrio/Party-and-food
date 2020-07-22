@@ -12,6 +12,7 @@ let userSchema = new Schema({
   	email : String,
     telephone : String,
     password : String,
+    photo: { data: Buffer, contentType: String },
     ingredients: [
         {
           type: mongoose.Schema.Types.ObjectId,
