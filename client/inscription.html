@@ -5,18 +5,25 @@
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - Party n'food</title>
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1>Party n'food</h1>
+    <div class="nomAppli">Party n'food</div>
     <div class="inscription-body">
-        <h3>Inscription</h3>
-        <form class="inscription-form">
-            <input class="inputInscription" placeholder="Nom" type="text" required>
+        <!-- <h3>Inscription</h3> -->
+        <form class="inscription-form" action="/inscription">
+            <h1>BIENVENUE</h1>
+            <h3>S'INSCRIRE</h3>
+            <!-- <input class="inputInscription" placeholder="Nom" type="text" required>
             <input class="inputInscription" placeholder="Prénom" type="text" required>
-            <input class="inputInscription" placeholder="Numéro de téléphone" type="tel" pattern="[0-9]{10}" required>
-            <input class="inputInscription" placeholder="Adresse-Mail" type="email" pattern=".+@+.com" required>
-            <input class="inputInscription" placeholder="Mot de passe" type="password" required>
-            <input class="buttonSubmitInscription" type="submit">
+            <input class="inputInscription" placeholder="Numéro de téléphone" type="tel" pattern="[0-9]{10}" required> -->
+            <input class="inputInscription" placeholder="E-Mail / Téléphone" required>
+            <input class="inputInscription" placeholder="Mot de passe" type="password" required><br>
+            <a class="coRegister" href="#">J'ai déjà un compte, me connecter</a><br>
+            <!-- <input class="buttonSubmitInscription" type="submit" > -->
+            <button type="submit"><i class="fa fa-check submitCheck"></i></button>
+            
         </form>
     </div>
 </body>
