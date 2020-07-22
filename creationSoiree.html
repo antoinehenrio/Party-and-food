@@ -5,6 +5,7 @@
     <link href="style2.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="client/scriptFooter.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Party and food</title>
 </head>
 <body>
@@ -12,7 +13,8 @@
         <span class="navLogo"><img src="client/images/LogoPartyAndFood.svg" width="50" height="50"/></span>
         <span class="navTitle">CRÉER MA SOIRÉE</span>
     </div>
-    <div class="subTitle">
+    <span class="bricolage"><i class="fa fa-arrow-left returnArrow"></i></span>
+    <div class="subTitle return">
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Informations</span></p>
         <hr>
     </div>
@@ -21,10 +23,34 @@
         <span class="inputInfoSoiree">Test</span>
         <span class="texteInfoSoiree">HEURE</span>
         <span class="inputInfoSoiree">Test2</span>
+        <span class="texteInfoSoiree">DEADLINE DES PREFERENCES</span>
+        <span class="inputInfoSoiree">Test2</span>
         <span class="texteInfoSoiree">FIN DES VOTES</span>
         <span class="inputInfoSoiree">Test3</span>
         <span class="texteInfoSoiree">NOTES</span>
         <span class="inputInfoSoiree">Test4</span>
+    </div>
+    <div class="subTitle">
+        <p class="paragrapheSubTitle"><span class="subTitleContenu">LIVRAISON ET/OU FAIT MAISON?</span></p>
+        <hr>
+    </div>
+    <div class="conteneurLogos">
+        <div class="contenantLogo1">
+            <div class="logoLivDrive">
+                <img src="client/images/Drive blanc.svg" class="imgdrive" width="50" height="50">
+            </div>
+        </div>
+        <div class="contenantLogo2">
+            <div class="logoLivDrive">
+                <img src="client/images/Livraison blanc.svg" class="imgdrive" width="50" height="50">
+            </div>
+        </div>
+        <div class="drive">
+            Drive
+        </div>
+        <div class="livraison">
+            Livraison
+        </div>
     </div>
     <div class="footer">
         <img src="client/images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/>
