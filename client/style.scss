@@ -1,0 +1,113 @@
+$yellow : #f3d65f;
+$blue : #2685ba;
+$red : #ff0e4e;
+
+@font-face {
+    font-family: "Lemon Milk";
+    src: url('client/fonts/Lemon Milk/LEMONMILK-Regular.otf');
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("client/fonts/Inter/Inter-Regular-slnt=0.ttf");
+  }
+
+html,body {
+    margin: 0;
+}
+
+.navigation {
+    background-color: $red;
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    color: white;
+    // padding-top: 2vh;
+    // padding-bottom: 2vh;
+    font-family: Lemon Milk;
+    align-items: center;
+}
+
+.navLogo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 5vw;
+}
+
+.navTitle {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-left: 12vw;
+}
+
+.subTitle {
+    color: $blue;
+    text-align: center;
+    font-family: Lemon Milk;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+}
+
+hr {
+    padding: 0;
+    margin-bottom: 0;
+    color: $red;
+    width: 30vw;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    margin-top: 0.5vh !important;
+    height: 1.4px;
+    background-color: $red;
+    border-top: none;
+}
+
+.paragrapheSubTitle {
+    margin-bottom: 0 !important;
+}
+
+.paragrapheTexte {
+    color: $blue;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.texte {
+    text-align: center;
+    font-family: Inter;
+    margin-bottom: 6vh;
+}
+
+.boutonRouge {
+    background-color: $red;
+    color: white;
+    font-family: Lemon Milk;
+    border: none;
+    height: 8vh;
+    width: 70vw;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 6vh;
+}
+
+.conteneurBoutons {
+    text-align: center;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: solid 2.5px $red;
+    border-bottom: solid 2.5px $red;
+    border-right: solid 2.5px $red;
+    position: fixed;
+    bottom: 0;
+}
+
+.imgFooter {
+    border-left: solid 2px $red;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+    margin: auto;
+}
