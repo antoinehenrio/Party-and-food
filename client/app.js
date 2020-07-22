@@ -12,6 +12,21 @@ const getFormData = ($form) => {
 };
 
 $(() => {
+    
+    if(location.href.indexOf('acceuil') > -1){
+        $.ajax({
+			url: URL + "party/get",
+			type: "GET",
+            dataType: "json",
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            },
+			success: (res) => {
+                console.log(res)
+			},
+		});
+    }
+
 	$(".inscription-form").on("submit", (e) => {
 		e.preventDefault();
 		console.log(getFormData($(".inscription-form")));
