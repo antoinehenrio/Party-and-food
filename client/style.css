@@ -10,6 +10,7 @@ body {
   font-family: Inter;
   height: 100vh;
   text-align: center;
+    margin: 0;
 }
 .bluetext{
     color: #2685ba;
@@ -40,71 +41,127 @@ h1 {
   border: 0px;
   box-shadow: 4px 4px 20px -4px black;
 }
-.header {
-    height: 10rem;
-    width: auto;
-    margin-bottom: 2rem;
-    justify-content: space-between;
+.navigation {
     background-color: #ff0e4e;
-    padding-bottom: 1rem;
-
-}
-.shop {
+    display: grid;
+    grid-template-columns: 30vw 1fr;
     color: white;
-    width: 100%;
+    font-family: Lemon Milk;
+    align-items: center;
+}
+.navLogo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 5vw;
+}
+
+.navTitle {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-left: 12vw;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 2.5%;
-    font-size: 4rem;
-    font-family: "Lemon Milk";
+}
+.paragrapheSubTitle {
+    margin-bottom: 0 !important;
+}
+hr {
+    padding: 0;
+    margin-bottom: 0;
+    color: #ff0e4e;
+    width: 30vw;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    margin-top: 0.5vh !important;
+    height: 1.4px;
+    background-color: #ff0e4e;
+    border-top: none;
+}
+.subTitle ,.subTitleContenu{
+    color: #2685ba;
+    text-align: center;
+    font-family: Inter;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+}
+.tableauAccueil {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    color: #2685ba;
+    font-family: Inter;
 }
 .profil{
-    width: auto;
-    height: auto;
+    width: 40%;
+    height: 40%;
 }
-.grid-footer{
-    text-align:center;
+.fleche{
+
 }
-.imagefooter:hover{
-    background-color: #ff0e4e;
-}
-@media only screen and (min-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr;
-    }
+.\*{
+    color: #ff0e4e;
 
-    .shop {
-        text-align: right;
-    }
-
-    .header {
-        display: flex;
-        height: 5rem;
-    }
-
-    .header-search {
-        position: absolute;
-        margin-top: 0.5rem;
-        margin-left: 2.5%;
-        padding: 0;
-    }
 }
 
-@media only screen and (min-width: 900px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .shop {
-        text-align: center;
-    }
+.tableauProfil {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    color: #2685ba;
+    font-family: Inter;
 }
+.tableauRegime{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    color: #2685ba;
+    font-family: Inter;
+}
+.check{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #2685ba;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
 
-@media only screen and (min-width: 1200px) {
-    .grid-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+}
+.red{
+    color: #ff0e4e;
+}
+.vote{
+    font-family: Inter;
+
+}
+.checkvote{
+    background-color: #2685ba;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: solid 2.5px #ff0e4e;
+    border-bottom: solid 2.5px #ff0e4e;
+    border-right: solid 2.5px #ff0e4e;
+    border-left: solid 2.5px #ff0e4e;
+    position: fixed;
+    bottom: 0;
+
+}
+.imgFooter {
+    border-left: solid 2px #ff0e4e;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+
 }
 
 /*# sourceMappingURL=style.css.map */

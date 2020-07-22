@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Accueil</title>
 </head>
 <body>
 
 <header class="header">
-    <p class="shop">Accueil</p>
-
+    <div class="navigation">
+        <span class="navLogo"><img src="image/Logo%20party%20n'%20food.svg" width="50" height="50"/></span>
+        <span class="navTitle">Accueil</span>
+    </div>
 </header>
 <main class="grid-container" id="mainframe">
-  <img class="profil" src="image/Profil%20bleu.png">
+    <img class="profil" src="image/Profil%20bleu.png">
     <p class="bluetext">Helloooo <b>Brice</b><br> Tu as <b>5</b> soirée à ton actif , bravo !</p>
     <input class="NewParty" type="submit" value="Nouvelle Soirée">
-    <p class="bluetext"><b>Mes soirées en cours</b></p>
+
+    <div class="subTitle">
+        <p class="paragrapheSubTitle"><span class="subTitleContenu"><b>Mes soirées</b></span></p>
+        <hr>
+    </div>
+    <div class="tableauAccueil">
+        <div>Date</div>
+        <div>Organisateur</div>
+        <div>Deadline</div>
+
+        <div>25/07/2020</div>
+        <div>Brice Godard</div>
+        <div>25/07/2020</div>
+        <div>25/07/2020</div>
+        <div>Brice Godard</div>
+        <div>25/07/2020</div>
+        <div>25/07/2020</div>
+        <div>Brice Godard</div>
+        <div>25/07/2020</div>
+        <div>25/07/2020</div>
+        <div>Brice Godard</div>
+        <div>25/07/2020</div>
+    </div>
+    <div class=""></div>
 </main>
-<footer class="grid-footer">
-    <img class="imagefooter" src="image/Home%20bleu.png" onclick="this.src='image/Home%20blanc.png';" onmouseout="this.src='image/Home%20bleu.png';" />
-    <img class="imagefooter" src="image/Verre%20bleu.png" onclick="this.src='image/Verre%20blanc.png';" onmouseout="this.src='image/Verre%20bleu.png';" />
-    <img class="imagefooter" src="image/Profil%20bleu.png" onclick="this.src='image/Profil%20blanc.png';" onmouseout="this.src='image/Profil%20bleu.png';" />
-</footer>
+<div class="footer">
+    <img src="image/Home%20bleu.png" class="imgFooter" width="40" height="40" id="btn1"/>
+    <img src="image/Verre%20bleu.png" class="imgFooter" width="40" height="40" id="btn2">
+    <img src="image/Profil%20bleu.png" class="imgFooter" width="40" height="40" id="btn3">
+</div>
 </body>
 </html>
