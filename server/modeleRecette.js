@@ -1,7 +1,6 @@
 /*globals require, module */
 
 const { ObjectID } = require("bson");
-
 const mongoose = require("mongoose"),
 	Schema = mongoose.Schema;
 

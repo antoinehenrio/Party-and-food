@@ -1,3 +1,46 @@
+@font-face {
+  font-family: "Lemon Milk";
+  src: url("../Party-and-food/fonts/Lemon Milk/LEMONMILK-regular.otf");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../Party-and-food/fonts/Inter/Inter-Regular-slnt=0.ttf");
+}
+body {
+  font-family: Inter;
+  height: 100vh;
+  text-align: center;
+}
 
+h1 {
+  font-family: Lemon Milk;
+}
+
+.login-body, .inscription-body {
+  text-align: center;
+}
+
+.inputLogin, .inputInscription {
+  margin-top: 10px;
+  width: 100%;
+  height: 10%;
+}
+
+.login-form, .inscription-form {
+  width: 70%;
+  margin: auto;
+}
+
+.buttonSubmitLogin, .buttonSubmitInscription {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 60%;
+  height: 30px;
+  padding: 6px;
+  color: white;
+  background-color: #ff0e4e;
+  border: 0px;
+  box-shadow: 4px 4px 20px -4px black;
+}
 
 /*# sourceMappingURL=style.css.map */

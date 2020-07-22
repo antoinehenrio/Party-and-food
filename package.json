@@ -1,0 +1,37 @@
+{
+  "name": "party-and-food",
+  "version": "1.0.0",
+  "description": "Choisir un repas pour une soirée entre amis",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --timeout 10000",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinehenrio/Party-and-food.git"
+  },
+  "keywords": [
+    "party",
+    "food",
+    "friends"
+  ],
+  "author": "CESI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoinehenrio/Party-and-food/issues"
+  },
+  "homepage": "https://github.com/antoinehenrio/Party-and-food#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chalk": "^4.1.0",
+    "mocha": "^8.0.1",
+    "morgan": "^1.10.0"
+  }
+}

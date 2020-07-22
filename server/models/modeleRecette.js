@@ -1,25 +1,35 @@
 /*globals require, module */
 
-
-const { ObjectID } = require("bson");
-
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
-let ingredientSchema = new Schema({
-	idIngredient : ObjectID,
-	nomIngredient : String
+let recetteSchema = new Schema({
+    idRecette: ObjectId,
+    quantite : Number,
+  	description  : String,
+    ingredients: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Ingredient"
+        }
+      ],
+    plats: 
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Plat"
+        }
 });
 
 // Create a model using schema
-let Ingredient = mongoose.model("Ingredients", ingredientSchema);
+let Recette = mongoose.model("Recettes", recetteSchema);
 
 //CRUD du schéma
-ingredientSchema.statics = {
+recetteSchema.statics = {
     create : function(data, cb) {
-      var ingredient = new this(data);
-      ingredient.save(cb);
+      var recette = new this(data);
+      recette.save(cb);
     },     
     get: function(query, cb) {
       this.find(query, cb);
@@ -37,4 +47,4 @@ ingredientSchema.statics = {
 }
 
 // make this model available
-module.exports = Ingredient;
+module.exports = Recette;
