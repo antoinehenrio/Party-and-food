@@ -1,3 +1,153 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 1rem;
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+}
 
+.cell {
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-content: center;
+    color: black;
+    background-color: white;
+}
+
+.cell:hover {
+    border-color: #029EE6;
+}
+
+
+.image {
+    width: auto;
+    height: 15rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
+
+.name {
+    text-align: center;
+    font-size: 3rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    font-family: Punk;
+}
+
+.description {
+    float: right;
+    text-align: justify;
+    vertical-align: middle;
+    height: auto;
+    font-family: Candara;
+}
+
+.header {
+    height: 10rem;
+    width: auto;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    background-color: #ff0e4e;
+    padding-bottom: 1rem;
+}
+
+.header-search {
+    text-align: center;
+}
+
+.shop {
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2.5%;
+    font-size: 4rem;
+}
+
+#site-search {
+    background-color: #AAD9EE;
+    border-radius: 1rem;
+    border-style: none;
+    height: 3rem;
+    width: 15rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: black;
+    text-indent: 1rem;
+}
+
+#site-search::placeholder {
+    color: black;
+}
+
+#site-search:focus {
+    outline: none;
+}
+
+body {
+    font-size: 16px;
+    margin: 0 0 0 0;
+    background-color: white;
+}
+.grid-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 1rem;
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+
+}
+
+@media only screen and (min-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .shop {
+        text-align: right;
+    }
+
+    .header {
+        display: flex;
+        height: 5rem;
+    }
+
+    .header-search {
+        position: absolute;
+        margin-top: 0.5rem;
+        margin-left: 2.5%;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .shop {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
 
 /*# sourceMappingURL=style.css.map */
