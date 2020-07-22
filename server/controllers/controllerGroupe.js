@@ -1,4 +1,4 @@
-var User = require('../models/modeleGroupe.js');
+var Groupe = require('../models/modeleGroupe.js');
 
 exports.createGroupe = function (req, res, next) {
     var groupe = {

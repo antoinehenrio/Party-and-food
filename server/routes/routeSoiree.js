@@ -1,10 +1,11 @@
 var Soiree = require('../controllers/controllerSoiree.js');
+var authMiddleware = require('../middleware/auth.js');
 
 module.exports = function(router) {
-    router.post('/recipe/create', Soiree.createSoiree);
-    router.get('/recipe/get', Soiree.getAllSoirees);
-    router.get('/recipe/get/:nomSoiree', Soiree.getSoireeByDescription);
-    router.get('/recipe/get/date/:dateSoiree', Soiree.getSoireesByDate);
-    router.put('/recipe/update/:id', Soiree.updateSoiree);
-    router.delete('/recipe/remove/:id', Soiree.removeSoiree);
+    router.post('/party/create', authMiddleware.requireJWT, Soiree.createSoiree);
+    router.get('/party/get', authMiddleware.requireJWT, Soiree.getAllSoirees);
+    router.get('/party/get/:nomSoiree', Soiree.getSoireeByDescription);
+    router.get('/party/get/date/:dateSoiree', Soiree.getSoireesByDate);
+    router.put('/party/update/:id', authMiddleware.requireJWT, Soiree.updateSoiree);
+    router.delete('/party/remove/:id', Soiree.removeSoiree);
 }
