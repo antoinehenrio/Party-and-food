@@ -4,16 +4,27 @@ const mongoose = require("mongoose"),
   Schema = mongoose.Schema,
   ObjectId = Schema.ObjectId;
 
+let makeid = (length) => {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result.toUpperCase();
+ }
+
 // create a schema for Dish
 let soireeSchema = new Schema({
     descriptionSoiree : String,
     dateSoiree : Date,
-    adresseSoiree1 : String,
-    adresseSoiree2 : String,
-    codePostalSoiree : String,
-    villeSoiree : String,
+    adresse : String,
     deadLinePref : Date,
     deadLineVote : Date,
+    code : {
+      type: String,
+      default: makeid(9)
+    },
     organisateur: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",

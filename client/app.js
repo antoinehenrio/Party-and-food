@@ -29,7 +29,6 @@ $(() => {
     
     $(".login-form").on("submit", (e) => {
 		e.preventDefault();
-		console.log(getFormData($(".login-form")));
 		$.ajax({
 			url: URL + "user/login",
 			type: "POST",
@@ -44,6 +43,23 @@ $(() => {
             }
 		});
     });
-    
 
+    $("#party-form").on('submit', (e) => {
+        e.preventDefault()
+        $.ajax({
+			url: URL + "party/create",
+			type: "POST",
+            dataType: "json",
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            },
+			data: getFormData($("#party-form")),
+			success: (res) => {
+                console.log(res)
+            },
+            error: (err) => {
+                //TODO: identifiants incorrects
+            }
+		});
+    })
 });
