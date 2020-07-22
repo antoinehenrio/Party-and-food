@@ -1,0 +1,112 @@
+$red-color: #ff0e4e;
+$blue-color: #2685ba;
+
+@font-face {
+    font-family: "Lemon Milk";
+    // src: url("../Party-and-food/fonts/Lemon\ Milk/LEMONMILK-regular.otf");
+    src: url("./fonts/Lemon\ Milk/LEMONMILK-regular.otf");
+  }
+  @font-face {
+    font-family: "Inter";
+    // src: url("../Party-and-food/fonts/Inter/Inter-Regular-slnt=0.ttf");
+    src: url("./fonts/Inter/Inter-Regular-slnt=0.ttf");
+  }
+
+body{
+    // font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Inter;
+    height: 100vh;
+    // text-align: center;
+    background-color: $red-color;
+    margin: 0;
+}
+
+.nomAppli{
+    font-family: Lemon Milk;
+    width: 40%;
+    text-shadow: -3px 0px 1px $blue-color;
+    color: white;
+    font-size: 3em;
+    margin-left: 10px;
+}
+
+h1, h2{
+    color: $red-color;
+    padding-top: 20px;
+    font-weight: bolder;
+}
+
+h3{
+    color: $blue-color;
+    font-weight: bolder;
+}
+
+
+.login-body, .inscription-body{
+    text-align: center;
+}
+
+.inputLogin, .inputInscription{
+    margin-top: 10px;
+    width: 80%;
+    height: 10%;
+    border: 2px solid $red-color;
+    border-radius: 20px;
+    font-size: 1.2em;
+    color: $blue-color;
+    text-align: center;
+}
+
+.inputInscription[type="password"], .inputLogin[type="password"]{
+    margin-bottom: 20px;
+}
+
+.inputLogin::placeholder, .inputInscription::placeholder{
+    color: $blue-color;
+    text-align: center;
+}
+
+.login-form, .inscription-form{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    height: 402px;
+}
+
+.buttonSubmitLogin, .buttonSubmitInscription{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 60%;
+    height: 30px;
+    padding: 6px;
+    color: white;
+    background-color: $red-color;
+    border: 0px;
+    box-shadow: 4px 4px 20px -4px black;
+}
+
+.coRegister, .mpOublie{
+    font-size: 0.8em;
+    color: $blue-color;
+    padding-top: 20px;
+    text-decoration: none;
+}
+
+.submitCheck{
+    width: 178px;
+    height: 32px;
+    margin: auto;
+    padding-top: 0px;
+    background-color: $blue-color;
+    padding-left: 2px;
+    padding-top: 8px;
+    border-radius: 3px;
+}
+
+button[type="submit"]{
+    border: 0;
+    background-color: transparent;
+    font-size: 24px;
+    margin-top: 50px;
+}

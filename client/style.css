@@ -1,19 +1,36 @@
 @font-face {
   font-family: "Lemon Milk";
-  src: url("../Party-and-food/fonts/Lemon Milk/LEMONMILK-regular.otf");
+  src: url("./fonts/Lemon Milk/LEMONMILK-regular.otf");
 }
 @font-face {
   font-family: "Inter";
-  src: url("../Party-and-food/fonts/Inter/Inter-Regular-slnt=0.ttf");
+  src: url("./fonts/Inter/Inter-Regular-slnt=0.ttf");
 }
 body {
   font-family: Inter;
   height: 100vh;
-  text-align: center;
+  background-color: #ff0e4e;
+  margin: 0;
 }
 
-h1 {
+.nomAppli {
   font-family: Lemon Milk;
+  width: 40%;
+  text-shadow: -3px 0px 1px #2685ba;
+  color: white;
+  font-size: 3em;
+  margin-left: 10px;
+}
+
+h1, h2 {
+  color: #ff0e4e;
+  padding-top: 20px;
+  font-weight: bolder;
+}
+
+h3 {
+  color: #2685ba;
+  font-weight: bolder;
 }
 
 .login-body, .inscription-body {
@@ -22,13 +39,30 @@ h1 {
 
 .inputLogin, .inputInscription {
   margin-top: 10px;
-  width: 100%;
+  width: 80%;
   height: 10%;
+  border: 2px solid #ff0e4e;
+  border-radius: 20px;
+  font-size: 1.2em;
+  color: #2685ba;
+  text-align: center;
+}
+
+.inputInscription[type=password], .inputLogin[type=password] {
+  margin-bottom: 20px;
+}
+
+.inputLogin::placeholder, .inputInscription::placeholder {
+  color: #2685ba;
+  text-align: center;
 }
 
 .login-form, .inscription-form {
-  width: 70%;
+  width: 80%;
   margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  height: 402px;
 }
 
 .buttonSubmitLogin, .buttonSubmitInscription {
@@ -42,6 +76,30 @@ h1 {
   border: 0px;
   box-shadow: 4px 4px 20px -4px black;
 }
+
+.coRegister, .mpOublie {
+  font-size: 0.8em;
+  color: #2685ba;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+.submitCheck {
+  width: 178px;
+  height: 32px;
+  margin: auto;
+  padding-top: 0px;
+  background-color: #2685ba;
+  padding-left: 2px;
+  padding-top: 8px;
+  border-radius: 3px;
+}
+
+button[type=submit] {
+  border: 0;
+  background-color: transparent;
+  font-size: 24px;
+  margin-top: 50px;
 
 .cell {
     border-width: 0.2rem;
