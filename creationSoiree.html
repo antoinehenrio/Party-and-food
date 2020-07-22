@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link href="style2.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="client/scriptFooter.js"></script>
+    <script src="client/scriptHidden.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Party and food</title>
+</head>
+<body>
+    <div class="navigation">
+        <span class="navLogo"><img src="client/images/LogoPartyAndFood.svg" width="50" height="50"/></span>
+        <span class="navTitle">CRÉER MA SOIRÉE</span>
+    </div>
+    <span class="bricolage"><i class="fa fa-arrow-left returnArrow"></i></span>
+    <div class="subTitle return">
+        <p class="paragrapheSubTitle"><span class="subTitleContenu">Informations</span></p>
+        <hr>
+    </div>
+    <div class="gridInfosSoiree">
+        <span class="texteInfoSoiree">DATE DE LA SOIREE <span class="red">*</span></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="texteInfoSoiree">HEURE <span class="red">*</span></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="texteInfoSoiree">DEADLINE <span class="red">*</span></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="texteInfoSoiree">FIN DES VOTES <span class="red">*</span></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="texteInfoSoiree">NOTES</span>
+        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="texteInfoSoiree">ADRESSE <span class="red">*</span></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+    </div>
+    <div class="subTitle logos">
+        <p class="paragrapheSubTitle"><span class="subTitleContenu">LIVRAISON ET/OU FAIT MAISON?</span></p>
+        <hr>
+    </div>
+    <div class="conteneurLogos">
+        <div class="contenantLogo1"  onclick="clickCheck1();">
+            <span class="checkIconeHidden" id="check1"><i class="fa fa-check check"></i></span>
+            <div class="logoLivDrive">
+                <img src="client/images/Drive blanc.svg" class="imgdrive" width="50" height="50">
+            </div>
+        </div>
+        <div class="contenantLogo2" onclick="clickCheck2();">
+            <span class="checkIconeHidden" id="check2"><i class="fa fa-check check"></i></span>
+            <div class="logoLivDrive">
+                <img src="client/images/Livraison blanc.svg" class="imgdrive" width="50" height="50">         
+            </div>
+        </div>
+        <div class="drive">
+            Drive
+        </div>
+        <div class="livraison">
+            Livraison
+        </div>
+    </div>
+    <div class="conteneurValider">
+        <button class="btnValider"><span class="bricolage2"><i class="fa fa-check"></i></span></button>
+    </div>
+    <div class="footer">
+        <img src="client/images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/>
+        <img src="client/images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();">
+        <img src="client/images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();">
+    </div>
+</body>
+</html>
