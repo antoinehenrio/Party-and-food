@@ -1,4 +1,4 @@
-var Groupe = require('./modeleGroupe.js');
+var Groupe = require('./modeleGroupe.js.js');
 exports.createGroupe = function (req, res, next) {
     var groupe = {
         idGroupe: req.body.idGroupe,

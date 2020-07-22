@@ -1,4 +1,4 @@
-var Categorie = require('./modeleCategorie.js');
+var Categorie = require('./modeleCategorie.js.js');
 exports.createCategorie = function (req, res, next) {
     var categorie = {
         idCategorie: req.body.idCategorie,

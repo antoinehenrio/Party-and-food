@@ -1,4 +1,4 @@
-var Plat = require('./modelePlat.js');
+var Plat = require('./modelePlat.js.js');
 exports.createPlat = function (req, res, next) {
     var plat = {
         idPlat: req.body.name,
