@@ -11,11 +11,12 @@ var ingredientRoutes = require('./routes/routeIngredient');
 var platRoutes = require('./routes/routePlat');
 var recetteRoutes = require('./routes/routeRecette');
 var soireeRoutes = require('./routes/routeSoiree');
+var userRoutes = require('./routes/routeUser');
 var app = express();
 
 //configure bodyparser
-var bodyParserJSON = bodyParser.json();
-var bodyParserURLEncoded = bodyParser.urlencoded({ extended: true });
+var bodyParserJSON = bodyParser.json({limit: '50mb', extended: true });
+var bodyParserURLEncoded = bodyParser.urlencoded({limit: '50mb', extended: true });
 
 //initialise express router
 var router = express.Router();
@@ -48,6 +49,7 @@ ingredientRoutes(router)
 platRoutes(router)
 recetteRoutes(router)
 soireeRoutes(router)
+userRoutes(router)
 
 // intialise server
 app.listen(properties.PORT, (req, res) => {

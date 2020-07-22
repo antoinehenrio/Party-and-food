@@ -1,5 +1,5 @@
 
-var User = require('../models/modeleUsers.js');
+var User = require('../models/modeleUser.js');
 
 exports.createUser = function (req, res, next) {
     var user = {
@@ -90,18 +90,7 @@ exports.getUserByPhone = function(req, res, next) {
 }
 
 exports.updateUser = function(req, res, next) {
-    var user = {
-        id: req.body.name,
-        name: req.body.name,
-        firstname: req.body.firstname,
-        email: req.body.email,
-        telephone: req.body.telephone,
-        password: req.body.password,
-        photo: req.body.photo,
-        ingredients: req.body.ingredients,
-        groupes: req.body.groupes
-    }
-    User.update({_id: req.params.id}, user, function(err, user) {
+    User.update({_id: req.user._id}, { $set: req.body }, function(err, user) {
         if(err) {
             res.json({
                 error : err
