@@ -1,16 +1,19 @@
 @font-face {
   font-family: "Lemon Milk";
-  src: url("./fonts/Lemon Milk/LEMONMILK-regular.otf");
+  src: url("fonts/Lemon Milk/LEMONMILK-regular.otf");
 }
 @font-face {
   font-family: "Inter";
-  src: url("./fonts/Inter/Inter-Regular-slnt=0.ttf");
+  src: url("fonts/Inter/Inter-Regular-slnt=0.ttf");
 }
 body {
   font-family: Inter;
   height: 100vh;
   background-color: #ff0e4e;
   margin: 0;
+}
+.bluetext{
+    color: #2685ba;
 }
 
 .nomAppli {
@@ -32,11 +35,9 @@ h3 {
   color: #2685ba;
   font-weight: bolder;
 }
-
 .login-body, .inscription-body {
   text-align: center;
 }
-
 .inputLogin, .inputInscription {
   margin-top: 10px;
   width: 80%;
@@ -56,7 +57,6 @@ h3 {
   color: #2685ba;
   text-align: center;
 }
-
 .login-form, .inscription-form {
   width: 80%;
   margin: auto;
@@ -64,8 +64,7 @@ h3 {
   border-radius: 10px;
   height: 402px;
 }
-
-.buttonSubmitLogin, .buttonSubmitInscription {
+.buttonSubmitLogin, .buttonSubmitInscription, .NewParty {
   margin-top: 10px;
   border-radius: 10px;
   width: 60%;
@@ -152,58 +151,28 @@ button[type=submit] {
     justify-content: space-between;
     background-color: #ff0e4e;
     padding-bottom: 1rem;
-}
 
-.header-search {
-    text-align: center;
 }
-
 .shop {
-    color: black;
+    color: white;
     width: 100%;
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: 2.5%;
     font-size: 4rem;
+    font-family: "Lemon Milk";
 }
-
-#site-search {
-    background-color: #AAD9EE;
-    border-radius: 1rem;
-    border-style: none;
-    height: 3rem;
-    width: 15rem;
-    margin-top: 1rem;
-    font-size: 2rem;
-    color: black;
-    text-indent: 1rem;
-}
-
-#site-search::placeholder {
-    color: black;
-}
-
-#site-search:focus {
-    outline: none;
-}
-
-body {
-    font-size: 16px;
-    margin: 0 0 0 0;
-    background-color: white;
+.profil{
+    width: auto;
+    height: auto;
 }
 .grid-footer{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem 1rem;
-    width: 95%;
-    margin-right: 2.5%;
-    margin-left: 2.5%;
-    margin-bottom: 2.5%;
-
+    text-align:center;
 }
-
+.imagefooter:hover{
+    background-color: #ff0e4e;
+}
 @media only screen and (min-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
