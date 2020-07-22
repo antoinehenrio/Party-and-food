@@ -1,28 +1,35 @@
 /*globals require, module */
 
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
-let groupeSchema = new Schema({
-	idGroupe : Int16Array,
-  nomGroupe : String,
-  utilisateurs: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User"
-    }
-  ]
+let recetteSchema = new Schema({
+    idRecette: ObjectId,
+    quantite : Number,
+  	description  : String,
+    ingredients: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Ingredient"
+        }
+      ],
+    plats: 
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Plat"
+        }
 });
 
 // Create a model using schema
-let Groupe = mongoose.model("Groupes", groupeSchema);
+let Recette = mongoose.model("Recettes", recetteSchema);
 
 //CRUD du schéma
-groupeSchema.statics = {
+recetteSchema.statics = {
     create : function(data, cb) {
-      var groupe = new this(data);
-      groupe.save(cb);
+      var recette = new this(data);
+      recette.save(cb);
     },     
     get: function(query, cb) {
       this.find(query, cb);
@@ -40,4 +47,4 @@ groupeSchema.statics = {
 }
 
 // make this model available
-module.exports = Groupe;
+module.exports = Recette;

@@ -1,28 +1,39 @@
 /*globals require, module */
 
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
-let platSchema = new Schema({
-	idPlat : Int16Array,
-	nomPlat : String,
-	categorie: [
+let userSchema = new Schema({
+    id : ObjectId,
+	  name  : String,
+	  firstname   : String,
+  	email : String,
+    telephone : String,
+    password : String,
+    ingredients: [
         {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Categorie"
+          ref: "Ingredients"
         }
-    ]
+    ],
+    groupes: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Groupe"
+        }
+      ]
 });
 
 // Create a model using schema
-let Plat = mongoose.model("Plats", platSchema);
+let User = mongoose.model("Users", userSchema);
 
 //CRUD du schéma
-platSchema.statics = {
+userSchema.statics = {
     create : function(data, cb) {
-      var plat = new this(data);
-      plat.save(cb);
+      var user = new this(data);
+      user.save(cb);
     },     
     get: function(query, cb) {
       this.find(query, cb);
@@ -40,4 +51,4 @@ platSchema.statics = {
 }
 
 // make this model available
-module.exports = Plat;
+module.exports = User;

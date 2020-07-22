@@ -1,28 +1,23 @@
 /*globals require, module */
 
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
-let categorieSchema = new Schema({
-	idCategorie  : Int16Array,
-  nomCategorie : String,
-  plats: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Plat"
-    }
-  ]
+let ingredientSchema = new Schema({
+	idIngredient : ObjectId,
+	nomIngredient : String
 });
 
 // Create a model using schema
-let Categorie = mongoose.model("Categories", categorieSchema);
+let Ingredient = mongoose.model("Ingredients", ingredientSchema);
 
 //CRUD du schéma
-categorieSchema.statics = {
+ingredientSchema.statics = {
     create : function(data, cb) {
-      var categorie = new this(data);
-      categorie.save(cb);
+      var ingredient = new this(data);
+      ingredient.save(cb);
     },     
     get: function(query, cb) {
       this.find(query, cb);
@@ -40,4 +35,4 @@ categorieSchema.statics = {
 }
 
 // make this model available
-module.exports = Categorie;
+module.exports = Ingredient;

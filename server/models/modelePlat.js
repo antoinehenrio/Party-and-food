@@ -1,34 +1,29 @@
 /*globals require, module */
 
 const mongoose = require("mongoose"),
-	Schema = mongoose.Schema;
+  Schema = mongoose.Schema,
+  ObjectId = Schema.ObjectId;
 
 // create a schema for Dish
-let recetteSchema = new Schema({
-    idRecette: Int16Array,
-    quantite : Int16Array,
-  	description  : String,
-    ingredients: [
+let platSchema = new Schema({
+	idPlat : ObjectId,
+	nomPlat : String,
+	categorie: [
         {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Ingredient"
+          ref: "Categorie"
         }
-      ],
-    plats: 
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Plat"
-        }
+    ]
 });
 
 // Create a model using schema
-let Recette = mongoose.model("Recettes", userSchema);
+let Plat = mongoose.model("Plats", platSchema);
 
 //CRUD du schéma
-recetteSchema.statics = {
+platSchema.statics = {
     create : function(data, cb) {
-      var recette = new this(data);
-      recette.save(cb);
+      var plat = new this(data);
+      plat.save(cb);
     },     
     get: function(query, cb) {
       this.find(query, cb);
@@ -46,4 +41,4 @@ recetteSchema.statics = {
 }
 
 // make this model available
-module.exports = Recette;
+module.exports = Plat;
