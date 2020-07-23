@@ -43,4 +43,387 @@ h1 {
   box-shadow: 4px 4px 20px -4px black;
 }
 
+.navigation {
+  background-color: #ff0e4e;
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+  color: white;
+  font-family: Lemon Milk;
+  align-items: center;
+}
+
+.navLogo {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding-left: 5vw;
+}
+
+.navTitle {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  position: absolute;
+  left: 32%;
+}
+
+.subTitle {
+  color: #2685ba;
+  text-align: center;
+  font-family: Lemon Milk;
+  margin-top: 5vh;
+  margin-bottom: 6vh;
+}
+
+hr {
+  padding: 0;
+  margin-bottom: 0;
+  color: #ff0e4e;
+  width: 30vw;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  margin-top: 0.5vh !important;
+  height: 1.4px;
+  background-color: #ff0e4e;
+  border-top: none;
+}
+
+.paragrapheSubTitle {
+  margin-bottom: 0 !important;
+}
+
+.paragrapheTexte {
+  color: #2685ba;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.texte {
+  text-align: center;
+  font-family: Inter;
+  margin-bottom: 6vh;
+}
+
+.boutonRouge {
+  background-color: #ff0e4e;
+  color: white;
+  font-family: Lemon Milk;
+  border: none;
+  height: 8vh;
+  width: 70vw;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-bottom: 6vh;
+}
+
+.conteneurBoutons {
+  text-align: center;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-top: solid 2.5px #ff0e4e;
+  border-bottom: solid 2.5px #ff0e4e;
+  border-right: solid 2.5px #ff0e4e;
+  position: fixed;
+  bottom: 0;
+  z-index: 90;
+  background-color: white;
+}
+
+.imgFooter {
+  border-left: solid 2px #ff0e4e;
+  padding-left: 11.1vw;
+  padding-right: 11.9vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  grid-column: span 1;
+  margin: auto;
+}
+
+.imgFooterclicked {
+  border-left: solid 2px #ff0e4e;
+  padding-left: 11.1vw;
+  padding-right: 11.9vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  grid-column: span 1;
+  margin: auto;
+  background-color: #ff0e4e;
+}
+
+.gridInfosSoiree {
+  display: grid;
+  width: 95vw;
+  grid-template-columns: 1fr 1fr;
+  font-family: Inter;
+  color: #2685ba;
+  margin: auto;
+  text-align: center;
+  grid-row-gap: 1vh;
+}
+
+.texteInfoSoiree {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  font-weight: bold;
+}
+
+.inputInfoSoiree {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.return {
+  margin-top: 0 !important;
+}
+
+.returnArrow {
+  color: #ff0e4e;
+  margin-left: 3vw;
+  padding-top: 2vh;
+}
+
+.bricolage {
+  font-size: 30px;
+}
+
+.conteneurLogos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw !important;
+  margin: auto;
+  color: #2685ba;
+  font-family: Inter;
+}
+
+.logoLivDrive {
+  background-color: #ff0e4e;
+  margin: auto;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+  align-items: center;
+  display: flex;
+}
+
+.contenantLogo1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: auto;
+}
+
+.contenantLogo2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: auto;
+}
+
+.imgdrive {
+  margin: auto;
+}
+
+.drive {
+  padding-top: 2vh;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: auto;
+}
+
+.livraison {
+  padding-top: 2vh;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: auto;
+}
+
+.btnValider {
+  background-color: #2685ba;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 42vw;
+  height: 4vh;
+}
+
+.conteneurValider {
+  padding-top: 3vh;
+  margin: auto;
+  width: 42vw;
+}
+
+.bricolage2 {
+  font-size: 20px;
+}
+
+.red {
+  color: red;
+  display: inline;
+}
+
+.checkIcone {
+  background-color: #2685ba;
+  color: white;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  margin-left: 65px;
+  margin-top: 30px;
+}
+
+.check {
+  margin-left: 0.5vw;
+}
+
+.checkIconeHidden {
+  visibility: hidden;
+}
+
+.logos {
+  margin-bottom: 3vh !important;
+}
+
+.inputSoiree {
+  border: none;
+  border-bottom: 1px solid #2685ba;
+}
+
+input {
+  color: #2685ba;
+  text-align: center !important;
+}
+
+.tooltipCircle {
+  color: white;
+  display: inline-block;
+  text-align: center;
+  background-color: #ff0e4e;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  margin-left: 1vw;
+}
+
+.modalHidden {
+  visibility: hidden;
+  height: 0;
+}
+
+.modal {
+  width: 80vw;
+  height: 30vh;
+  color: #2685ba;
+  z-index: 100;
+  position: fixed;
+  top: 25%;
+  left: 8%;
+  background-color: white;
+  border: 1.5px solid #2685ba;
+  text-align: center;
+  vertical-align: middle;
+  display: table;
+  font-family: Inter;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.textModal {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.closeModal {
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 22px;
+  height: 22px;
+  background-color: #ff0e4e;
+  position: absolute;
+  bottom: 94%;
+  right: -2%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.closeModal:hover {
+  cursor: pointer;
+}
+
+.cross {
+  position: absolute;
+  top: 9%;
+  left: 28%;
+}
+
+.joinSoiree {
+  font-family: Lemon Milk !important;
+  display: block;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  font-size: 22px;
+}
+
+.codeSoiree {
+  margin-bottom: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  width: 40vw;
+  border: 1px solid #ff0e4e;
+  border-radius: 10px;
+}
+
+.mesSoirees {
+  margin-left: 6vw;
+}
+
+.conteneurListeSoirees {
+  display: grid;
+  grid-template-columns: 29vw 29vw 29vw 8vw;
+  font-family: Inter;
+  margin: auto;
+  text-align: center;
+  width: 95vw;
+  margin-bottom: 6vh;
+  grid-row-gap: 1.5vh;
+}
+
+.conteneurTitresListeSoirees {
+  display: grid;
+  grid-template-columns: 29vw 29vw 29vw 8vw;
+  font-family: Inter;
+  margin: auto;
+  text-align: center;
+  width: 95vw;
+  margin-bottom: 2vh;
+}
+
+.sepSoirees {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 2vh;
+}
+
+.soiree {
+  margin-bottom: 1.5vh;
+}
+
+.titreListeSoirees {
+  margin-bottom: 4vh !important;
+}
+
+/*# sourceMappingURL=style2.css.map */
+
+
 /*# sourceMappingURL=style.css.map */
