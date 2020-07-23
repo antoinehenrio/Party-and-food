@@ -6,9 +6,9 @@ function clickBtn1()
   p.className = 'imgFooterclicked';
   p2.className = 'imgFooter'
   p3.className = 'imgFooter'
-  p.setAttribute("src", "client/images/Home blanc.png");
-  p2.setAttribute("src", "client/images/Verre bleu.png");
-  p3.setAttribute("src", "client/images/Profil bleu.png");
+  p.setAttribute("src", "./images/Home blanc.png");
+  p2.setAttribute("src", "./images/Verre bleu.png");
+  p3.setAttribute("src", "./images/Profil bleu.png");
 };
 
 function clickBtn2()
@@ -19,9 +19,9 @@ function clickBtn2()
     p.className = 'imgFooter';
     p2.className = 'imgFooterclicked'
     p3.className = 'imgFooter'
-    p.setAttribute("src", "client/images/Home bleu.png");
-    p2.setAttribute("src", "client/images/Verre blanc.png");
-    p3.setAttribute("src", "client/images/Profil bleu.png");
+    p.setAttribute("src", "./images/Home bleu.png");
+    p2.setAttribute("src", "./images/Verre blanc.png");
+    p3.setAttribute("src", "./images/Profil bleu.png");
 };
 
 function clickBtn3()
@@ -32,7 +32,7 @@ function clickBtn3()
     p.className = 'imgFooter';
     p2.className = 'imgFooter'
     p3.className = 'imgFooterclicked'
-    p.setAttribute("src", "client/images/Home bleu.png");
-    p2.setAttribute("src", "client/images/Verre bleu.png");
-    p3.setAttribute("src", "client/images/Profil blanc.png");
+    p.setAttribute("src", "./images/Home bleu.png");
+    p2.setAttribute("src", "./images/Verre bleu.png");
+    p3.setAttribute("src", "./images/Profil blanc.png");
 };
