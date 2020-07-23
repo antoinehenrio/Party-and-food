@@ -1066,6 +1066,8 @@ hr {
   border-right: solid 2.5px #ff0e4e;
   position: fixed;
   bottom: 0;
+  z-index: 90;
+  background-color: white;
 }
 
 .imgFooter {
@@ -1305,7 +1307,60 @@ input {
   left: 28%;
 }
 
+.joinSoiree {
+  font-family: Lemon Milk !important;
+  display: block;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  font-size: 22px;
+}
 
+.codeSoiree {
+  margin-bottom: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  width: 40vw;
+  border: 1px solid #ff0e4e;
+  border-radius: 10px;
+}
 
+.mesSoirees {
+  margin-left: 6vw;
+}
+
+.conteneurListeSoirees {
+  display: grid;
+  grid-template-columns: 29vw 29vw 29vw 8vw;
+  font-family: Inter;
+  margin: auto;
+  text-align: center;
+  width: 95vw;
+  margin-bottom: 6vh;
+  grid-row-gap: 1.5vh;
+}
+
+.conteneurTitresListeSoirees {
+  display: grid;
+  grid-template-columns: 29vw 29vw 29vw 8vw;
+  font-family: Inter;
+  margin: auto;
+  text-align: center;
+  width: 95vw;
+  margin-bottom: 2vh;
+}
+
+.sepSoirees {
+  width: 80vw;
+  margin: auto;
+  margin-bottom: 2vh;
+}
+
+.soiree {
+  margin-bottom: 1.5vh;
+}
+
+.titreListeSoirees {
+  margin-bottom: 4vh !important;
+}
 
 /*# sourceMappingURL=style.css.map */

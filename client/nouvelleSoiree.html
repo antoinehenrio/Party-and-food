@@ -5,12 +5,26 @@
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scriptFooter.js"></script>
+    <script src="scriptHidden.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Party and food</title>
 </head>
 <body>
     <div class="navigation">
         <span class="navLogo"><img src="images/LogoPartyAndFood.svg" width="50" height="50"/></span>
         <span class="navTitle">NOUVELLE SOIREE</span>
+    </div>
+    <div class="modalHidden" id="modal3">
+        <div class="textModal joinSoiree">Entre le code de ta soirée</div>
+        <div class="inputCodeSoiree">
+            <input class="inputSoiree codeSoiree" name="codeSoiree" placeholder="_ _ _ _ _ _"/>  
+        </div>
+        <button class="btnValider">
+            <span class="bricolage2">
+                <i class="fa fa-check check"></i>
+            </span>
+        </button>
+        <span class="closeModal" onclick="clickCross3();" onmouseover="this.style.cursor='pointer'" ><span class="cross"><a>X</a></span></span>
     </div>
     <div class="subTitle">
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Nouvelle soirée</span></p>
@@ -22,7 +36,7 @@
     </div>
     <div class="conteneurBoutons">
         <button class="boutonRouge">creer une soiree</button>
-        <button class="boutonRouge">rejoindre une liste de soirees</button>
+        <button class="boutonRouge" onclick="clickModal3();">rejoindre une soirée</button>
         <button class="boutonRouge">voir ma liste de soirees</button>
     </div>
     <div class="footer">
