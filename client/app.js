@@ -154,18 +154,132 @@ $(() => {
 				$("#deadlineVote").text(getDateHoursToString(new Date(res.soiree[0].deadLineVote)))
 				$("#description").text(res.soiree[0].descriptionSoiree)
 				$("#adresse").text(res.soiree[0].adresse)
+				$(".Password").val(res.soiree[0].code)
+				$("#prefLink").attr('href', "mesPreferences.html?code=" + res.soiree[0].code)
 
 				$(".maps").append("<iframe "+
-					'width="600"'+
-					'height="450"'+
 					'frameborder="0" style="border:0"'+
 					'src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCXGZf_qoA20DFO83bnCJMEIhzbEJBkhSs'+
 					  '&q=' + res.soiree[0].adresse + '" allowfullscreen>'+
 				 ' </iframe>')
             },
             error: (err) => {
-                //TODO: identifiants incorrects
+                
             }
 		});
+	}
+
+	/************* PREFERENCES ******************/
+
+	let soiree_id;
+
+	if(location.href.indexOf('mesPreferences.html') > -1){
+
+		$.ajax({
+			url: URL + "party/get/" + urlParams.get('code'),
+			type: "GET",
+            dataType: "json",
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            },
+			success: (res) => {
+				soiree_id = res.soiree[0]._id
+            },
+            error: (err) => {
+                
+            }
+		});
+
+		$.ajax({
+			url: URL + "category/get",
+			type: "GET",
+            dataType: "json",
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            },
+			success: (res) => {
+				console.log(res)
+
+				$("#categ").empty()
+
+				$("#categ").append('<span class="arrowCarrousel"><i class="fa fa-chevron-left"></i></span>')
+				for(let category of res.categorie){
+					$("#categ").append('<div data-id="' + category._id + '" class="photoCategorie" onclick="changeCouleur(this);">' + 
+						'<img src="images/' + category.photoURL + '" height="50" width="50">' +
+					'</div>')
+				}
+				
+				
+				$("#categ").append('<span class="arrowCarrousel"><i class="fa fa-chevron-right"></i></span>' +
+				'<span class="nomCategorie"></span>')
+
+				for(let category of res.categorie){
+					$("#categ").append('<span class="nomCategorie">' + category.nomCategorie + '</span>')
+				}
+
+				$("#categ").append('<span class="nomCategorie"></span>')
+            },
+            error: (err) => {
+                
+            }
+		});
+
+		$.ajax({
+			url: URL + "ingredient/get",
+			type: "GET",
+            dataType: "json",
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            },
+			success: (res) => {
+				console.log(res)
+
+				$("#likes").empty()
+				$("#dislikes").empty()
+
+				$("#likes").append('<span class="arrowCarrousel"><i class="fa fa-chevron-left"></i></span>')
+				$("#dislikes").append('<span class="arrowCarrousel"><i class="fa fa-chevron-left"></i></span>')
+				for(let i = 0; i < 4; i++){
+					$("#likes").append('<div data-id="' + res.ingredient[i]._id + '" class="photoPreference" onclick="changeCouleur(this);">'+
+						'<img src="images/' + res.ingredient[i].photoURL + '" height="50" width="50">'+
+					'</div>')
+					$("#dislikes").append('<div data-id="' + res.ingredient[i]._id + '" class="photoPreference" onclick="changeCouleur(this);">'+
+						'<img src="images/' + res.ingredient[i].photoURL + '" height="50" width="50">'+
+					'</div>')
+				}
+				
+				
+				$("#likes").append('<span class="arrowCarrousel"><i class="fa fa-chevron-right"></i></span>')
+				$("#dislikes").append('<span class="arrowCarrousel"><i class="fa fa-chevron-right"></i></span>')
+			},
+            error: (err) => {
+            
+            }
+		});
+
+		// Envoyer le formulaire de préférence au serveur
+		$("#pref-form").on('submit', (e) => {
+			e.preventDefault()
+
+			let pref = {
+				soiree : soiree_id,
+				categorie : [],
+				souhaits : [],
+				rejets : []
+			}
+
+			$("#categ .red").each(function() {
+				pref.categorie.push($(this).data('id'))
+			})
+
+			$("#likes .red").each(function() {
+				pref.souhaits.push($(this).data('id'))
+			})
+
+			$("#dislikes .red").each(function() {
+				pref.rejets.push($(this).data('id'))
+			})
+
+		})
 	}
 });

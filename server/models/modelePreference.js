@@ -15,10 +15,10 @@ let preferenceSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Ingredient"
     }],
-    categorie: {
+    categorie: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Categorie"
-    },
+    }],
     soiree: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Categorie",

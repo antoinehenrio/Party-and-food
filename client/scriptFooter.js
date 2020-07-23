@@ -37,16 +37,6 @@ function clickBtn3()
     p3.setAttribute("src", "client/images/Profil blanc.png");
 };
 
-function changeCouleur(nomElement) {
-  console.log(nomElement);
-  var p = document.getElementById(nomElement);
-  if (p.classList.contains("blue")) {
-    p.classList.add("red");
-    p.classList.remove("blue");
-  }
-  else {
-    p.classList.add("blue");
-    p.classList.remove("red");
-  }
-
+function changeCouleur(elem) {
+    elem.classList.toggle("red");
 }
