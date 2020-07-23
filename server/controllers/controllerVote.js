@@ -1,16 +1,41 @@
 
 var Vote = require('../models/modeleVote.js');
+var Soiree = require('../models/modeleSoiree.js');
 
 exports.createVote = function (req, res, next) {
     req.body.votant = req.user._id
-    Vote.create(req.body, function(err, vote) {
-        if(err) {
-            res.json({
-                error : err
-            })
-        }
-        res.json({
-            message : "Vote créé avec succès"
+    Soiree.findOne({code: req.params.soiree}, (err, soiree) => {
+        req.body.soiree = soiree._id
+        Vote.create(req.body, function(err, vote) {
+            if(err) {
+                console.log(err)
+                res.json({
+                    error : err
+                })
+            } else {
+                res.json({
+                    message : "Vote créé avec succès"
+                })
+            }
+        })
+    })
+}
+
+exports.getSelfVote = function(req, res, next) {
+    req.body.votant = req.user._id
+    Soiree.findOne({code: req.params.soiree}, (err, soiree) => {
+        req.body.soiree = soiree._id
+        Vote.findOne({votant : req.user._id, soiree : soiree._id}, function(err, vote) {
+            if(err) {
+                console.log(err)
+                res.json({
+                    error : err
+                })
+            } else {
+                res.json({
+                    vote
+                })
+            }
         })
     })
 }

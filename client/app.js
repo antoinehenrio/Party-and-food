@@ -156,6 +156,11 @@ $(() => {
 				$("#adresse").text(res.soiree[0].adresse)
 				$(".Password").val(res.soiree[0].code)
 				$("#prefLink").attr('href', "mesPreferences.html?code=" + res.soiree[0].code)
+				
+				if(new Date(res.soiree[0].deadLinePref) < new Date()) {
+					$("#prefLink").attr("href", "vote.html?code=" + res.soiree[0].code)
+					$("#prefLink input").val('VOTE POUR TON PLAT PREFERE')
+				}
 
 				$(".maps").append("<iframe "+
 					'frameborder="0" style="border:0"'+
@@ -300,6 +305,36 @@ $(() => {
 
 	/************* VOTE ******************/
 
+	$('.voterepas').on('click', '.div1', function(){
+		$(this).toggleClass('red')
+	})
+
+	$('.checkvote').on('click', function(){
+		let plat_id;
+
+		$(".voterepas .red").each(function() {
+			plat_id = $(this).data('id')
+		})
+
+		if(!plat_id) return
+
+		$.ajax({
+			url: URL + "poll/create/" + urlParams.get('code'),
+			type: "POST",
+			dataType: "json",
+			data: {plat : plat_id},
+			headers: {
+				'Authorization': `Bearer ${localStorage.getItem("token")}`,
+			},
+			success: (res) => {
+				console.log(res)
+			},
+			error : (err) => {
+
+			}
+		})
+	})
+
 	if(location.href.indexOf('vote.html') > -1){
 		$.ajax({
 			url: URL + "dish/poll/" + urlParams.get('code'),
@@ -314,7 +349,8 @@ $(() => {
 				$('.voterepas').empty()
 
 				for(let plat of res.plats){
-					$('.voterepas').append('<div class="div1"><img class="milk" src="images/' + plat.photoURL + '"></div>' +
+					$('.voterepas').append(
+						'<div class="div1" data-id="' + plat._id + '"><img class="milk" src="images/' + plat.photoURL + '"></div>' +
 						'<div class="lignevote">' +
 							'<div class="div2"><b class="bluetext">' + (plat.categorie.nomCategorie || "") + '</b></div>' +
 							'<div class="div3"><p class="bluetext">' + plat.nomPlat + '</p></div>' +
@@ -323,6 +359,22 @@ $(() => {
 				}
 			},
 			error : (err) => {
+
+			}
+		})
+
+		$.ajax({
+			url : URL + 'poll/get/' + urlParams.get('code'),
+			type: "GET",
+			dataType: "json",
+			headers: {
+				'Authorization': `Bearer ${localStorage.getItem("token")}`,
+			},
+			success: (res) => {
+				console.log(res)
+				if(res.vote) alert("Tu as déjà voté !")
+			},
+			error: (err) => {
 
 			}
 		})
