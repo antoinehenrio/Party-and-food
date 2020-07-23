@@ -47,7 +47,7 @@ const loadMaps = (adr) => {
 
 $(() => {
     // Récupération lorsqu'on est sur la page d'accueil
-    if(location.href.indexOf('acceuil') > -1){
+    if(location.href.indexOf('accueil') > -1){
         $.ajax({
 			url: URL + "party/get",
 			type: "GET",
@@ -280,6 +280,21 @@ $(() => {
 				pref.rejets.push($(this).data('id'))
 			})
 
+			$.ajax({
+				url: URL + "preference/create",
+				type: "POST",
+				dataType: "json",
+				data: pref,
+				headers: {
+					'Authorization': `Bearer ${localStorage.getItem("token")}`,
+				},
+				success: (res) => {
+					console.log(res)
+				},
+				error : (err) => {
+
+				}
+			})
 		})
 	}
 });

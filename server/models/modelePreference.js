@@ -21,7 +21,7 @@ let preferenceSchema = new Schema({
     }],
     soiree: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Categorie",
+        ref: "Soirees",
         required: true
     }
 });

@@ -13,7 +13,11 @@ let platSchema = new Schema({
           type: mongoose.Schema.Types.ObjectId,
           ref: "Categorie"
         }
-    ]
+  ],
+  ingredients : [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Ingredients"
+  }]
 });
 
 //CRUD du schéma

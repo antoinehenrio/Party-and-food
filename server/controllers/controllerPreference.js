@@ -1,30 +1,24 @@
 var Preference = require('../models/modelePreference.js');
+var Soiree = require('../models/modeleSoiree.js');
 
 exports.createPreference = function (req, res, next) {
     req.body.votant = req.user._id
-    Preference.create(req.body, function(err, vote) {
+    Preference.create(req.body, function(err, preference) {
         if(err) {
+            console.log(err)
             res.json({
                 error : err
             })
-        }
-        res.json({
-            message : "Preference créée avec succès"
-        })
-    })
-}
-
-exports.getPreferenceBySoiree = function(req, res, next) {
-    Preference.get({soiree: req.params.idSoiree}, function(err, user) {
-        if(err) {
-            res.json({
-                error: err
+        } else {
+            Soiree.findOne({_id: req.body.soiree}, function(err, soiree) {
+                soiree.preferences.push(preference._id)
+                soiree.save()
+                res.json({
+                    message : "Preference créée avec succès"
+                })
             })
         }
-        res.json({
-            user
-        })
-    })
+    })   
 }
 
 exports.updatePreference = function(req, res, next) {

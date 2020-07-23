@@ -26,7 +26,11 @@ let soireeSchema = new Schema({
     plat: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Plat"
-    }
+    },
+    preferences: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Preferences"
+    }]
     
 });
 

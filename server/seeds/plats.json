@@ -1,0 +1,18 @@
+[
+    {
+        "nomPlat" : "Brownie",
+        "ingredients" : [2, 3, 1]
+    },
+    {
+        "nomPlat" : "Travers de porc aux épices",
+        "ingredients" : [4, 5, 7]
+    },
+    {
+        "nomPlat" : "Sauté de poulet",
+        "ingredients" : [8, 9, 5]
+    },
+    {
+        "nomPlat" : "Soufflet au fromage",
+        "ingredients" : [10, 11]
+    }
+]

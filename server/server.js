@@ -12,6 +12,8 @@ var platRoutes = require('./routes/routePlat');
 var recetteRoutes = require('./routes/routeRecette');
 var soireeRoutes = require('./routes/routeSoiree');
 var userRoutes = require('./routes/routeUser');
+var preferenceRoutes = require('./routes/routePreference');
+var voteRoutes = require('./routes/routeVote');
 var app = express();
 
 //configure bodyparser
@@ -50,6 +52,8 @@ platRoutes(router)
 recetteRoutes(router)
 soireeRoutes(router)
 userRoutes(router)
+preferenceRoutes(router)
+voteRoutes(router)
 
 // intialise server
 app.listen(properties.PORT, (req, res) => {

@@ -6,8 +6,12 @@ const mongoose = require("mongoose"),
 
 // create a schema for Dish
 let ingredientSchema = new Schema({
-	idIngredient : {type: ObjectId, auto: true, required: true, index: true},
-	nomIngredient : String
+  idIngredient : {type: ObjectId, auto: true, required: true, index: true},
+  nomIngredient : String,
+  plats : [{
+    type: ObjectId,
+    ref: "Plats"
+  }]
 });
 
 //CRUD du schéma
