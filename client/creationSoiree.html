@@ -14,55 +14,62 @@
         <span class="navLogo"><img src="images/LogoPartyAndFood.svg" width="50" height="50"/></span>
         <span class="navTitle">CRÉER MA SOIRÉE</span>
     </div>
-    <span class="bricolage"><i class="fa fa-arrow-left returnArrow"></i></span>
+    <span class="bricolage"><a href="accueil.html"></a><i class="fa fa-arrow-left returnArrow"></i></span>
     <div class="subTitle return">
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Informations</span></p>
         <hr>
     </div>
-    <div class="gridInfosSoiree">
-        <form id="party-form">
+    <div class="modalHidden" id="modal1">
+        <span class="textModal">Voici un texte de test pour ma fenêtre modale</span>
+        <span class="closeModal" onclick="clickCross1();"><span class="cross"><a>X</a></span></span>
+    </div>
+    <div class="modalHidden" id="modal2">
+        <span class="textModal">Voici un texte de test pour ma fenêtre modale</span>
+        <span class="closeModal" onclick="clickCross2();"><span class="cross"><a>X</a></span></span>
+    </div>
+    <form id="party-form">
+        <div class="gridInfosSoiree">
             <span class="texteInfoSoiree">DATE DE LA SOIREE <span class="red">*</span></span>
-            <span class="inputInfoSoiree"><input name="dateSoiree" type="datetime" class="inputSoiree"/></span>
+            <span class="inputInfoSoiree"><input name="dateSoiree" type="date" class="inputSoiree"/></span>
             <span class="texteInfoSoiree">HEURE <span class="red">*</span></span>
-            <span class="inputInfoSoiree"><input type="datetime" class="inputSoiree"/></span>
+            <span class="inputInfoSoiree"><input type="time" class="inputSoiree"/></span>
             <span class="texteInfoSoiree">DEADLINE <span class="red">*</span></span>
-            <span class="inputInfoSoiree"><input type="datetime" name="deadLinePref" class="inputSoiree"/></span>
+            <span class="inputInfoSoiree"><input type="date" name="deadLinePref" class="inputSoiree"/></span>
             <span class="texteInfoSoiree">FIN DES VOTES <span class="red">*</span></span>
-            <span class="inputInfoSoiree"><input type="datetime" name="deadLineVote" class="inputSoiree"/></span>
+            <span class="inputInfoSoiree"><input type="date" name="deadLineVote" class="inputSoiree"/></span>
             <span class="texteInfoSoiree">NOTES</span>
             <span class="inputInfoSoiree"><input name="descriptionSoiree" class="inputSoiree"/></span>
             <span class="texteInfoSoiree">ADRESSE <span class="red">*</span></span>
             <span class="inputInfoSoiree"><input name="adresse" class="inputSoiree"/></span>
-            <input type="submit" class="inputSoiree" value="OK" />
-        </form>
-    </div>
-    <div class="subTitle logos">
-        <p class="paragrapheSubTitle"><span class="subTitleContenu">LIVRAISON ET/OU FAIT MAISON?</span></p>
-        <hr>
-    </div>
-    <div class="conteneurLogos">
-        <div class="contenantLogo1"  onclick="clickCheck1();">
-            <span class="checkIconeHidden" id="check1"><i class="fa fa-check check"></i></span>
-            <div class="logoLivDrive">
-                <img src="images/Drive blanc.svg" class="imgdrive" width="50" height="50">
+        </div>
+        <div class="subTitle logos">
+            <p class="paragrapheSubTitle"><span class="subTitleContenu">LIVRAISON ET/OU FAIT MAISON?</span></p>
+            <hr>
+        </div>
+        <div class="conteneurLogos">
+            <div class="contenantLogo1"  onclick="clickCheck1();">
+                <span class="checkIconeHidden" id="check1"><i class="fa fa-check check"></i></span>
+                <div class="logoLivDrive">
+                    <img src="images/Drive blanc.svg" class="imgdrive" width="50" height="50">
+                </div>
+            </div>
+            <div class="contenantLogo2" onclick="clickCheck2();">
+                <span class="checkIconeHidden" id="check2"><i class="fa fa-check check"></i></span>
+                <div class="logoLivDrive">
+                    <img src="images/Livraison blanc.svg" class="imgdrive" width="50" height="50">         
+                </div>
+            </div>
+            <div class="drive">
+                Drive
+            </div>
+            <div class="livraison">
+                Livraison
             </div>
         </div>
-        <div class="contenantLogo2" onclick="clickCheck2();">
-            <span class="checkIconeHidden" id="check2"><i class="fa fa-check check"></i></span>
-            <div class="logoLivDrive">
-                <img src="images/Livraison blanc.svg" class="imgdrive" width="50" height="50">         
-            </div>
+        <div class="conteneurValider">
+            <button type="submit" class="btnValider"><span class="bricolage2"><i class="fa fa-check"></i></span></button>
         </div>
-        <div class="drive">
-            Drive
-        </div>
-        <div class="livraison">
-            Livraison
-        </div>
-    </div>
-    <div class="conteneurValider">
-        <button class="btnValider"><span class="bricolage2"><i class="fa fa-check"></i></span></button>
-    </div>
+    </form>
     <div class="footer">
         <img src="images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/>
         <img src="images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();">

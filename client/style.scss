@@ -131,7 +131,7 @@ hr {
 
 .gridInfosSoiree {
     display: grid;
-    width: 90vw;
+    width: 95vw;
     grid-template-columns: 1fr 1fr;
     font-family: Inter;
     color: $blue;
@@ -150,7 +150,6 @@ hr {
 .inputInfoSoiree {
     grid-column-start: 2;
     grid-column-end: 3;
-    // display: inline-grid;
 }
 
 .return {
@@ -192,16 +191,12 @@ hr {
 .contenantLogo1 {
     grid-column-start: 1;
     grid-column-end: 2;
-    // display: flex;
-    // align-content: center;
     margin: auto;
 }
 
 .contenantLogo2 {
     grid-column-start: 2;
     grid-column-end: 3;
-    // display: flex;
-    // align-content: center;
     margin: auto;
 }
 
@@ -279,92 +274,76 @@ hr {
     border-bottom: 1px solid $blue;
 }
 
-.coRegister, .mpOublie{
-    font-size: 0.8em;
+input {
     color: $blue;
-    padding-top: 20px;
-    text-decoration: none;
+    text-align: center !important;
 }
 
-.submitCheck{
-    width: 178px;
-    height: 32px;
-    margin: auto;
-    padding-top: 0px;
-    background-color: $blue;
-    padding-left: 2px;
-    padding-top: 8px;
-    border-radius: 3px;
-}
-
-button[type="submit"]{
-    border: 0;
-    background-color: transparent;
-    font-size: 24px;
-    margin-top: 50px;
-}
-
-.buttonSubmitLogin, .buttonSubmitInscription{
-    margin-top: 10px;
-    border-radius: 10px;
-    width: 60%;
-    height: 30px;
-    padding: 6px;
+.tooltipCircle {
     color: white;
+    display: inline-block;
+    text-align: center;
     background-color: $red;
-    border: 0px;
-    box-shadow: 4px 4px 20px -4px black;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    margin-left: 1vw;
+  }
+
+.modalHidden {
+    visibility: hidden;
+    height: 0;
 }
 
-.login-form, .inscription-form{
-    width: 80%;
-    margin: auto;
+.modal {
+    width: 80vw;
+    height: 30vh;
+    color: $blue;
+    z-index: 100;
+    position: fixed;
+    top: 25%;
+    left: 8%;
     background-color: white;
-    border-radius: 10px;
-    height: 402px;
-}
-
-.inputLogin::placeholder, .inputInscription::placeholder{
-    color: $blue;
+    border: 1.5px solid $blue;
     text-align: center;
+    vertical-align: middle;
+    display: table;
+    font-family: Inter;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
-.inputLogin, .inputInscription{
-    margin-top: 10px;
-    width: 80%;
-    height: 10%;
-    border: 2px solid $red;
-    border-radius: 20px;
-    font-size: 1.2em;
-    color: $blue;
-    text-align: center;
+.textModal {
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.inputInscription[type="password"], .inputLogin[type="password"]{
-    margin-bottom: 20px;
-}
-
-
-.login-body, .inscription-body{
-    text-align: center;
-}
-
-h1, h2{
-    color: $red;
-    padding-top: 20px;
-    font-weight: bolder;
-}
-
-h3{
-    color: $blue;
-    font-weight: bolder;
-}
-
-.nomAppli{
-    font-family: Lemon Milk;
-    width: 40%;
-    text-shadow: -3px 0px 1px $blue-color;
+.closeModal {
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    background-color: $red;
+    position: absolute;
+    bottom: 94%;
+    right: -2%;
     color: white;
-    font-size: 3em;
-    margin-left: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.closeModal:hover {
+    cursor: pointer;
+}
+
+.cross {
+    position: absolute;
+    top: 9%;
+    left: 28%;
 }
