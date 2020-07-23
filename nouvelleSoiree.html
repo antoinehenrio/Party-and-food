@@ -10,10 +10,13 @@
     <title>Party and food</title>
 </head>
 <body>
+    <!--Barre de navigation-->
     <div class="navigation">
         <span class="navLogo"><img src="client/images/LogoPartyAndFood.svg" width="50" height="50"/></span>
         <span class="navTitle">NOUVELLE SOIREE</span>
     </div>
+
+    <!-- Fenêtre modale "pop-up" lors d'un clic sur le bouton pour rejoindre une soirée-->
     <div class="modalHidden" id="modal3">
         <div class="textModal joinSoiree">Entre le code de ta soirée</div>
         <div class="inputCodeSoiree">
@@ -34,11 +37,15 @@
         <p class="paragrapheTexte">Fais attention d'avoir bien complété ton profil pour organiser ta soiréede la meilleure des façons!</p>
         <p class="paragrapheTexte">Crée ou rejoins une soirée pour t'amuser !</p>
     </div>
+
+    <!--Code contenant les boutons rouges appartenant au menu principal-->
     <div class="conteneurBoutons">
         <a href="creationSoiree.html"><button class="boutonRouge">creer une soiree</button></a>
         <button class="boutonRouge" onclick="clickModal3();">rejoindre une soirée</button>
         <a href="mesSoirees.html"><button class="boutonRouge">voir ma liste de soirees</button></a>
     </div>
+
+    <!--Pied de page-->
     <div class="footer">
         <a href="accueil.html"><img src="client/images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/></a>
         <a href="mesSoirees.html"><img src="client/images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();"></a>

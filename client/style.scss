@@ -1,7 +1,10 @@
+//Variables utilisées pour les couleurs
 $yellow : #f3d65f;
 $blue : #2685ba;
 $red : #ff0e4e;
 
+
+//Description des deux polices utilisées dans l'application
 @font-face {
     font-family: "Lemon Milk";
     src: url('client/fonts/Lemon Milk/LEMONMILK-Regular.otf');
@@ -12,28 +15,30 @@ $red : #ff0e4e;
     src: url("client/fonts/Inter/Inter-Regular-slnt=0.ttf");
   }
 
+//Suppression des marges pour html et body et définition du bleu comme couleur de police par défaut
 html,body {
     margin: 0;
     color: $blue;
 }
 
+//Barre de navigation
 .navigation {
     background-color: $red;
     display: grid;
     grid-template-columns: 30vw 1fr;
     color: white;
-    // padding-top: 2vh;
-    // padding-bottom: 2vh;
     font-family: Lemon Milk;
     align-items: center;
 }
 
+//Logo de la barre de navigation
 .navLogo {
     grid-column-start: 1;
     grid-column-end: 2;
     padding-left: 5vw;
 }
 
+//Titre de la barre de navigation
 .navTitle {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -42,6 +47,7 @@ html,body {
     left: 32%;
 }
 
+//Sous-titres des pages
 .subTitle {
     color: $blue;
     text-align: center;
@@ -50,6 +56,7 @@ html,body {
     margin-bottom: 6vh;
 }
 
+//Trait rouge de séparation sous les sous-titres et titres
 hr {
     padding: 0;
     margin-bottom: 0;
@@ -79,6 +86,7 @@ hr {
     margin-bottom: 6vh;
 }
 
+//Classe des trois gros boutons rouges (rejoindre une soirée, créer une soirée, voir ma liste de soirées)
 .boutonRouge {
     background-color: $red;
     color: white;
@@ -92,10 +100,13 @@ hr {
     box-shadow: 0px 12px 22px 0px rgba(0,0,0,0.25);
 }
 
+//Conteneur des gros boutons rouges
 .conteneurBoutons {
     text-align: center;
 }
 
+
+//Pied de page
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -109,6 +120,7 @@ hr {
     height: 50px;
 }
 
+//Images appartenant au pied de page
 .imgFooter {
     border-left: solid 2px $red;
     padding-left: 11.1vw;
@@ -119,6 +131,7 @@ hr {
     margin: auto;
 }
 
+//Classe appliquée lors du clic sur un élément du pied de page
 .imgFooterclicked {
     border-left: solid 2px $red;
     padding-left: 11.1vw;
@@ -130,6 +143,7 @@ hr {
     background-color: $red;
 }
 
+//Grille contenant les titres des inputs et ces inputs lors de la création d'une soirée
 .gridInfosSoiree {
     display: grid;
     width: 95vw;
@@ -141,31 +155,37 @@ hr {
     grid-row-gap: 1vh;
 }
 
+//Classe positionnant les titres des inputs
 .texteInfoSoiree {
     grid-column-start: 1;
     grid-column-end: 2;
     font-weight: bold;
 }
 
+//Classe positionnant les inputs
 .inputInfoSoiree {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
+//Classe de positionnement de la flèche de retour
 .return {
     margin-top: 0 !important;
 }
 
+//Classe liée à la flèche de retour
 .returnArrow {
     color: $red;
     margin-left: 3vw;
     padding-top: 2vh;
 }
 
+//Classe utilisée pour redimensionner une icône font awesome
 .bricolage {
     font-size: 30px;
 }
 
+//Contient les logos Drive et livraison
 .conteneurLogos {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -175,6 +195,7 @@ hr {
     font-family: Inter;
 }
 
+//Classe contenant les images des logos drive et livraison
 .logoLivDrive {
     background-color: $red;
     margin: auto;
@@ -188,22 +209,26 @@ hr {
     display: flex;
 }
 
+//Classe utilisée pour arrondir les images et le background des logos drive et livraison
 .contenantLogo1 {
     grid-column-start: 1;
     grid-column-end: 2;
     margin: auto;
 }
 
+//Classe utilisée pour arrondir les images et le background des logos drive et livraison
 .contenantLogo2 {
     grid-column-start: 2;
     grid-column-end: 3;
     margin: auto;
 }
 
+//Classe image pour le drive et la livraison
 .imgdrive {
     margin: auto;
 }
 
+//Classe pour le texte drive
 .drive {
     padding-top: 2vh;
     grid-column-start: 1;
@@ -211,6 +236,7 @@ hr {
     margin: auto;
 }
 
+//Classe pour le texte livraison
 .livraison {
     padding-top: 2vh;
     grid-column-start: 2;
@@ -218,6 +244,7 @@ hr {
     margin: auto;
 }
 
+//Classe du bouton valider bleu avec le check blanc
 .btnValider {
     background-color: $blue;
     color: white;
@@ -228,21 +255,25 @@ hr {
     box-shadow: 0px 12px 22px 0px rgba(0,0,0,0.25);
 }
 
+//Conteneur du bouton valider pour le positionner correctement
 .conteneurValider {
     padding-top: 3vh;
     margin: auto;
     width: 42vw;
 }
 
+//Autre classe utilisée pour redimensionner les icônes font awesome
 .bricolage2 {
     font-size: 20px;
 }
 
+//Applique la couleur rouge
 .red {
     color: red;
     display: inline;
 }
 
+//Classe pour faire apparaître l'icône "check" bleue et blanche lors d'une sélection
 .checkIcone {
     background-color: $blue;
     color: white;
@@ -256,10 +287,12 @@ hr {
     margin-top: 30px;
 }
 
+//Positionnement du check blanc
 .check {
     margin-left: 0.5vw;
 }
 
+//Pour cacher l'icône check bleue et blanche
 .checkIconeHidden {
     visibility: hidden;
 }
@@ -466,6 +499,7 @@ input {
     width: 42vw;
 }
 
+//Classes utilisées pour le changement de couleur des boutons pour la page "Mes préférences"
 .blue {
     border-color: $blue !important;
 }
