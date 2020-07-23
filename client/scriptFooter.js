@@ -32,10 +32,21 @@ function clickBtn3()
     p.className = 'imgFooter';
     p2.className = 'imgFooter'
     p3.className = 'imgFooterclicked'
-    p.setAttribute("src", "./images/Home bleu.png");
-    p2.setAttribute("src", "./images/Verre bleu.png");
-    p3.setAttribute("src", "./images/Profil blanc.png");
-    // NOTE: showAlert(); ou showAlert(param); NE fonctionne PAS ici.
-    // Il faut fournir une valeur de type function (nom de fonction déclaré ailleurs ou declaration en ligne de fonction).
-    p.onclick = showAlert;
+    p.setAttribute("src", "client/images/Home bleu.png");
+    p2.setAttribute("src", "client/images/Verre bleu.png");
+    p3.setAttribute("src", "client/images/Profil blanc.png");
 };
+
+function changeCouleur(nomElement) {
+  console.log(nomElement);
+  var p = document.getElementById(nomElement);
+  if (p.classList.contains("blue")) {
+    p.classList.add("red");
+    p.classList.remove("blue");
+  }
+  else {
+    p.classList.add("blue");
+    p.classList.remove("red");
+  }
+
+}

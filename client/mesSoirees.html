@@ -10,15 +10,17 @@
     <title>Party and food</title>
 </head>
 <body>
+    <!--Barre de navigation-->
     <div class="navigation">
         <span class="navLogo"><img src="images/Logo symbole pnf blanc et bleu.svg" width="50" height="50"/></span>
         <span class="navTitle mesSoirees">MES SOIREES</span>
     </div>
-    <span class="bricolage"><a href="acceuil.html"><i class="fa fa-arrow-left returnArrow"></i></a></span>
+    <span class="bricolage"><a href="nouvelleSoiree.html"><i class="fa fa-arrow-left returnArrow"></i></a></span>
     <div class="subTitle titreListeSoirees">
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Mes soirées en cours</span></p>
         <hr>
     </div>
+    <!--Conteneur des titres relatifs aux informations des soirées (ex: DATE, heure etc...)-->
     <div class="conteneurTitresListeSoirees">
         <span>DATE</span>
         <span>Heure</span>
@@ -26,6 +28,7 @@
         <span><i class="fa fa-search"></i></span>
     </div>
     <hr class="sepSoirees">
+    <!--Liste des soirées en cours-->
     <div class="conteneurListeSoirees">
             <span>25/07/2020</span>
             <span>19:00</span>
@@ -44,6 +47,7 @@
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Mes soirées terminées</span></p>
         <hr>
     </div>
+    <!--Conteneur des titres relatifs aux informations des soirées (ex: DATE, heure etc...)-->
     <div class="conteneurTitresListeSoirees">
         <span>DATE</span>
         <span>Heure</span>
@@ -51,6 +55,7 @@
         <span><i class="fa fa-search"></i></span>
     </div>
     <hr class="sepSoirees">
+    <!--Liste des soirées terminées-->
     <div class="conteneurListeSoirees">
             <span>25/07/2020</span>
             <span>19:00</span>
@@ -65,10 +70,11 @@
             <span>Antoine Henrio</span>
             <span><i class="fa fa-search"></i></span>
     </div>
+    <!-- Pied de page-->
     <div class="footer">
-        <img src="images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/>
-        <img src="images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();">
-        <img src="images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();">
+        <a href="accueil.html"><img src="client/images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/></a>
+        <a href="mesSoirees.html"><img src="client/images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();"></a>
+        <a href="profil.html"><img src="client/images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();"></a>
     </div>
 </body>
 </html>

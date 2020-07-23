@@ -10,6 +10,7 @@
     <title>Party and food</title>
 </head>
 <body>
+    <!--Navbar de la page-->
     <div class="navigation">
         <span class="navLogo"><img src="images/LogoPartyAndFood.svg" width="50" height="50"/></span>
         <span class="navTitle mesSoirees">MES PRÉFÉRENCES</span>
@@ -23,19 +24,21 @@
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Catégories</span></p>
         <hr class="hrPreferences">
     </div>
+
+    <!-- Liste des catégories de plats (indien, chinois etc...), veiller à mettre un id lors de la création-->
     <div class="gridPreferences">
         <span class="arrowCarrousel"><i class="fa fa-chevron-left"></i></span>
-        <div class="photoCategorie">
-            <img src="images/Touchard.jpg" height="50" width="50">
+        <div class="photoCategorie blue" id="cat1" onclick="changeCouleur(this.id);">
+            <img src="client/images/Touchard.jpg" height="50" width="50">
         </div>
-        <div class="photoCategorie">
-            <img src="images/Alkpote.jpg" height="50" width="50">
+        <div class="photoCategorie blue" id="cat2" onclick="changeCouleur(this.id);">
+            <img src="client/images/Alkpote.jpg" height="50" width="50">
         </div>
-        <div class="photoCategorie">
-            <img src="images/antoine.jpg" height="50" width="50">
+        <div class="photoCategorie blue" id="cat3" onclick="changeCouleur(this.id);">
+            <img src="client/images/antoine.jpg" height="50" width="50">
         </div>
-        <div class="photoCategorie">
-            <img src="images/bilboquier.jpg" height="50" width="50">
+        <div class="photoCategorie blue" id="cat4" onclick="changeCouleur(this.id);">
+            <img src="client/images/bilboquier.jpg" height="50" width="50">
         </div>
         <span class="arrowCarrousel"><i class="fa fa-chevron-right"></i></span>
 
@@ -50,19 +53,21 @@
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Ce que j'aime</span></p>
         <hr class="hrPreferences" style="width: 28vw">
     </div>
+
+    <!--Liste des préférences de l'utilisateur -->
     <div class="gridPreferences">
         <span class="arrowCarrousel"><i class="fa fa-chevron-left"></i></span>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="pref1" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="pref2" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="pref3" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="pref4" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
         <span class="arrowCarrousel"><i class="fa fa-chevron-right"></i></span>
     </div>
@@ -70,31 +75,33 @@
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Ce que je n'aime pas</span></p>
         <hr class="hrPreferences" style="width: 43vw">
     </div>
+
+    <!--Liste des intolérances de l'utilisateur-->
     <div class="gridPreferences">
         <span class="arrowCarrousel"><i class="fa fa-chevron-left"></i></span>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="int1" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="int2" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="int3" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
-        <div class="photoPreference">
-            <img src="images/bottle.png" height="50" width="50">
+        <div class="photoPreference blue" id="int4" onclick="changeCouleur(this.id);">
+            <img src="client/images/bottle.png" height="50" width="50">
         </div>
         <span class="arrowCarrousel"><i class="fa fa-chevron-right"></i></span>
     </div>
     <div class="valider">
-        <span class="bricolage">
-            <button class="btnValider"><i class="fa fa-check check"></i></button>
-        </span>
+        <button class="btnValider"><span class="bricolage2"><i class="fa fa-check check"></i></span></button>
     </div>
+
+    <!--Pied de page-->
     <div class="footer">
-        <img src="images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/>
-        <img src="images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();">
-        <img src="images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();">
+        <a href="accueil.html"><img src="client/images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/></a>
+        <a href="mesSoirees.html"><img src="client/images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();"></a>
+        <a href="profil.html"><img src="client/images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();"></a>
     </div>
 </body>
 </html>

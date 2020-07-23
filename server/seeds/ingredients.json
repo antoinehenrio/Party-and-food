@@ -1,0 +1,46 @@
+[
+    {
+        "nomIngredient" : "Farine",
+        "photoURL" : "farine.webp"
+    },
+    {
+        "nomIngredient" : "Chocolat",
+        "photoURL" : "chocolat.png"
+    },
+    {
+        "nomIngredient" : "Noix",
+        "photoURL" : "noix.webp"
+    },
+    {
+        "nomIngredient" : "Porc",
+        "photoURL" : "porc.webp"
+    },
+    {
+        "nomIngredient" : "Gingembre",
+        "photoURL" : "gingembre.jpg"
+    },
+    {
+        "nomIngredient" : "Vinaigre",
+        "photoURL" : "vinaigre.jpg"
+    },
+    {
+        "nomIngredient" : "Sauce soja",
+        "photoURL" : "sauce soja.jpg"
+    },
+    {
+        "nomIngredient" : "Poulet",
+        "photoURL" : "poulet.webp"
+    },
+    {
+        "nomIngredient" : "Légumes",
+        "photoURL" : "legumes.webp"
+    },
+    {
+        "nomIngredient" : "Fromage",
+        "photoURL" : "fromage.webp"
+    },
+    {
+        "nomIngredient" : "Muscade",
+        "photoURL" : "muscade.webp"
+    }
+]

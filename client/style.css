@@ -924,6 +924,7 @@ hr {
   border-radius: 30px;
   font-size: 16px;
   margin-bottom: 6vh;
+  box-shadow: 0px 12px 22px 0px rgba(0, 0, 0, 0.25);
 }
 
 .conteneurBoutons {
@@ -940,6 +941,7 @@ hr {
   bottom: 0;
   z-index: 90;
   background-color: white;
+  height: 50px;
 }
 
 .imgFooter {
@@ -1058,6 +1060,7 @@ hr {
   border: none;
   width: 42vw;
   height: 4vh;
+  box-shadow: 0px 12px 22px 0px rgba(0, 0, 0, 0.25);
 }
 
 .conteneurValider {
@@ -1297,3 +1300,13 @@ input {
   margin-right: 29vw;
   width: 42vw;
 }
+
+.blue {
+  border-color: #2685ba !important;
+}
+
+.red {
+  border-color: #ff0e4e !important;
+}
+
+/*# sourceMappingURL=style2.css.map */
