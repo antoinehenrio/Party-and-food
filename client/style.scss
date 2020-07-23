@@ -399,3 +399,66 @@ input {
 .titreListeSoirees{
     margin-bottom: 4vh !important;
 }
+
+.subTitlePreferences {
+    margin-top: 0 !important;
+    text-align: left !important;
+    margin-left: 5vw;
+    margin-bottom: 2vh !important;
+}
+
+.gridPreferences {
+    display: grid;
+    margin: auto;
+    text-align: center;
+    width: 100vw;
+    grid-template-columns: 1fr 20vw 20vw 20vw 20vw 1fr;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.photoCategorie {
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border: 3px solid $blue;
+}
+
+.arrowCarrousel {
+    display: inline;
+}
+
+.hrPreferences {
+    margin-left: 0;
+    margin-right: 0;
+    width: 25vw;
+}
+
+.nomCategorie {
+    text-align: center;
+    font-family: Lemon Milk;
+    font-size: 11px;
+    margin-top: 1vh;
+}
+
+.photoPreference {
+    border: 1px solid $blue;
+    border-radius: 20px;
+    margin: 5px;
+    padding-top: 2px;
+}
+
+.subTitleMesPreferences {
+    margin-top: 0 !important;
+    margin-bottom: 2vh !important;
+}
+
+.valider {
+    margin-left: 29vw;
+    margin-right: 29vw;
+    width: 42vw;
+}
