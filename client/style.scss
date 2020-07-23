@@ -47,6 +47,17 @@ html,body {
     padding-left: 5vw;
 }
 
+.contenuInscription, .contenuLogin{
+    background-color: $red-color;
+    height: 100vh;
+}
+
+h1, h2{
+    color: $red-color;
+    padding-top: 20px;
+    font-weight: bolder;
+}
+
 .navTitle {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -454,11 +465,6 @@ input {
     outline: none;
 }
 
-// body {
-//     font-size: 16px;
-//     margin: 0 0 0 0;
-//     background-color: white;
-// }
 .grid-footer{
     display: grid;
     grid-template-columns: 1fr;
