@@ -102,6 +102,8 @@ hr {
     border-right: solid 2.5px $red;
     position: fixed;
     bottom: 0;
+    z-index: 90;
+    background-color: white;
 }
 
 .imgFooter {
@@ -139,7 +141,6 @@ hr {
 .texteInfoSoiree {
     grid-column-start: 1;
     grid-column-end: 2;
-    // display: inline-grid;
     font-weight: bold;
 }
 
@@ -249,8 +250,6 @@ hr {
     height:20px;
     margin-left: 65px;
     margin-top: 30px;
-    // top: 50%;
-    // position: relative;
 }
 
 .check {
@@ -342,4 +341,21 @@ input {
     position: absolute;
     top: 9%;
     left: 28%;
+}
+
+.joinSoiree {
+    font-family: Lemon Milk !important;
+    display: block;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    font-size: 22px;
+}
+
+.codeSoiree {
+    margin-bottom: 5vh;
+    font-size: 22px;
+    font-weight: bold;
+    width: 40vw;
+    border: 1px solid $red;
+    border-radius: 10px;
 }

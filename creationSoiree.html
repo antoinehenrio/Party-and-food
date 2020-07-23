@@ -20,26 +20,26 @@
         <hr>
     </div>
     <div class="modalHidden" id="modal1">
-        <span class="textModal">Voici un texte de test pour ma fenêtre modale</span>
-        <span class="closeModal" onclick="clickCross1();"><span class="cross"><a>X</a></span></span>
+        <span class="textModal">La fin des préférences correspond à la date et l'heure à laquelle les invités ne pourront plus remplir leurs préférences alimentaires et passeront au vote du plat final !</span>
+        <span class="closeModal" onclick="clickCross1();" onmouseover="this.style.cursor='pointer'" ><span class="cross"><a>X</a></span></span>
     </div>
     <div class="modalHidden" id="modal2">
-        <span class="textModal">Voici un texte de test pour ma fenêtre modale</span>
-        <span class="closeModal" onclick="clickCross2();"><span class="cross"><a>X</a></span></span>
+        <span class="textModal">La fin des votes correspond à la date et l'heure à laquelle les participants ne pourront plus voter pour un plat. Il leur sera donc imposé.</span>
+        <span class="closeModal" onclick="clickCross2();" onmouseover="this.style.cursor='pointer'"><span class="cross"><a>X</a></span></span>
     </div>
     <div class="gridInfosSoiree">
         <span class="texteInfoSoiree">DATE DE LA SOIREE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="date"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="date" name="dateSoiree"/></span>
         <span class="texteInfoSoiree">HEURE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="time"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="time" name="heure"/></span>
         <span class="texteInfoSoiree">FIN DES </br> PREFERENCES <span class="red">*<span class="tooltipCircle" id="tooltip1" onclick="clickModal1();">i</span></span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="date"/><input class="inputSoiree" type="time"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="date" name="datePreference"/><input class="inputSoiree" type="time" name="heurePreference"/></span>
         <span class="texteInfoSoiree">FIN DES VOTES <span class="red">*<span class="tooltipCircle" id="tooltip2" onclick="clickModal2();">i</span></span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="date"/><input class="inputSoiree" type="time"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" type="date" name="finVote"/><input class="inputSoiree" type="time" name="heurefinVote"/></span>
         <span class="texteInfoSoiree">NOTES</span>
-        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" name="notes"/></span>
         <span class="texteInfoSoiree">ADRESSE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree"/></span>
+        <span class="inputInfoSoiree"><input class="inputSoiree" name="adresse"/></span>
     </div>
     <div class="subTitle logos">
         <p class="paragrapheSubTitle"><span class="subTitleContenu">LIVRAISON ET/OU FAIT MAISON?</span></p>

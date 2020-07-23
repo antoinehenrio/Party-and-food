@@ -29,6 +29,11 @@ function clickModal2(){
     p.className = "modal";
 }
 
+function clickModal3(){
+    var p = document.getElementById("modal3");
+    p.className = "modal";
+}
+
 function clickCross1(){
     var p = document.getElementById("modal1");
     p.className = "modalHidden";
@@ -36,5 +41,10 @@ function clickCross1(){
 
 function clickCross2(){
     var p = document.getElementById("modal2");
+    p.className = "modalHidden";
+}
+
+function clickCross3(){
+    var p = document.getElementById("modal3");
     p.className = "modalHidden";
 }

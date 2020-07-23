@@ -93,6 +93,8 @@ hr {
   border-right: solid 2.5px #ff0e4e;
   position: fixed;
   bottom: 0;
+  z-index: 90;
+  background-color: white;
 }
 
 .imgFooter {
@@ -330,6 +332,23 @@ input {
   position: absolute;
   top: 9%;
   left: 28%;
+}
+
+.joinSoiree {
+  font-family: Lemon Milk !important;
+  display: block;
+  margin-top: 5vh;
+  margin-bottom: 4vh;
+  font-size: 22px;
+}
+
+.codeSoiree {
+  margin-bottom: 5vh;
+  font-size: 22px;
+  font-weight: bold;
+  width: 40vw;
+  border: 1px solid #ff0e4e;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=style2.css.map */
