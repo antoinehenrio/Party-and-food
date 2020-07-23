@@ -61,7 +61,7 @@ h3 {
   border-radius: 10px;
   height: 402px;
 }
-.buttonSubmitLogin, .buttonSubmitInscription, .NewParty {
+.buttonSubmitLogin, .buttonSubmitInscription, .NewParty ,.ModifierPreferences,.Password{
   margin-top: 10px;
   border-radius: 10px;
   width: 60%;
@@ -373,11 +373,7 @@ display: grid;
 }
 
 .maps{
-    display: grid;
-    grid-template-columns: 1fr;
-    z-index: 1;
-    width: 340px;
-    height: 120px;
+
 }
 
 .boutonRouge {
