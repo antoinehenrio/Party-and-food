@@ -6,7 +6,7 @@ const mongoose = require("mongoose"),
 
 // create a schema for Dish
 let platSchema = new Schema({
-	idPlat : ObjectId,
+	idPlat : {type: ObjectId, auto: true, required: true, index: true},
 	nomPlat : String,
 	categorie: [
         {
@@ -15,9 +15,6 @@ let platSchema = new Schema({
         }
     ]
 });
-
-// Create a model using schema
-let Plat = mongoose.model("Plats", platSchema);
 
 //CRUD du schéma
 platSchema.statics = {
@@ -39,6 +36,9 @@ platSchema.statics = {
       this.findOneAndDelete(query,cb);
     }
 }
+
+// Create a model using schema
+let Plat = mongoose.model("Plats", platSchema);
 
 // make this model available
 module.exports = Plat;

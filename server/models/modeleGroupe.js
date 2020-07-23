@@ -16,9 +16,6 @@ let groupeSchema = new Schema({
   ]
 });
 
-// Create a model using schema
-let Groupe = mongoose.model("Groupes", groupeSchema);
-
 //CRUD du schéma
 groupeSchema.statics = {
     create : function(data, cb) {
@@ -39,6 +36,8 @@ groupeSchema.statics = {
       this.findOneAndDelete(query,cb);
     }
 }
+// Create a model using schema
+let Groupe = mongoose.model("Groupes", groupeSchema);
 
 // make this model available
 module.exports = Groupe;

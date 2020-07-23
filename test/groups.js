@@ -23,7 +23,7 @@ describe('Groupes', () => {
               .get('/api/group/get')
               .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.deep.equal({groupes: []});
+                    res.body.should.to.deep.equal({groupe: []});
                 done();
               });
         });
@@ -39,80 +39,80 @@ describe('Groupes', () => {
                 .send(groupe)
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.deep.include({message: "Groupe créée avec succès"})
+                    res.body.should.to.deep.include({message: "Groupe créé avec succès"})
             });
 
             chai.request(server)
                 .get('/api/group/get')
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.nested.include({'groupe[0].nomCategorie' : "Algérien"});
+                    res.body.should.to.nested.include({'groupe[0].nomGroupe' : "Super groupe"});
                     done();
             })
         });
     })
 
-    describe('/GET/:name categorie', () => {
-        it('it should GET a category by name', (done) => {
-            let categorie = new Categorie({
-                nomCategorie: "Méxicain"
+    describe('/GET/:name groupe', () => {
+        it('it should GET a groupe by name', (done) => {
+            let groupe = new Groupe({
+                nomGroupe: "Super groupe"
             })
-            categorie.save((err, category) => {
+            groupe.save((err, groupe) => {
                 chai.request(server)
-                .get(encodeURI('/api/category/get/' + category.nomCategorie))
-                .send(category)
+                .get(encodeURI('/api/group/get/' + groupe.nomGroupe))
+                .send(groupe)
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.nested.include({'categorie[0].nomCategorie' : "Méxicain"});
+                    res.body.should.to.nested.include({'groupe[0].nomGroupe' : "Super groupe"});
                     done();
                 })
             })
         })
     })
 
-    describe('/PUT/:id categorie', () => {
-        it('it should UPDATE a category by id', (done) => {
-            let categorie = new Categorie({
-                nomCategorie: "Méxicain"
+    describe('/PUT/:id groupe', () => {
+        it('it should UPDATE a groupe by id', (done) => {
+            let groupe = new Groupe({
+                nomGroupe: "Super groupe"
             })
-            categorie.save((err, category) => {
+            groupe.save((err, group) => {
                 chai.request(server)
-                .put(encodeURI('/api/category/update/' + category.idCategorie))
-                .send({nomCategorie: "Algérien"})
+                .put(encodeURI('/api/group/update/' + group.idGroupe))
+                .send({nomGroupe: "Mon groupe"})
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.deep.include({message: 'Catégorie modifiée avec succès'})
+                    res.body.should.to.deep.include({message: 'Groupe modifié avec succès'})
                 })
 
                 chai.request(server)
-                .get('/api/category/get')
+                .get('/api/group/get')
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.nested.include({'categorie[0].nomCategorie' : "Algérien"});
+                    res.body.should.to.nested.include({'groupe[0].nomGroupe' : "Mon groupe"});
                     done();
                 })
             })
         })
     })
 
-    describe('/DELETE/:id categorie', () => {
-        it('it should DELETE a category by id', (done) => {
-            let categorie = new Categorie({
-                nomCategorie: "Méxicain"
+    describe('/DELETE/:id groupe', () => {
+        it('it should DELETE a group by id', (done) => {
+            let groupe = new Groupe({
+                nomGroupe: "Méxicain"
             })
-            categorie.save((err, category) => {
+            groupe.save((err, group) => {
                 chai.request(server)
-                .delete(encodeURI('/api/category/remove/' + category.idCategorie))
+                .delete(encodeURI('/api/group/remove/' + group.idGroupe))
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.deep.include({message: 'Catégorie supprimée avec succès'})
+                    res.body.should.to.deep.include({message: 'Groupe supprimé avec succès'})
                 })
 
                 chai.request(server)
-                .get('/api/category/get')
+                .get('/api/group/get')
                 .end((err, res) => {
                     res.should.have.status(200);
-                    res.body.should.to.deep.equal({categorie: []});
+                    res.body.should.to.deep.equal({groupe: []});
                     done();
                 })
             })
