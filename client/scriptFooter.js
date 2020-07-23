@@ -35,4 +35,7 @@ function clickBtn3()
     p.setAttribute("src", "./images/Home bleu.png");
     p2.setAttribute("src", "./images/Verre bleu.png");
     p3.setAttribute("src", "./images/Profil blanc.png");
+    // NOTE: showAlert(); ou showAlert(param); NE fonctionne PAS ici.
+    // Il faut fournir une valeur de type function (nom de fonction déclaré ailleurs ou declaration en ligne de fonction).
+    p.onclick = showAlert;
 };
