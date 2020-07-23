@@ -492,11 +492,112 @@ button[type="submit"]{
       padding: 0;
       margin: 0;
       padding-bottom: 5px;
-      padding-top: 15px;
+      padding-top: 18px;
   }
 
   .trait{
       border: 1px solid $red-color;
       width: 40%;
       margin-left: 30%;
+  }
+
+  .dispoPlat{
+      width: 80%;
+      margin: auto;
+  }
+
+  .logoLivraison, .logoDrive{
+    height: 55px;
+    padding-top: 18%;
+    // width: 100px;
+    // background-color: $red-color;
+  }
+
+  .containerPlat1, .containerPlat2{
+      display: inline-flex;
+      width: 90%;
+    //   padding-right: 10px;
+      padding-left: 24px;
+  }
+
+  .containerPlat1{
+      padding-top: 4%;
+  }
+
+  .containerPlat2{
+      padding-top: 8%;
+  }
+
+  .btnLivraison{
+    height: 35px;
+    // margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8%;
+    background-color: $blue-color;
+    border: 0;
+    border-radius: 30px;
+    width: 60%;
+    color: white;
+    font-size: 14px;
+  }
+
+  .btnDrive{
+    height: 35px;
+    // margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8%;
+    background-color: $blue-color;
+    border: 0;
+    border-radius: 30px;
+    width: 85%;
+    color: white;
+    font-size: 14px;
+  }
+
+  .circleLogo{
+      background-color: $red-color;
+      height: 93px;
+      width: 93px;
+      border-radius: 100px;
+  }
+
+  .containerBtn{
+      margin-top: auto;
+      margin-bottom: auto;
+      width: 70%;
+  }
+
+  .topPlat{
+      margin-top: 15px;
+  }
+
+  .containerPlatFinal{
+      width: 70%;
+      margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+  }
+
+  .milk{
+    height: 106px;
+    width: 121px;
+    border-radius: 24px;
+    border: 1px solid $blue-color;
+  }
+
+  .logoMilk{
+     height: 42px;
+     width: 42px; 
+     padding-top: 25%;
+  }
+
+  .containerCat{
+    padding-left: 30px;
+  }
+
+  .choixPlat{
+      color: $blue-color;
   }
