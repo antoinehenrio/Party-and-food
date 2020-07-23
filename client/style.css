@@ -16,35 +16,6 @@ body {
 .bluetext{
     color: #2685ba;
 }
-.navigation {
-    background-color: #ff0e4e;
-    display: grid;
-    grid-template-columns: 30vw 1fr;
-    color: white;
-    font-family: Lemon Milk;
-    align-items: center;
-}
-
-.navLogo {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    padding-left: 5vw;
-}
-
-.navTitle {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    position: absolute;
-    left: 32%;
-}
-.nomAppli {
-  font-family: Lemon Milk;
-  width: 40%;
-  text-shadow: -3px 0px 1px #2685ba;
-  color: white;
-  font-size: 3em;
-  margin-left: 10px;
-}
 
 .contenuInscription, .contenuLogin {
   background-color: #ff0e4e;
@@ -113,19 +84,18 @@ h3 {
   width: 178px;
   height: 32px;
   margin: auto;
-  padding-top: 0px;
   background-color: #2685ba;
   padding-left: 2px;
   padding-top: 8px;
   border-radius: 3px;
 }
 
-button[type=submit] {
+/*button[type=submit] {
   border: 0;
   background-color: transparent;
   font-size: 24px;
   margin-top: 50px;
-}
+}*/
 
 .cell {
   border-width: 0.2rem;
@@ -170,7 +140,7 @@ button[type=submit] {
 }
 
 .header {
-  height: 10rem;
+  height: 2rem;
   width: auto;
   margin-bottom: 2rem;
   justify-content: space-between;
@@ -204,18 +174,6 @@ button[type=submit] {
   text-indent: 1rem;
 }
 
-.navLogo {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    padding-left: 5vw;
-}
-
-.navTitle {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding-left: 12vw;
-    text-align: center;
-}
 .paragrapheSubTitle {
     margin-bottom: 0 !important;
 }
@@ -335,40 +293,6 @@ hr {
     color: white;
     text-align: center;
     margin-top: 10px;
-}
-
-.navLogo {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  padding-left: 5vw;
-}
-
-.navTitle {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  position: absolute;
-  left: 32%;
-}
-
-.subTitle {
-  color: #2685ba;
-  text-align: center;
-  font-family: Lemon Milk;
-  margin-top: 5vh;
-  margin-bottom: 7vh;
-}
-
-hr {
-  padding: 0;
-  margin-bottom: 0;
-  color: #ff0e4e;
-  width: 30vw;
-  margin-left: 35vw;
-  margin-right: 35vw;
-  margin-top: 0.5vh !important;
-  height: 1.4px;
-  background-color: #ff0e4e;
-  border-top: none;
 }
 
 .paragrapheSubTitle {
@@ -726,49 +650,6 @@ hr {
   color: #2685ba;
 }
 
-.navigation {
-  background-color: #ff0e4e;
-  display: grid;
-  grid-template-columns: 30vw 1fr;
-  color: white;
-  font-family: Lemon Milk;
-  align-items: center;
-}
-
-.navLogo {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  padding-left: 5vw;
-}
-
-.navTitle {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  position: absolute;
-  left: 32%;
-}
-
-.subTitle {
-  color: #2685ba;
-  text-align: center;
-  font-family: Lemon Milk;
-  margin-top: 5vh;
-  margin-bottom: 6vh;
-}
-
-hr {
-  padding: 0;
-  margin-bottom: 0;
-  color: #ff0e4e;
-  width: 30vw;
-  margin-left: 35vw;
-  margin-right: 35vw;
-  margin-top: 0.5vh !important;
-  height: 1.4px;
-  background-color: #ff0e4e;
-  border-top: none;
-}
-
 .paragrapheSubTitle {
   margin-bottom: 0 !important;
 }
@@ -989,13 +870,6 @@ hr {
   grid-column-start: 1;
   grid-column-end: 2;
   padding-left: 5vw;
-}
-
-.navTitle {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  position: absolute;
-  left: 32%;
 }
 
 .subTitle {
@@ -1418,5 +1292,3 @@ input {
   margin-right: 29vw;
   width: 42vw;
 }
-
-/*# sourceMappingURL=style2.css.map */

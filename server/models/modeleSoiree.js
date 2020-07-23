@@ -9,13 +9,14 @@ const mongoose = require("mongoose"),
 let soireeSchema = new Schema({
     descriptionSoiree : String,
     dateSoiree : Date,
+    heure : Date,
     adresse : String,
     deadLinePref : Date,
     deadLineVote : Date,
     code : String,
     organisateur: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: "Users",
       required: true
     },
     utilisateurs: [ {
@@ -36,7 +37,7 @@ soireeSchema.statics = {
       soiree.save(cb);
     },     
     get: function(query, cb) {
-      this.find(query).populate("utilisateurs").exec(cb);
+      this.find(query).populate("utilisateurs").populate("organisateur").exec(cb);
     },
     getByName: function(query, cb) {
       this.find(query, cb);

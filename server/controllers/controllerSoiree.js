@@ -16,22 +16,24 @@ exports.createSoiree = function (req, res, next) {
     //l'organisateur est le créateur de la soirée et participe à la soirée
     req.body.organisateur = req.user._id
     req.body.utilisateurs = [req.user._id]
+    req.body.heure = "0001-01-01T" + req.body.heure + ":00.000+00:00"
     req.body.code = makeid(9)
     Soiree.create(req.body, function(err, soiree) {
         if(err) {
+            console.log(err)
             res.json({
                 error : err
             })
+        } else {
+            res.json({
+                message : "Soirée créée avec succès"
+            })
         }
-        res.json({
-            message : "Soirée créée avec succès"
-        })
     })
 }
 
 exports.getAllSoirees = function(req, res, next) {
     Soiree.get({utilisateurs: req.user._id}, function(err, soiree) {
-        console.log(err)
         /*if(err) {
             res.json({
                 error: err

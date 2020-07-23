@@ -11,8 +11,16 @@ const getFormData = ($form) => {
 	return indexed_array;
 };
 
+const getDateToString = (date) => {
+	return date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear()
+}
+
+const getHoursToString = (date) => {
+	return ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2)
+}
+
 $(() => {
-    
+    // Récupération lorsqu'on est sur la page d'accueil
     if(location.href.indexOf('acceuil') > -1){
         $.ajax({
 			url: URL + "party/get",
@@ -22,6 +30,31 @@ $(() => {
                 'Authorization': `Bearer ${localStorage.getItem("token")}`,
             },
 			success: (res) => {
+				$("#nbSoiree").text(res.soiree.length)
+
+				console.log(res)
+
+				for(let soiree of res.soiree){
+					//Date soirée
+					$(".tableauAccueil").append("<div>" + getDateToString(new Date(soiree.dateSoiree)) + "</div>")
+					//Heure soirée
+					$(".tableauAccueil").append("<div>" + getHoursToString(new Date(soiree.heure)) + "</div>")
+					//Organisateur
+					$(".tableauAccueil").append("<div>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</div>")
+				}
+                
+			},
+		});
+
+		$.ajax({
+			url: URL + "user/get",
+			type: "GET",
+            dataType: "json",
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            },
+			success: (res) => {
+				$("#firstname").text(res.user.firstname)
                 console.log(res)
 			},
 		});
