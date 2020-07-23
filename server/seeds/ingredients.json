@@ -1,56 +1,45 @@
 [
     {
-        "_id" : 1,
         "nomIngredient" : "Farine",
         "photoURL" : "farine.webp"
     },
     {
-        "_id" : 2,
         "nomIngredient" : "Chocolat",
         "photoURL" : "chocolat.png"
     },
     {
-        "_id" : 3,
         "nomIngredient" : "Noix",
         "photoURL" : "noix.webp"
     },
     {
-        "_id" : 4,
         "nomIngredient" : "Porc",
         "photoURL" : "porc.webp"
     },
     {
-        "_id" : 5,
         "nomIngredient" : "Gingembre",
         "photoURL" : "gingembre.jpg"
     },
     {
-        "_id" : 6,
         "nomIngredient" : "Vinaigre",
         "photoURL" : "vinaigre.jpg"
     },
     {
-        "_id" : 7,
         "nomIngredient" : "Sauce soja",
         "photoURL" : "sauce soja.jpg"
     },
     {
-        "_id" : 8,
         "nomIngredient" : "Poulet",
         "photoURL" : "poulet.webp"
     },
     {
-        "_id" : 9,
         "nomIngredient" : "Légumes",
         "photoURL" : "legumes.webp"
     },
     {
-        "_id" : 10,
         "nomIngredient" : "Fromage",
         "photoURL" : "fromage.webp"
     },
     {
-        "_id" : 11,
         "nomIngredient" : "Muscade",
         "photoURL" : "muscade.webp"
     }

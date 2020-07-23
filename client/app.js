@@ -96,7 +96,7 @@ $(() => {
 			data: getFormData($(".inscription-form")),
 			success: (res) => {
                 localStorage.setItem("token", res.token)
-                location.replace("acceuil.html")
+                location.replace("accueil.html")
 			},
 		});
     });
@@ -110,7 +110,7 @@ $(() => {
 			data: getFormData($(".login-form")),
 			success: (res) => {
                 localStorage.setItem("token", res.token)
-                location.replace("acceuil.html")
+                location.replace("accueil.html")
             },
             error: (err) => {
                 //TODO: identifiants incorrects
@@ -295,6 +295,36 @@ $(() => {
 
 				}
 			})
+		})
+	}
+
+	/************* VOTE ******************/
+
+	if(location.href.indexOf('vote.html') > -1){
+		$.ajax({
+			url: URL + "dish/poll/" + urlParams.get('code'),
+			type: "GET",
+			dataType: "json",
+			headers: {
+				'Authorization': `Bearer ${localStorage.getItem("token")}`,
+			},
+			success: (res) => {
+				console.log(res)
+
+				$('.voterepas').empty()
+
+				for(let plat of res.plats){
+					$('.voterepas').append('<div class="div1"><img class="milk" src="images/' + plat.photoURL + '"></div>' +
+						'<div class="lignevote">' +
+							'<div class="div2"><b class="bluetext">' + (plat.categorie.nomCategorie || "") + '</b></div>' +
+							'<div class="div3"><p class="bluetext">' + plat.nomPlat + '</p></div>' +
+						'</div>'
+					)
+				}
+			},
+			error : (err) => {
+
+			}
 		})
 	}
 });

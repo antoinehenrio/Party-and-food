@@ -7,7 +7,8 @@ const mongoose = require("mongoose"),
 // create a schema for Dish
 let platSchema = new Schema({
 	idPlat : {type: ObjectId, auto: true, required: true, index: true},
-	nomPlat : String,
+  nomPlat : String,
+  photoURL : String,
 	categorie: [
         {
           type: mongoose.Schema.Types.ObjectId,

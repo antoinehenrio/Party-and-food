@@ -1,5 +1,10 @@
 
 var Plat = require('../models/modelePlat.js');
+var Soiree = require('../models/modeleSoiree.js');
+var Preference = require('../models/modelePreference');
+var Ingredient = require('../models/modeleIngredient');
+var Soiree = require('../models/modeleSoiree');
+const { forestgreen } = require('color-name');
 
 exports.createPlat = function (req, res, next) {
     var plat = {
@@ -14,6 +19,39 @@ exports.createPlat = function (req, res, next) {
         }
         res.json({
             message : "Plat créé avec succès"
+        })
+    })
+}
+
+exports.getPlatsForPoll = function(req, res, next) {
+    Soiree.findOne({code: req.params.code}, (err, soiree) => {
+        Preference.find({soiree: soiree._id}, (err, preferences) => {
+
+            let souhaits = []
+
+            for(let preference of preferences)
+                for(let souhait of preference.souhaits)
+                    souhaits.push(souhait)
+
+            Ingredient.find({_id: souhaits}, (err, ingredients) => {
+
+                let ingres = []
+
+                for(let ingredient of ingredients)
+                    ingres.push(ingredient._id)
+
+                Plat.find({ingredients: ingres}).populate("Categorie").exec((err, plats) => {
+                    if(err) {
+                        res.json({
+                            error: err
+                        })
+                    } else {
+                        res.json({
+                            plats
+                        })
+                    }
+                })
+            })
         })
     })
 }
