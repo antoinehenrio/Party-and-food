@@ -45,6 +45,19 @@ exports.getAllSoirees = function(req, res, next) {
     })
 }
 
+exports.getSoireeByCode = function(req, res, next) {
+    Soiree.get({code: req.params.code}, function(err, soiree) {
+        if(err) {
+            res.json({
+                error: err
+            })
+        }
+        res.json({
+            soiree
+        })
+    })
+}
+
 exports.getSoireeByDescription = function(req, res, next) {
     Soiree.get({descriptionSoiree: req.params.descriptionSoiree}, function(err, soiree) {
         if(err) {
