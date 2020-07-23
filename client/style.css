@@ -23,7 +23,7 @@ body {
   margin-left: 10px;
 }
 
-.contenuInscription {
+.contenuInscription, .contenuLogin {
   background-color: #ff0e4e;
   height: 100vh;
 }
