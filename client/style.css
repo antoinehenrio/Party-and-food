@@ -320,7 +320,16 @@ border-style: solid;
     margin: 10px;
 }
 .informations{
+display: grid;
+    grid-template-columns:1fr 1fr;
+}
 
+.maps{
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 1;
+    width: 340px;
+    height: 120px;
 }
 
 
