@@ -16,7 +16,7 @@ exports.createVote = function (req, res, next) {
 }
 
 exports.getVoteBySoiree = function(req, res, next) {
-    User.get({soiree: req.params.idSoiree}, function(err, user) {
+    Vote.get({soiree: req.params.idSoiree}, function(err, user) {
         if(err) {
             res.json({
                 error: err
@@ -49,7 +49,7 @@ exports.removeVote = function(req, res, next) {
             })
         }
         res.json({
-            message : "Utilisateur supprimé avec succès"
+            message : "Vote supprimé avec succès"
         })
     })
 }

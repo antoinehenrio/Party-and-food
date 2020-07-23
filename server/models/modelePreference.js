@@ -6,29 +6,31 @@ const mongoose = require("mongoose"),
 
 
 // create a schema for Dish
-let voteSchema = new Schema({
-    votant: {
+let preferenceSchema = new Schema({
+    souhaits: [{
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: true
+      ref: "Ingredient"
+    }],
+    rejets: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Ingredient"
+    }],
+    categorie: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Categorie"
     },
     soiree: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Soiree",
-      required: true
-    },
-    plat: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Plat",
+        ref: "Categorie",
         required: true
     }
 });
 
 //CRUD du schéma
-voteSchema.statics = {
+preferenceSchema.statics = {
     create : function(data, cb) {
-      var vote = new this(data);
-      vote.save(cb);
+      var preference = new this(data);
+      preference.save(cb);
     },     
     get: function(query, cb) {
       this.find(query, cb);
@@ -46,7 +48,7 @@ voteSchema.statics = {
 }
 
 // Create a model using schema
-let Vote = mongoose.model("Votes", voteSchema);
+let Preference = mongoose.model("Preferences", preferenceSchema);
 
 // make this model available
-module.exports = Vote;
+module.exports = Preference;
