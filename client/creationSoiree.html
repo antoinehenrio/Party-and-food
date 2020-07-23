@@ -10,15 +10,20 @@
     <title>Party and food</title>
 </head>
 <body>
+    <!--Barre de navigation-->
     <div class="navigation">
         <span class="navLogo"><img src="client/images/LogoPartyAndFood.svg" width="50" height="50"/></span>
         <span class="navTitle">CRÉER MA SOIRÉE</span>
     </div>
+
+    <!--Flèche de retour en arrière-->
     <span class="bricolage"><a href="nouvelleSoiree.html"><i class="fa fa-arrow-left returnArrow"></i></a></span>
     <div class="subTitle return">
         <p class="paragrapheSubTitle"><span class="subTitleContenu">Informations</span></p>
         <hr>
     </div>
+
+    <!--Fenêtres modales (pop-up) apparaissant lors du clic sur le tooltip (i rouge)-->
     <div class="modalHidden" id="modal1">
         <span class="textModal">La fin des préférences correspond à la date et l'heure à laquelle les invités ne pourront plus remplir leurs préférences alimentaires et passeront au vote du plat final !</span>
         <span class="closeModal" onclick="clickCross1();" onmouseover="this.style.cursor='pointer'" ><span class="cross"><a>X</a></span></span>
@@ -27,6 +32,8 @@
         <span class="textModal">La fin des votes correspond à la date et l'heure à laquelle les participants ne pourront plus voter pour un plat. Il leur sera donc imposé.</span>
         <span class="closeModal" onclick="clickCross2();" onmouseover="this.style.cursor='pointer'"><span class="cross"><a>X</a></span></span>
     </div>
+
+    <!--Titres des champs inputs de la création de soirée-->
     <div class="gridInfosSoiree">
         <span class="texteInfoSoiree">DATE DE LA SOIREE <span class="red">*</span></span>
         <span class="inputInfoSoiree"><input class="inputSoiree" type="date" name="dateSoiree"/></span>
@@ -45,6 +52,8 @@
         <p class="paragrapheSubTitle"><span class="subTitleContenu">LIVRAISON ET/OU FAIT MAISON?</span></p>
         <hr>
     </div>
+
+    <!--Conteneur des deux logos rouges drive et livraison-->
     <div class="conteneurLogos">
         <div class="contenantLogo1"  onclick="clickCheck1();">
             <span class="checkIconeHidden" id="check1"><i class="fa fa-check check"></i></span>
@@ -65,13 +74,17 @@
             Livraison
         </div>
     </div>
+
+    <!--Bouton valider en bas de la page-->
     <div class="conteneurValider">
         <button class="btnValider"><span class="bricolage2"><i class="fa fa-check"></i></span></button>
     </div>
+
+    <!--Pied de page-->
     <div class="footer">
-        <img src="client/images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/>
-        <img src="client/images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();">
-        <img src="client/images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();">
+        <a href="accueil.html"><img src="client/images/Home bleu.png" class="imgFooter" width="40" height="40" id="btn1" onclick="clickBtn1();"/></a>
+        <a href="mesSoirees.html"><img src="client/images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();"></a>
+        <a href="profil.html"><img src="client/images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();"></a>
     </div>
 </body>
 </html>
