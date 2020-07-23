@@ -4,7 +4,7 @@ var Soiree = require('../models/modeleSoiree.js');
 
 exports.createVote = function (req, res, next) {
     req.body.votant = req.user._id
-    Soiree.findOne({code: req.params.soiree}, (err, soiree) => {
+    Soiree.findOne({code: req.params.code}, (err, soiree) => {
         req.body.soiree = soiree._id
         Vote.create(req.body, function(err, vote) {
             if(err) {

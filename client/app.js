@@ -162,6 +162,11 @@ $(() => {
 					$("#prefLink input").val('VOTE POUR TON PLAT PREFERE')
 				}
 
+				if(new Date(res.soiree[0].deadLineVote) < new Date()) {
+					$("#prefLink").attr("href", "platFinalUser.html?code=" + res.soiree[0].code)
+					$("#prefLink input").val('Accéder au plat final')
+				}
+
 				$(".maps").append("<iframe "+
 					'frameborder="0" style="border:0"'+
 					'src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCXGZf_qoA20DFO83bnCJMEIhzbEJBkhSs'+
@@ -375,6 +380,37 @@ $(() => {
 				if(res.vote) alert("Tu as déjà voté !")
 			},
 			error: (err) => {
+
+			}
+		})
+	}
+
+	/************* PLAT FINAL ******************/
+
+	if(location.href.indexOf('platFinalUser.html') > -1){
+		$.ajax({
+			url: URL + "dish/get/selected/" + urlParams.get('code'),
+			type: "GET",
+			dataType: "json",
+			headers: {
+				'Authorization': `Bearer ${localStorage.getItem("token")}`,
+			},
+			success: (res) => {
+				console.log(res)
+
+				$('.containerPlatFinal').empty()
+
+				$('.containerPlatFinal').append(
+					'<div class="milk">' +
+						'<img src="./images/' + res.plat.photoURL + '" alt="logo milk" class="logoMilk">' +
+					'</div>' +
+					'<div class="containerCat">' +
+						'<h3 class="choixCat">' + (res.plat.categorie.nomCategorie || "") + '</h3>' +
+						'<div class="choixPlat">' + res.plat.nomPlat + '</div>' +
+					'</div>'
+				)
+			},
+			error : (err) => {
 
 			}
 		})
