@@ -1,0 +1,18 @@
+[
+    {
+        "nomCategorie" : "Italien",
+        "photoURL" : "categ_italien.jpeg"
+    },
+    {
+        "nomCategorie" : "Chinois",
+        "photoURL" : "categ_chinois.jpeg"
+    },
+    {
+        "nomCategorie" : "Indien",
+        "photoURL" : "categ_indien.jpg"
+    },
+    {
+        "nomCategorie" : "Mexicain",
+        "photoURL" : "categ_mexicain.jpeg"
+    }
+]

@@ -8,6 +8,7 @@ const mongoose = require("mongoose"),
 let categorieSchema = new Schema({
 	idCategorie  : {type: ObjectId, auto: true, required: true, index: true},
   nomCategorie : String,
+  photoURL: String,
   plats: [
     {
       type: mongoose.Schema.Types.ObjectId,
