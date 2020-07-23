@@ -23,6 +23,11 @@ body {
   margin-left: 10px;
 }
 
+.contenuInscription {
+  background-color: #ff0e4e;
+  height: 100vh;
+}
+
 h1, h2 {
   color: #ff0e4e;
   padding-top: 20px;

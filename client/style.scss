@@ -31,6 +31,11 @@ body{
     margin-left: 10px;
 }
 
+.contenuInscription{
+    background-color: $red-color;
+    height: 100vh;
+}
+
 h1, h2{
     color: $red-color;
     padding-top: 20px;
@@ -201,11 +206,6 @@ button[type="submit"]{
     outline: none;
 }
 
-// body {
-//     font-size: 16px;
-//     margin: 0 0 0 0;
-//     background-color: white;
-// }
 .grid-footer{
     display: grid;
     grid-template-columns: 1fr;
