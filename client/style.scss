@@ -95,7 +95,7 @@ h3{
 .coRegister, .mpOublie{
     font-size: 0.9em;
     color: $blue-color;
-    padding-top: 20px;
+    // padding-top: 20px;
     text-decoration: none;
 }
 
@@ -103,7 +103,6 @@ h3{
     width: 178px;
     height: 32px;
     margin: auto;
-    padding-top: 0px;
     background-color: $blue-color;
     padding-left: 2px;
     padding-top: 8px;
@@ -392,8 +391,9 @@ button[type="submit"]{
   
   .returnArrow {
     color: $red-color;
-    margin-left: 3vw;
-    padding-top: 3vh;
+    // margin-left: 3vw;
+    // padding-top: 3vh;
+    margin-right: 90%;
   }
   
   .bricolage {
@@ -492,7 +492,7 @@ button[type="submit"]{
       padding: 0;
       margin: 0;
       padding-bottom: 5px;
-      padding-top: 18px;
+    //   padding-top: 18px;
   }
 
   .trait{
@@ -504,6 +504,7 @@ button[type="submit"]{
   .dispoPlat{
       width: 80%;
       margin: auto;
+      padding-top: 18px;
   }
 
   .logoLivraison, .logoDrive{

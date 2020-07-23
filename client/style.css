@@ -86,7 +86,6 @@ h3 {
 .coRegister, .mpOublie {
   font-size: 0.9em;
   color: #2685ba;
-  padding-top: 20px;
   text-decoration: none;
 }
 
@@ -94,7 +93,6 @@ h3 {
   width: 178px;
   height: 32px;
   margin: auto;
-  padding-top: 0px;
   background-color: #2685ba;
   padding-left: 2px;
   padding-top: 8px;
@@ -374,8 +372,7 @@ hr {
 
 .returnArrow {
   color: #ff0e4e;
-  margin-left: 3vw;
-  padding-top: 3vh;
+  margin-right: 90%;
 }
 
 .bricolage {
@@ -473,7 +470,6 @@ hr {
   padding: 0;
   margin: 0;
   padding-bottom: 5px;
-  padding-top: 18px;
 }
 
 .trait {
@@ -485,6 +481,7 @@ hr {
 .dispoPlat {
   width: 80%;
   margin: auto;
+  padding-top: 18px;
 }
 
 .logoLivraison, .logoDrive {
