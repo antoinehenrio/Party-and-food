@@ -1,46 +1,14 @@
 @font-face {
   font-family: "Lemon Milk";
-  src: url("../Party-and-food/fonts/Lemon Milk/LEMONMILK-regular.otf");
+  src: url("client/fonts/Lemon Milk/LEMONMILK-Regular.otf");
 }
 @font-face {
   font-family: "Inter";
-  src: url("../Party-and-food/fonts/Inter/Inter-Regular-slnt=0.ttf");
+  src: url("client/fonts/Inter/Inter-Regular-slnt=0.ttf");
 }
-body {
-  font-family: Inter;
-  height: 100vh;
-  text-align: center;
-}
-
-h1 {
-  font-family: Lemon Milk;
-}
-
-.login-body, .inscription-body {
-  text-align: center;
-}
-
-.inputLogin, .inputInscription {
-  margin-top: 10px;
-  width: 100%;
-  height: 10%;
-}
-
-.login-form, .inscription-form {
-  width: 70%;
-  margin: auto;
-}
-
-.buttonSubmitLogin, .buttonSubmitInscription {
-  margin-top: 10px;
-  border-radius: 10px;
-  width: 60%;
-  height: 30px;
-  padding: 6px;
-  color: white;
-  background-color: #ff0e4e;
-  border: 0px;
-  box-shadow: 4px 4px 20px -4px black;
+html, body {
+  margin: 0;
+  color: #2685ba;
 }
 
 .navigation {
@@ -423,7 +391,67 @@ input {
   margin-bottom: 4vh !important;
 }
 
+.subTitlePreferences {
+  margin-top: 0 !important;
+  text-align: left !important;
+  margin-left: 5vw;
+  margin-bottom: 2vh !important;
+}
+
+.gridPreferences {
+  display: grid;
+  margin: auto;
+  text-align: center;
+  width: 100vw;
+  grid-template-columns: 1fr 20vw 20vw 20vw 20vw 1fr;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.photoCategorie {
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  border: 3px solid #2685ba;
+}
+
+.arrowCarrousel {
+  display: inline;
+}
+
+.hrPreferences {
+  margin-left: 0;
+  margin-right: 0;
+  width: 25vw;
+}
+
+.nomCategorie {
+  text-align: center;
+  font-family: Lemon Milk;
+  font-size: 11px;
+  margin-top: 1vh;
+}
+
+.photoPreference {
+  border: 1px solid #2685ba;
+  border-radius: 20px;
+  margin: 5px;
+  padding-top: 2px;
+}
+
+.subTitleMesPreferences {
+  margin-top: 0 !important;
+  margin-bottom: 2vh !important;
+}
+
+.valider {
+  margin-left: 29vw;
+  margin-right: 29vw;
+  width: 42vw;
+}
+
 /*# sourceMappingURL=style2.css.map */
-
-
-/*# sourceMappingURL=style.css.map */
