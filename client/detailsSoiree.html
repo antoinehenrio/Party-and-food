@@ -26,24 +26,28 @@
     <div class="icone"></div>
     <hr>
 </div>
-<form id="party-form">
-    <div class="gridInfosSoiree">
-        <span class="texteInfoSoiree">DATE DE LA SOIREE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="date" name="dateSoiree"/></span>
-        <span class="texteInfoSoiree">HEURE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="time" name="heure"/></span>
-        <span class="texteInfoSoiree">FIN DES </br> PREFERENCES <span class="red">*<span class="tooltipCircle" id="tooltip1" onclick="clickModal1();">i</span></span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="datetime-local" name="deadLinePref"/></span>
-        <span class="texteInfoSoiree">FIN DES VOTES <span class="red">*<span class="tooltipCircle" id="tooltip2"
-                                                                             onclick="clickModal2();">i</span></span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" type="datetime-local" name="deadLineVote"/></span>
-        <span class="texteInfoSoiree">NOTES</span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" name="descriptionSoiree"/></span>
-        <span class="texteInfoSoiree">ADRESSE <span class="red">*</span></span>
-        <span class="inputInfoSoiree"><input class="inputSoiree" name="adresse"/></span>
-    </div>
-</form>
-<a href="mesPreferences.html"><input class="ModifierPreferences" type="button" value="Modifier tes Préférences"></a>
+
+<div class="informations">
+    <div><b class="bluetext">Date de la soirée</b>
+        <p class="*">*</p></div>
+    <div id="dateSoiree" class="bluetext">27/07/2020</div>
+    <div><b class="bluetext">Heure</b>
+        <p class="*">*</p></div>
+    <div id="heure" class="bluetext">27/07/2020</div>
+    <div><b class="bluetext">Fin des préférences</b>
+        <p class="*">*</p></div>
+    <div id="deadlinePref" class="bluetext">27/07/2020</div>
+    <div><b class="bluetext">Fin des votes</b></div>
+    <div id="deadlineVote" class="bluetext">27/07/2020</div>
+    <div><b class="bluetext">Notes</b>
+        <p class="*">*</p></div>
+    <div id="description" class="bluetext">27/07/2020</div>
+    <div><b class="bluetext">Adresse</b>
+        <p class="*">*</p></div>
+    <div id="adresse" class="bluetext">27/07/2020</div>
+</div>
+
+<a id="prefLink" href="mesPreferences.html"><input class="ModifierPreferences" type="button" value="Modifier tes Préférences"></a>
 <hr class="sepDetaisSoiree">
 <div class="subTitle logos">
     <p class="paragrapheSubTitle"><span class="subTitleContenu"><b>LIVRAISON ET/OU FAIT MAISON?</b>
