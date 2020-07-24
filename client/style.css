@@ -302,6 +302,10 @@ hr {
     margin-bottom: 2.5%;
 }
 
+.grid-container {
+  margin: 2vh;
+}
+
 @media only screen and (min-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr 1fr;
@@ -544,6 +548,7 @@ hr {
 .returnArrow {
   color: #ff0e4e;
   margin-right: 3vw;
+  margin-left: 3vw;
   padding-top: 3vh;
   float: left;
 }

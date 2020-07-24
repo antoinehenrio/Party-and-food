@@ -68,18 +68,25 @@ $(() => {
                 'Authorization': `Bearer ${localStorage.getItem("token")}`,
             },
 			success: (res) => {
-				$("#nbSoiree").text(res.soiree.length)
+				let nb = 0
 
 				console.log(res)
 
 				for(let soiree of res.soiree){
-					//Date soirée
-					$(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getDateToString(new Date(soiree.dateSoiree)) + "</div></a>")
-                    //Heure soirée
-                    $(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getHoursToString(new Date(soiree.heure)) + "</div></a>")
-                    //Organisateur
-                    $(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</div></a>")
+					if(combineDateAndTime(new Date(soiree.dateSoiree), new Date(soiree.heure)) >= new Date()){
+						nb++
+						//Date soirée
+						$(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getDateToString(new Date(soiree.dateSoiree)) + "</div></a>")
+						//Heure soirée
+						$(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getHoursToString(new Date(soiree.heure)) + "</div></a>")
+						//Organisateur
+						$(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</div></a>")
+					}
 				}
+
+				$("#nbSoiree").text(nb)
+				if(nb > 1)
+					$("#s").text("s")
                 
 			},
 			error: (err) => {
@@ -251,7 +258,7 @@ $(() => {
                 'Authorization': `Bearer ${localStorage.getItem("token")}`,
             },
 			success: (res) => {
-				soiree_id = res.soiree[0]._id
+				soiree_id = res.soiree._id
             },
             error: (err) => {
                 
@@ -483,6 +490,8 @@ $(() => {
 	/************* PLAT FINAL ******************/
 
 	if(location.href.indexOf('platFinalUser.html') > -1){
+		$(".bricolage a").attr('href', 'detailsSoiree.html?code=' + urlParams.get('code'))
+
 		$.ajax({
 			url: URL + "dish/get/selected/" + urlParams.get('code'),
 			type: "GET",
@@ -504,6 +513,32 @@ $(() => {
 						'<div class="choixPlat">' + res.plat.nomPlat + '</div>' +
 					'</div>'
 				)
+			},
+			error : (err) => {
+
+			}
+		})
+	}
+
+	/************* PROFIL */
+
+	if(location.href.indexOf('profil.html') > -1){
+		
+
+		$.ajax({
+			url: URL + "/user/get",
+			type: "GET",
+			dataType: "json",
+			headers: {
+				'Authorization': `Bearer ${localStorage.getItem("token")}`,
+			},
+			success: (res) => {
+				console.log(res)
+
+				$("#name").text(res.user.name)
+				$("#firstname").text(res.user.firstname)
+				$("#email").text(res.user.email)
+				$("#telephone").text(res.user.telephone)
 			},
 			error : (err) => {
 
