@@ -46,7 +46,8 @@ exports.getAllSoirees = function(req, res, next) {
 }
 
 exports.getSoireeByCode = function(req, res, next) {
-    Soiree.get({code: req.params.code}, function(err, soiree) {
+    console.log("the code " + req.params.code)
+    Soiree.findOne({code: req.params.code}).populate("utilisateurs").populate("organisateur").exec(function(err, soiree) {
         if(err) {
             res.json({
                 error: err
@@ -119,6 +120,17 @@ exports.removeSoiree = function(req, res, next) {
         }
         res.json({
             message : "Soirée supprimée avec succès"
+        })
+    })
+}
+
+exports.joinSoiree = function(req, res, next) {
+    Soiree.findOne({code: req.params.code}, (err, soiree) => {
+        soiree.utilisateurs.indexOf(req.user._id) === -1 ? soiree.utilisateurs.push(req.user._id) : false
+        soiree.save()
+
+        res.json({
+            message : "Tu as bien rejoins la soirée"
         })
     })
 }

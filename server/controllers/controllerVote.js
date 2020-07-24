@@ -23,20 +23,22 @@ exports.createVote = function (req, res, next) {
 
 exports.getSelfVote = function(req, res, next) {
     req.body.votant = req.user._id
-    Soiree.findOne({code: req.params.soiree}, (err, soiree) => {
-        req.body.soiree = soiree._id
-        Vote.findOne({votant : req.user._id, soiree : soiree._id}, function(err, vote) {
-            if(err) {
-                console.log(err)
-                res.json({
-                    error : err
-                })
-            } else {
-                res.json({
-                    vote
-                })
-            }
-        })
+    Soiree.findOne({code: req.params.code}, (err, soiree) => {
+        if(soiree){
+            req.body.soiree = soiree._id
+            Vote.findOne({votant : req.user._id, soiree : soiree._id}, function(err, vote) {
+                if(err) {
+                    console.log(err)
+                    res.json({
+                        error : err
+                    })
+                } else {
+                    res.json({
+                        vote
+                    })
+                }
+            })
+        }
     })
 }
 

@@ -19,14 +19,16 @@
     <!-- Fenêtre modale "pop-up" lors d'un clic sur le bouton pour rejoindre une soirée-->
     <div class="modalHidden" id="modal3">
         <div class="textModal joinSoiree">Entre le code de ta soirée</div>
-        <div class="inputCodeSoiree">
-            <input class="inputSoiree codeSoiree" name="codeSoiree" placeholder="_ _ _ _ _ _"/>  
-        </div>
-        <button class="btnValider">
-            <span class="bricolage2">
-                <i class="fa fa-check check"></i>
-            </span>
-        </button>
+        <form id="join-soiree" href="#">
+            <div class="inputCodeSoiree">
+                <input id="codeSoiree" class="inputSoiree codeSoiree" name="codeSoiree" placeholder="_ _ _ _ _ _"/>  
+            </div>
+            <button type="submit" class="btnValider">
+                <span class="bricolage2">
+                    <i class="fa fa-check check"></i>
+                </span>
+            </button>
+        </form>
         <span class="closeModal" onclick="clickCross3();" onmouseover="this.style.cursor='pointer'" ><span class="cross"><a>X</a></span></span>
     </div>
     <div class="subTitle">
@@ -51,5 +53,8 @@
         <a href="mesSoirees.html"><img src="client/images/Verre bleu.png" class="imgFooter" width="40" height="40" id="btn2" onclick="clickBtn2();"></a>
         <a href="profil.html"><img src="client/images/Profil bleu.png" class="imgFooter" width="40" height="40" id="btn3" onclick="clickBtn3();"></a>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>

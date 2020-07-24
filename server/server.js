@@ -1,6 +1,7 @@
 var express = require("express");
 var log = require("morgan")("dev");
 var bodyParser = require("body-parser");
+var path = require('path')
 
 var properties = require("./config/properties");
 var db = require("./config/database");
@@ -54,6 +55,8 @@ soireeRoutes(router)
 userRoutes(router)
 preferenceRoutes(router)
 voteRoutes(router)
+
+app.use(express.static(path.join(__dirname, '../client')));
 
 // intialise server
 app.listen(properties.PORT, (req, res) => {

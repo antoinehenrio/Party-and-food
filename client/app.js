@@ -16,7 +16,7 @@ const getDateToString = (date) => {
 }
 
 const getHoursToString = (date) => {
-	return ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2)
+	return ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getUTCMinutes()).slice(-2)
 }
 
 const getDateHoursToString = (date) => {
@@ -46,7 +46,7 @@ const loadMaps = (adr) => {
 }
 
 $(() => {
-    // Récupération lorsqu'on est sur la page d'accueil
+	// Récupération lorsqu'on est sur la page d'accueil
     if(location.href.indexOf('accueil') > -1){
         $.ajax({
 			url: URL + "party/get",
@@ -62,14 +62,19 @@ $(() => {
 
 				for(let soiree of res.soiree){
 					//Date soirée
-					$(".tableauAccueil").append("<div>" + getDateToString(new Date(soiree.dateSoiree)) + "</div>")
-					//Heure soirée
-					$(".tableauAccueil").append("<div>" + getHoursToString(new Date(soiree.heure)) + "</div>")
-					//Organisateur
-					$(".tableauAccueil").append("<div>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</div>")
+					$(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getDateToString(new Date(soiree.dateSoiree)) + "</div></a>")
+                    //Heure soirée
+                    $(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getHoursToString(new Date(soiree.heure)) + "</div></a>")
+                    //Organisateur
+                    $(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</div></a>")
 				}
                 
 			},
+			error: (err) => {
+				if(err.status == 401){
+					location.replace('inscription.html')
+				}
+			}
 		});
 
 		$.ajax({
@@ -84,7 +89,25 @@ $(() => {
                 console.log(res)
 			},
 		});
-    }
+	}
+	
+	$("#join-soiree").on('submit', (e) => {
+		e.preventDefault()
+
+		$.ajax({
+			url: URL + "party/join/" + $("#codeSoiree").val(),
+			type: "POST",
+			dataType: "json",
+			headers: {
+				'Authorization': `Bearer ${localStorage.getItem("token")}`,
+			},
+			success: (res) => {
+				location.replace("accueil.html")
+			}
+		});
+	})
+
+	/************** INSCRIPTION *********/
 
 	$(".inscription-form").on("submit", (e) => {
 		e.preventDefault();
@@ -137,6 +160,8 @@ $(() => {
 		});
 	})
 	
+	/************* DETAILS SOIREE ******************/
+
 	if(location.href.indexOf('detailsSoiree.html') > -1){
 		$.ajax({
 			url: URL + "party/get/" + urlParams.get('code'),
@@ -148,29 +173,50 @@ $(() => {
 			success: (res) => {
 				console.log(res)
 				
-				$("#dateSoiree").text(getDateToString(new Date(res.soiree[0].dateSoiree)))
-				$("#heure").text(getHoursToString(new Date(res.soiree[0].heure)))
-				$("#deadlinePref").text(getDateHoursToString(new Date(res.soiree[0].deadLinePref)))
-				$("#deadlineVote").text(getDateHoursToString(new Date(res.soiree[0].deadLineVote)))
-				$("#description").text(res.soiree[0].descriptionSoiree)
-				$("#adresse").text(res.soiree[0].adresse)
-				$(".Password").val(res.soiree[0].code)
-				$("#prefLink").attr('href', "mesPreferences.html?code=" + res.soiree[0].code)
+				$("#dateSoiree").text(getDateToString(new Date(res.soiree.dateSoiree)))
+				$("#heure").text(getHoursToString(new Date(res.soiree.heure)))
+				$("#deadlinePref").text(getDateHoursToString(new Date(res.soiree.deadLinePref)))
+				$("#deadlineVote").text(getDateHoursToString(new Date(res.soiree.deadLineVote)))
+				$("#description").text(res.soiree.descriptionSoiree)
+				$("#adresse").text(res.soiree.adresse)
+				$(".Password").val(res.soiree.code)
+				$("#prefLink").attr('href', "mesPreferences.html?code=" + res.soiree.code)
 				
-				if(new Date(res.soiree[0].deadLinePref) < new Date()) {
-					$("#prefLink").attr("href", "vote.html?code=" + res.soiree[0].code)
-					$("#prefLink input").val('VOTE POUR TON PLAT PREFERE')
-				}
-
-				if(new Date(res.soiree[0].deadLineVote) < new Date()) {
-					$("#prefLink").attr("href", "platFinalUser.html?code=" + res.soiree[0].code)
+				if(new Date(res.soiree.deadLineVote) < new Date()) {
+					$("#prefLink").attr("href", "platFinalUser.html?code=" + res.soiree.code)
 					$("#prefLink input").val('Accéder au plat final')
+				}
+				else if(new Date(res.soiree.deadLinePref) < new Date()) {
+					$("#prefLink").attr("href", "vote.html?code=" + res.soiree.code)
+					$("#prefLink input").val('VOTE POUR TON PLAT PREFERE')
+
+					let theSoiree = res.soiree
+
+					$.ajax({
+						url : URL + 'poll/get/' + urlParams.get('code'),
+						type: "GET",
+						dataType: "json",
+						headers: {
+							'Authorization': `Bearer ${localStorage.getItem("token")}`,
+						},
+						success: (res) => {
+							console.log(res)
+							if(res.vote) {
+								$("#prefLink").empty()
+								$("#prefLink").attr("href", "#")
+								$("#prefLink").replaceWith('<span class="subTitleContenu">LE PLAT CHOISI SERA DISPONIBLE DES LE ' + getDateToString(new Date(theSoiree.deadLineVote)) + ' A ' + getHoursToString(new Date(theSoiree.deadLineVote)) + '</p>')
+							}
+						},
+						error: (err) => {
+			
+						}
+					})
 				}
 
 				$(".maps").append("<iframe "+
 					'frameborder="0" style="border:0"'+
 					'src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCXGZf_qoA20DFO83bnCJMEIhzbEJBkhSs'+
-					  '&q=' + res.soiree[0].adresse + '" allowfullscreen>'+
+					  '&q=' + res.soiree.adresse + '" allowfullscreen>'+
 				 ' </iframe>')
             },
             error: (err) => {
@@ -310,8 +356,13 @@ $(() => {
 
 	/************* VOTE ******************/
 
+	//Sélection
 	$('.voterepas').on('click', '.div1', function(){
-		$(this).toggleClass('red')
+		//Retirer les autres sélections si elles existent
+		$(".voterepas .red").each(function() {
+			$(this).removeClass('red')
+		})
+		$(this).addClass('red')
 	})
 
 	$('.checkvote').on('click', function(){
@@ -333,6 +384,7 @@ $(() => {
 			},
 			success: (res) => {
 				console.log(res)
+				location.replace("detailsSoiree.html?code=" + urlParams.get('code'))
 			},
 			error : (err) => {
 
@@ -364,22 +416,6 @@ $(() => {
 				}
 			},
 			error : (err) => {
-
-			}
-		})
-
-		$.ajax({
-			url : URL + 'poll/get/' + urlParams.get('code'),
-			type: "GET",
-			dataType: "json",
-			headers: {
-				'Authorization': `Bearer ${localStorage.getItem("token")}`,
-			},
-			success: (res) => {
-				console.log(res)
-				if(res.vote) alert("Tu as déjà voté !")
-			},
-			error: (err) => {
 
 			}
 		})

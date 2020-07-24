@@ -79,8 +79,10 @@ exports.getPlatsForPoll = function(req, res, next) {
 
                 for(let ingredient of ingredients)
                     ingres.push(ingredient._id)
+                
+                let search = (ingres.length <= 0) ? {} : {ingredients: ingres}
 
-                Plat.find({ingredients: ingres}).populate("Categorie").exec((err, plats) => {
+                Plat.find(search).populate("Categorie").exec((err, plats) => {
                     if(err) {
                         res.json({
                             error: err
