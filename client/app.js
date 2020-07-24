@@ -421,6 +421,12 @@ $(() => {
 		})
 	}
 
+	/************* MES SOIREES ******************/
+
+	if(location.href.indexOf('mesSoirees.html') > -1){
+		
+	}
+
 	/************* PLAT FINAL ******************/
 
 	if(location.href.indexOf('platFinalUser.html') > -1){
