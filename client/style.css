@@ -95,8 +95,34 @@ h3 {
     padding-left: 2px;
     padding-top: 8px;
     border-radius: 3px;
+    color: white;
+}
+.submitCheck2{
+    width: 30px;
+    height:30px;
+    padding: 0;
+    background-color: #2685ba;
+    border-radius: 3px;
+    color: white;
+}
+.nomAppli{
+    font-family: Lemon Milk;
+    width: 40%;
+    text-shadow: -3px 0px 1px #2685BA;
+    color: white;
+    font-size: 3em;
+    margin-left: 10px;
 }
 
+.buttonCoRegister{
+    border: 0;
+    background-color: transparent;
+    font-size: 24px;
+    margin-top: 50px;
+}
+.red_pencil{
+    color: red;
+}
 /*button[type=submit] {
   border: 0;
   background-color: transparent;
@@ -396,6 +422,9 @@ hr {
 .informations {
     display: grid;
     grid-template-columns:1fr 1fr;
+}
+.buttonDS{
+
 }
 
 .maps {

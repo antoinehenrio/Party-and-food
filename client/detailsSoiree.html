@@ -20,9 +20,15 @@
         <span class="navTitle">DÉTAILS DE LA SOIRÉE</span>
     </div>
 </header>
-<main class="grid-container" id="mainframe">
+<main>
 <div class="subTitle">
-    <p class="paragrapheSubTitle"><span class="subTitleContenu"><b>INFORMATIONS</b></span></p>
+    <p class="paragrapheSubTitle">
+        <span class="subTitleContenu"><b>INFORMATIONS</b>
+            <img class="red_pencil"src="//img.icons8.com/material-outlined/24/000000/pencil--v1.png"/>
+            <button class="buttonCoRegister" type="submit">
+            <i class="fa fa-check submitCheck2"></i>
+            </button>
+        </span></p>
     <div class="icone"></div>
     <hr>
 </div>
@@ -32,9 +38,7 @@
         <span class="inputInfoSoiree"><input class="inputSoiree" type="date" name="dateSoiree"/></span>
         <span class="texteInfoSoiree">HEURE <span class="red">*</span></span>
         <span class="inputInfoSoiree"><input class="inputSoiree" type="time" name="heure"/></span>
-        <span class="texteInfoSoiree">FIN DES </br> PREFERENCES <span class="red">*<span class="tooltipCircle"
-                                                                                         id="tooltip1"
-                                                                                         onclick="clickModal1();">i</span></span></span>
+        <span class="texteInfoSoiree">FIN DES </br> PREFERENCES <span class="red">*<span class="tooltipCircle" id="tooltip1" onclick="clickModal1();">i</span></span></span>
         <span class="inputInfoSoiree"><input class="inputSoiree" type="datetime-local" name="deadLinePref"/></span>
         <span class="texteInfoSoiree">FIN DES VOTES <span class="red">*<span class="tooltipCircle" id="tooltip2"
                                                                              onclick="clickModal2();">i</span></span></span>
@@ -48,7 +52,7 @@
 <a href="mesPreferences.html"><input class="ModifierPreferences" type="button" value="Modifier tes Préférences"></a>
 <hr class="sepDetaisSoiree">
 <div class="subTitle logos">
-    <p class="paragrapheSubTitle"><span class="subTitleContenu">LIVRAISON ET/OU FAIT MAISON?</span></p>
+    <p class="paragrapheSubTitle"><span class="subTitleContenu"><b>LIVRAISON ET/OU FAIT MAISON?</b></span></p>
     <hr>
 </div>
 <div class="conteneurLogos">
@@ -71,6 +75,33 @@
         Livraison
     </div>
 </div>
+    <div class="subTitle logos">
+        <p class="paragrapheSubTitle"><span class="subTitleContenu"><b>PARTICIPANTS</b></span></p>
+        <hr>
+    </div>
+    <div class="gridPreferences">
+        <span class="arrowCarrousel"><i class="fa fa-chevron-left"></i></span>
+        <div class="photoCategorie">
+            <img src="images/Touchard.jpg" height="50" width="50">
+        </div>
+        <div class="photoCategorie">
+            <img src="images/Alkpote.jpg" height="50" width="50">
+        </div>
+        <div class="photoCategorie">
+            <img src="images/antoine.jpg" height="50" width="50">
+        </div>
+        <div class="photoCategorie">
+            <img src="images/bilboquier.jpg" height="50" width="50">
+        </div>
+        <span class="arrowCarrousel"><i class="fa fa-chevron-right"></i></span>
+
+        <span class="nomCategorie"></span>
+        <span class="nomCategorie">Touchard</span>
+        <span class="nomCategorie">L'empereur 2</span>
+        <span class="nomCategorie">L'empereur</span>
+        <span class="nomCategorie">Billboquier</span>
+        <span class="nomCategorie"></span>
+    </div>
 <div class="maps">
 </div>
 </div>
