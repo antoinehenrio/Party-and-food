@@ -98,8 +98,8 @@ h3 {
     color: white;
 }
 .submitCheck2{
-    width: 30px;
-    height:30px;
+    width: 25px;
+    height:25px;
     padding: 0;
     background-color: #2685ba;
     border-radius: 3px;
@@ -122,6 +122,8 @@ h3 {
 }
 .red_pencil{
     color: red;
+    width: 25px;
+    height: 25px;
 }
 /*button[type=submit] {
   border: 0;
@@ -508,7 +510,7 @@ hr {
 
 .returnArrow {
     color: #ff0e4e;
-    margin-left: 3vw;
+    margin-left: -80vw;
     padding-top: 3vh;
 }
 
@@ -800,11 +802,7 @@ hr {
     margin-top: 0 !important;
 }
 
-.returnArrow {
-    color: #ff0e4e;
-    margin-left: 3vw;
-    padding-top: 2vh;
-}
+
 
 .bricolage {
     font-size: 30px;
@@ -1046,11 +1044,6 @@ hr {
     margin-top: 0 !important;
 }
 
-.returnArrow {
-    color: #ff0e4e;
-    margin-left: 3vw;
-    padding-top: 2vh;
-}
 
 .bricolage {
     font-size: 30px;
