@@ -1314,4 +1314,20 @@ input {
   border-color: #ff0e4e !important;
 }
 
+.nomAppli{
+  font-family: Lemon Milk;
+  width: 40%;
+  text-shadow: -3px 0px 1px #2685BA;
+  color: white;
+  font-size: 3em;
+  margin-left: 10px;
+}
+
+.buttonCoRegister{
+  border: 0;
+    background-color: transparent;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
 /*# sourceMappingURL=style2.css.map */
