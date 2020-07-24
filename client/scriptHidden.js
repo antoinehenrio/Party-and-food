@@ -1,21 +1,20 @@
 function clickCheck1(){
-    var p = document.getElementById("check1"); 
-    if (p.className == "checkIcone") {
-        p.className = "checkIconeHidden";
+    var p = document.getElementById("logoDrive"); 
+    if (p.className == "logoLivDrive") {
+        p.className = "logoLivDriveBlue";
     }
     else {
-        console.log("oui");
-        p.className = "checkIcone";
+        p.className = "logoLivDrive";;
     }
 }
 
 function clickCheck2(){
-    var p = document.getElementById("check2"); 
-    if (p.className == "checkIcone") {
-        p.className = "checkIconeHidden";
+    var p = document.getElementById("logoLivraison"); 
+    if (p.className == "logoLivDrive") {
+        p.className = "logoLivDriveBlue";
     }
     else {
-        p.className = "checkIcone";
+        p.className = "logoLivDrive";;
     }
 }
 
