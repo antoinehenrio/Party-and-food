@@ -62,13 +62,12 @@ $(() => {
 
 				for(let soiree of res.soiree){
 					//Date soirée
-					$(".tableauAccueil").append("<div>" + getDateToString(new Date(soiree.dateSoiree)) + "</div>")
-					//Heure soirée
-					$(".tableauAccueil").append("<div>" + getHoursToString(new Date(soiree.heure)) + "</div>")
-					//Organisateur
-					$(".tableauAccueil").append("<div>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</div>")
-				}
-                
+					$(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getDateToString(new Date(soiree.dateSoiree)) + "</div></a>")
+                    //Heure soirée
+                    $(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + getHoursToString(new Date(soiree.heure)) + "</div></a>")
+                    //Organisateur
+                    $(".tableauAccueil").append("<a href='detailsSoiree.html?code=" + soiree.code + "' class='lienSoiree'><div>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</div></a>")
+				}               
 			},
 		});
 
