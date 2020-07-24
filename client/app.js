@@ -83,7 +83,7 @@ $(() => {
                 console.log(res)
 			},
 		});
-    }
+	}
 
 	$(".inscription-form").on("submit", (e) => {
 		e.preventDefault();

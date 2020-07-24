@@ -468,7 +468,7 @@ display: grid;
   grid-column-end: 2;
   display: inline-grid;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .inputInfoSoiree {
@@ -512,6 +512,20 @@ display: grid;
   height: 90px;
   align-items: center;
   display: flex;
+}
+
+.logoLivDriveBlue {
+  background-color: #ff0e4e;
+  margin: auto;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  width: 90px;
+  height: 90px;
+  align-items: center;
+  display: flex;
+  border: 3px solid #2685ba;
 }
 
 .contenantLogo1 {
@@ -863,6 +877,8 @@ display: grid;
   height: 20px;
   margin-left: 65px;
   margin-top: 30px;
+  border-color: white;
+  /* display: inline; */
 }
 
 .check {
@@ -1345,6 +1361,22 @@ input {
 
 .creationSoiree {
   margin-left: 30vw;
+}
+
+.navTitle .mesSoirees {
+  margin-left: 0;
+}
+
+.boutonRougeNewParty {
+  background-color: #ff0e4e;
+  color: white;
+  font-family: Lemon Milk;
+  border: none;
+  height: 8vh;
+  width: 70vw;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=style2.css.map */
