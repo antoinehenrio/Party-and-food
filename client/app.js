@@ -23,6 +23,18 @@ const getDateHoursToString = (date) => {
 	return getDateToString(date) + " - " + getHoursToString(date)
 }
 
+const combineDateAndTime = (date, time) => {
+    timeString = time.getHours() + ':' + time.getMinutes() + ':00';
+
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1; // Jan is 0, dec is 11
+    var day = date.getDate();
+    var dateString = '' + year + '-' + month + '-' + day;
+    var combined = new Date(dateString + ' ' + timeString);
+
+    return combined;
+};
+
 const urlParams = new URLSearchParams(window.location.search);
 
 const loadMaps = (adr) => {
@@ -424,7 +436,48 @@ $(() => {
 	/************* MES SOIREES ******************/
 
 	if(location.href.indexOf('mesSoirees.html') > -1){
-		
+		$.ajax({
+			url: URL + "party/get",
+			type: "GET",
+            dataType: "json",
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem("token")}`,
+            },
+			success: (res) => {
+
+				console.log(res)
+
+				$("#termine").empty()
+				$("#en-cours").empty()
+
+				for(let soiree of res.soiree){
+
+					if(combineDateAndTime(new Date(soiree.dateSoiree), new Date(soiree.heure)) < new Date()){
+						$("#termine").append("<span>" + getDateToString(new Date(soiree.dateSoiree)) + "</span>")
+						//Heure soirée
+						$("#termine").append("<span>" + getHoursToString(new Date(soiree.heure)) + "</span>")
+						//Organisateur
+						$("#termine").append("<span>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</span>")
+						//lien
+						$("#termine").append('<a href="detailsSoiree.html?code=' + soiree.code + '"><span><i class="fa fa-search"></i></span></a>')
+					} else {
+						$("#en-cours").append("<span>" + getDateToString(new Date(soiree.dateSoiree)) + "</span>")
+						//Heure soirée
+						$("#en-cours").append("<span>" + getHoursToString(new Date(soiree.heure)) + "</span>")
+						//Organisateur
+						$("#en-cours").append("<span>" + soiree.organisateur.firstname + " " + soiree.organisateur.name + "</span>")
+						//lien
+						$("#en-cours").append('<a href="detailsSoiree.html?code=' + soiree.code + '"><span><i class="fa fa-search"></i></span></a>')
+					}
+				}
+                
+			},
+			error: (err) => {
+				if(err.status == 401){
+					location.replace('inscription.html')
+				}
+			}
+		});
 	}
 
 	/************* PLAT FINAL ******************/
