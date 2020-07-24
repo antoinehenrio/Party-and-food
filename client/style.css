@@ -1,11 +1,13 @@
 @font-face {
-  font-family: "Lemon Milk";
-  src: url("fonts/Lemon Milk/LEMONMILK-regular.otf");
+    font-family: "Lemon Milk";
+    src: url("fonts/Lemon Milk/LEMONMILK-regular.otf");
 }
+
 @font-face {
-  font-family: "Inter";
-  src: url("fonts/Inter/Inter-Regular-slnt=0.ttf");
+    font-family: "Inter";
+    src: url("fonts/Inter/Inter-Regular-slnt=0.ttf");
 }
+
 body {
     font-family: Inter;
     height: 100vh;
@@ -35,41 +37,43 @@ body {
 }
 
 .contenuInscription, .contenuLogin {
-  background-color: #ff0e4e;
-  height: 100vh;
+    background-color: #ff0e4e;
+    height: 100vh;
 }
 
 h1, h2 {
-  color: #ff0e4e;
-  padding-top: 20px;
-  font-weight: bolder;
+    color: #ff0e4e;
+    padding-top: 20px;
+    font-weight: bolder;
 }
 
 h3 {
-  color: #2685ba;
-  font-weight: bolder;
+    color: #2685ba;
+    font-weight: bolder;
 }
+
 .login-body, .inscription-body {
-  text-align: center;
+    text-align: center;
 }
+
 .inputLogin, .inputInscription {
-  margin-top: 10px;
-  width: 80%;
-  height: 10%;
-  border: 2px solid #ff0e4e;
-  border-radius: 20px;
-  font-size: 1.2em;
-  color: #2685ba;
-  text-align: center;
+    margin-top: 10px;
+    width: 80%;
+    height: 10%;
+    border: 2px solid #ff0e4e;
+    border-radius: 20px;
+    font-size: 1.2em;
+    color: #2685ba;
+    text-align: center;
 }
 
 .inputInscription[type=password], .inputLogin[type=password] {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .inputLogin::placeholder, .inputInscription::placeholder {
-  color: #2685ba;
-  text-align: center;
+    color: #2685ba;
+    text-align: center;
 }
 
 .login-body {
@@ -77,22 +81,23 @@ h3 {
 }
 
 .login-form, .inscription-form {
-  width: 80%;
-  margin: auto;
-  background-color: white;
-  border-radius: 10px;
-  height: 402px;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    height: 402px;
 }
-.buttonSubmitLogin, .buttonSubmitInscription, .NewParty ,.ModifierPreferences,.Password{
-  margin-top: 10px;
-  border-radius: 10px;
-  width: 60%;
-  height: 30px;
-  padding: 6px;
-  color: white;
-  background-color: #ff0e4e;
-  border: 0px;
-  box-shadow: 4px 4px 20px -4px black;
+
+.buttonSubmitLogin, .buttonSubmitInscription, .NewParty, .ModifierPreferences, .Password {
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 60%;
+    height: 30px;
+    padding: 6px;
+    color: white;
+    background-color: #ff0e4e;
+    border: 0px;
+    box-shadow: 4px 4px 20px -4px black;
 }
 
 .submitLogin {
@@ -109,22 +114,50 @@ h3 {
 }
 
 .coRegister, .mpOublie {
-  font-size: 0.9em;
-  color: #2685ba;
-  padding-top: 20px;
-  text-decoration: none;
+    font-size: 0.9em;
+    color: #2685ba;
+    padding-top: 20px;
+    text-decoration: none;
 }
 
 .submitCheck {
-  width: 178px;
-  height: 32px;
-  margin: auto;
-  background-color: #2685ba;
-  padding-left: 2px;
-  padding-top: 8px;
-  border-radius: 3px;
+    width: 178px;
+    height: 32px;
+    margin: auto;
+    background-color: #2685ba;
+    padding-left: 2px;
+    padding-top: 8px;
+    border-radius: 3px;
+    color: white;
+}
+.submitCheck2{
+    width: 25px;
+    height:25px;
+    padding: 0;
+    background-color: #2685ba;
+    border-radius: 3px;
+    color: white;
+}
+.nomAppli{
+    font-family: Lemon Milk;
+    width: 40%;
+    text-shadow: -3px 0px 1px #2685BA;
+    color: white;
+    font-size: 3em;
+    margin-left: 10px;
 }
 
+.buttonCoRegister{
+    border: 0;
+    background-color: transparent;
+    font-size: 24px;
+    margin-top: 50px;
+}
+.red_pencil{
+    color: red;
+    width: 25px;
+    height: 25px;
+}
 /*button[type=submit] {
   border: 0;
   background-color: transparent;
@@ -133,85 +166,86 @@ h3 {
 }*/
 
 .cell {
-  border-width: 0.2rem;
-  border-style: solid;
-  border-color: white;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  align-content: center;
-  color: black;
-  background-color: white;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-content: center;
+    color: black;
+    background-color: white;
 }
 
 .cell:hover {
-  border-color: #029EE6;
+    border-color: #029EE6;
 }
 
 .image {
-  width: auto;
-  height: 15rem;
-  margin-top: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+    width: auto;
+    height: 15rem;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .name {
-  text-align: center;
-  font-size: 3rem;
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-  font-family: Punk;
+    text-align: center;
+    font-size: 3rem;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
+    font-family: Punk;
 }
 
 .description {
-  float: right;
-  text-align: justify;
-  vertical-align: middle;
-  height: auto;
-  font-family: Candara;
+    float: right;
+    text-align: justify;
+    vertical-align: middle;
+    height: auto;
+    font-family: Candara;
 }
 
 .header {
-  height: 2rem;
-  width: auto;
-  margin-bottom: 2rem;
-  justify-content: space-between;
-  background-color: #ff0e4e;
-  padding-bottom: 1rem;
+    height: 2rem;
+    width: auto;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    background-color: #ff0e4e;
+    padding-bottom: 1rem;
 }
 
 .header-search {
-  text-align: center;
+    text-align: center;
 }
 
 .shop {
-  color: black;
-  width: 100%;
-  text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 2.5%;
-  font-size: 4rem;
+    color: black;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2.5%;
+    font-size: 4rem;
 }
 
 #site-search {
-  background-color: #AAD9EE;
-  border-radius: 1rem;
-  border-style: none;
-  height: 3rem;
-  width: 15rem;
-  margin-top: 1rem;
-  font-size: 2rem;
-  color: black;
-  text-indent: 1rem;
+    background-color: #AAD9EE;
+    border-radius: 1rem;
+    border-style: none;
+    height: 3rem;
+    width: 15rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: black;
+    text-indent: 1rem;
 }
 
 .paragrapheSubTitle {
     margin-bottom: 0 !important;
 }
+
 hr {
     padding: 0;
     margin-bottom: 0;
@@ -224,7 +258,8 @@ hr {
     background-color: #ff0e4e;
     border-top: none;
 }
-.subTitle ,.subTitleContenu{
+
+.subTitle, .subTitleContenu {
     color: #2685ba;
     text-align: center;
     font-family: Inter;
@@ -244,69 +279,74 @@ hr {
     color: #2685ba;
     font-family: Inter;
 }
-.profil{
+
+.profil {
     width: 40%;
     height: 40%;
 }
-.fleche{
+
+.fleche {
 }
 
-.\*{
+.\* {
     color: #ff0e4e;
 }
 
 .grid-footer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem 1rem;
-  width: 95%;
-  margin-right: 2.5%;
-  margin-left: 2.5%;
-  margin-bottom: 2.5%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 1rem;
+    width: 95%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 @media only screen and (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
 
-  .shop {
-    text-align: right;
-  }
+    .shop {
+        text-align: right;
+    }
 
-  .header {
-    display: flex;
-    height: 5rem;
-  }
+    .header {
+        display: flex;
+        height: 5rem;
+    }
 
-  .header-search {
-    position: absolute;
-    margin-top: 0.5rem;
-    margin-left: 2.5%;
-    padding: 0;
-  }
+    .header-search {
+        position: absolute;
+        margin-top: 0.5rem;
+        margin-left: 2.5%;
+        padding: 0;
+    }
 }
+
 @media only screen and (min-width: 900px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
-  .shop {
-    text-align: center;
-  }
+    .shop {
+        text-align: center;
+    }
 }
+
 @media only screen and (min-width: 1200px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
+
 .navigation {
-  background-color: #ff0e4e;
-  display: grid;
-  grid-template-columns: 30vw 1fr;
-  color: white;
-  font-family: Lemon Milk;
-  align-items: center;
+    background-color: #ff0e4e;
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    color: white;
+    font-family: Lemon Milk;
+    align-items: center;
 }
 
 .tableauProfil {
@@ -317,15 +357,18 @@ hr {
     color: #2685ba;
     font-family: Inter;
 }
-.tableauRegime{
+
+.tableauRegime {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     color: #2685ba;
     font-family: Inter;
+
 }
-.check{
+
+.check {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -336,16 +379,19 @@ hr {
 }
 
 .paragrapheSubTitle {
-  margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
-.red{
+
+.red {
     color: #ff0e4e;
 }
-.vote{
+
+.vote {
     font-family: Inter;
 
 }
-.checkvote{
+
+.checkvote {
     background-color: #2685ba;
     color: white;
     text-align: center;
@@ -353,8 +399,9 @@ hr {
     margin-left: 100px;
     margin-right: 100px;
 }
+
 .footer {
-    width: 100%;
+    width: 99%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     border-top: solid 2.5px #ff0e4e;
@@ -364,9 +411,10 @@ hr {
     position: fixed;
     bottom: 0;
 }
-    .shop {
-        text-align: center;
-    }
+
+.shop {
+    text-align: center;
+}
 
 .imgFooter {
     border-left: solid 2px #ff0e4e;
@@ -376,6 +424,7 @@ hr {
     padding-bottom: 1vh;
     grid-column: span 1;
 }
+
 .voterepas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -384,15 +433,15 @@ hr {
 }
 
 .paragrapheTexte {
-  color: #2685ba;
-  padding-left: 10vw;
-  padding-right: 10vw;
+    color: #2685ba;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .texte {
-  text-align: center;
-  font-family: Inter;
-  margin-bottom: 6vh;
+    text-align: center;
+    font-family: Inter;
+    margin-bottom: 6vh;
 }
 
 .div1{
@@ -406,14 +455,19 @@ hr {
   height: 95px;
   width: 95px;
 }
-.lignevote{
+
+.lignevote {
     text-align: center;
-    margin: 20px;
+    margin: 30px;
+    padding: 3px;
 }
 
-.informations{
-display: grid;
+.informations {
+    display: grid;
     grid-template-columns:1fr 1fr;
+}
+.buttonDS{
+
 }
 
 .maps{
@@ -421,264 +475,264 @@ display: grid;
 }
 
 .boutonRouge {
-  background-color: #ff0e4e;
-  color: white;
-  font-family: Lemon Milk;
-  border: none;
-  height: 8vh;
-  width: 70vw;
-  border-radius: 30px;
-  font-size: 16px;
-  margin-bottom: 6vh;
+    background-color: #ff0e4e;
+    color: white;
+    font-family: Lemon Milk;
+    border: none;
+    height: 8vh;
+    width: 70vw;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 6vh;
 }
 
 .conteneurBoutons {
-  text-align: center;
+    text-align: center;
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-top: solid 2.5px #ff0e4e;
-  border-bottom: solid 2.5px #ff0e4e;
-  border-right: solid 2.5px #ff0e4e;
-  position: fixed;
-  bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: solid 2.5px #ff0e4e;
+    border-bottom: solid 2.5px #ff0e4e;
+    border-right: solid 2.5px #ff0e4e;
+    position: fixed;
+    bottom: 0;
 }
 
 .imgFooter {
-  border-left: solid 2px #ff0e4e;
-  padding-left: 11.1vw;
-  padding-right: 11.9vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  grid-column: span 1;
-  margin: auto;
+    border-left: solid 2px #ff0e4e;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+    margin: auto;
 }
 
 .imgFooterclicked {
-  border-left: solid 2px #ff0e4e;
-  padding-left: 11.1vw;
-  padding-right: 11.9vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  grid-column: span 1;
-  margin: auto;
-  background-color: #ff0e4e;
+    border-left: solid 2px #ff0e4e;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+    margin: auto;
+    background-color: #ff0e4e;
 }
 
 .gridInfosSoiree {
-  display: grid;
-  width: 80vw;
-  grid-template-columns: 1fr 1fr;
-  font-family: Inter;
-  color: #2685ba;
-  margin: auto;
-  text-align: center;
-  grid-row-gap: 1vh;
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 1fr 1fr;
+    font-family: Inter;
+    color: #2685ba;
+    margin: auto;
+    text-align: center;
+    grid-row-gap: 1vh;
 }
 
 .texteInfoSoiree {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  display: inline-grid;
-  font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: inline-grid;
+    font-weight: bold;
 }
 
 .inputInfoSoiree {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  display: inline-grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: inline-grid;
 }
 
 .return {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 .returnArrow {
   color: #ff0e4e;
-  margin-left: 3vw;
+  margin-right: 3vw;
   padding-top: 3vh;
   float: left;
 }
 
 .bricolage {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .conteneurLogos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80vw !important;
-  margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw !important;
+    margin: auto;
 }
 
 .logoLivDrive {
-  background-color: #ff0e4e;
-  margin: auto;
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 90px;
-  height: 90px;
-  align-items: center;
-  display: flex;
+    background-color: #ff0e4e;
+    margin: auto;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    display: flex;
 }
 
 .contenantLogo1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: auto;
 }
 
 .contenantLogo2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
 }
 
 .imgdrive {
-  margin: auto;
+    margin: auto;
 }
 
 .drive {
-  padding-top: 2vh;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: auto;
+    padding-top: 2vh;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: auto;
 }
 
 .livraison {
-  padding-top: 2vh;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: auto;
+    padding-top: 2vh;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
 }
 
 .logoEntete {
-  width: 20%;
-  height: 80%;
-  padding: 10px 16px 13px 14px;
-  border-right: 2px solid white;
+    width: 20%;
+    height: 80%;
+    padding: 10px 16px 13px 14px;
+    border-right: 2px solid white;
 }
 
 .headerPlatFinal {
-  height: 2rem;
-  width: auto;
-  margin-bottom: 2rem;
-  justify-content: space-between;
-  background-color: #ff0e4e;
-  padding-bottom: 1rem;
-  display: flex;
-  margin: 0;
+    height: 2rem;
+    width: auto;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+    background-color: #ff0e4e;
+    padding-bottom: 1rem;
+    display: flex;
+    margin: 0;
 }
 
 .footerPlatFinal {
-  height: 2rem;
-  width: auto;
-  justify-content: space-between;
-  background-color: #ff0e4e;
-  padding-bottom: 1rem;
-  display: flex;
+    height: 2rem;
+    width: auto;
+    justify-content: space-between;
+    background-color: #ff0e4e;
+    padding-bottom: 1rem;
+    display: flex;
 }
 
 .titreEntete {
-  margin: auto;
-  color: white;
-  font-size: 1.3em;
-  padding-top: 10px;
-  padding-bottom: 9px;
-  font-weight: 900;
+    margin: auto;
+    color: white;
+    font-size: 1.3em;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    font-weight: 900;
 }
 
 .titrePlat {
-  color: #2685ba;
-  padding: 0;
-  margin: 0;
-  padding-bottom: 5px;
-  padding-top: 18px;
+    color: #2685ba;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-top: 18px;
 }
 
 .trait {
-  border: 1px solid #ff0e4e;
-  width: 40%;
-  margin-left: 30%;
+    border: 1px solid #ff0e4e;
+    width: 40%;
+    margin-left: 30%;
 }
 
 .dispoPlat {
-  width: 80%;
-  margin: auto;
+    width: 80%;
+    margin: auto;
 }
 
 .logoLivraison, .logoDrive {
-  height: 55px;
-  padding-top: 18%;
+    height: 55px;
+    padding-top: 18%;
 }
 
 .containerPlat1, .containerPlat2 {
-  display: inline-flex;
-  width: 90%;
-  padding-left: 24px;
+    display: inline-flex;
+    width: 90%;
+    padding-left: 24px;
 }
 
 .containerPlat1 {
-  padding-top: 4%;
+    padding-top: 4%;
 }
 
 .containerPlat2 {
-  padding-top: 8%;
+    padding-top: 8%;
 }
 
 .btnLivraison {
-  height: 35px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 8%;
-  background-color: #2685ba;
-  border: 0;
-  border-radius: 30px;
-  width: 60%;
-  color: white;
-  font-size: 14px;
+    height: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8%;
+    background-color: #2685ba;
+    border: 0;
+    border-radius: 30px;
+    width: 60%;
+    color: white;
+    font-size: 14px;
 }
 
 .btnDrive {
-  height: 35px;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 8%;
-  background-color: #2685ba;
-  border: 0;
-  border-radius: 30px;
-  width: 85%;
-  color: white;
-  font-size: 14px;
+    height: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8%;
+    background-color: #2685ba;
+    border: 0;
+    border-radius: 30px;
+    width: 85%;
+    color: white;
+    font-size: 14px;
 }
 
 .circleLogo {
-  background-color: #ff0e4e;
-  height: 93px;
-  width: 93px;
-  border-radius: 100px;
+    background-color: #ff0e4e;
+    height: 93px;
+    width: 93px;
+    border-radius: 100px;
 }
 
 .containerBtn {
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
 }
 
 .topPlat {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .containerPlatFinal {
-  width: 70%;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-flex;
+    width: 70%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
 }
 
 .milk {
@@ -688,276 +742,273 @@ display: grid;
 }
 
 .logoMilk {
-  height: 42px;
-  width: 42px;
-  padding-top: 25%;
+    height: 42px;
+    width: 42px;
+    padding-top: 25%;
 }
 
 .containerCat {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 
 .choixPlat {
-  color: #2685ba;
+    color: #2685ba;
 }
 
 .paragrapheSubTitle {
-  margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .paragrapheTexte {
-  color: #2685ba;
-  padding-left: 10vw;
-  padding-right: 10vw;
+    color: #2685ba;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .texte {
-  text-align: center;
-  font-family: Inter;
-  margin-bottom: 6vh;
+    text-align: center;
+    font-family: Inter;
+    margin-bottom: 6vh;
 }
 
 .boutonRouge {
-  background-color: #ff0e4e;
-  color: white;
-  font-family: Lemon Milk;
-  border: none;
-  height: 8vh;
-  width: 70vw;
-  border-radius: 30px;
-  font-size: 16px;
-  margin-bottom: 6vh;
+    background-color: #ff0e4e;
+    color: white;
+    font-family: Lemon Milk;
+    border: none;
+    height: 8vh;
+    width: 70vw;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-bottom: 6vh;
 }
 
 .conteneurBoutons {
-  text-align: center;
+    text-align: center;
 }
 
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-top: solid 2.5px #ff0e4e;
-  border-bottom: solid 2.5px #ff0e4e;
-  border-right: solid 2.5px #ff0e4e;
-  position: fixed;
-  bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: solid 2.5px #ff0e4e;
+    border-bottom: solid 2.5px #ff0e4e;
+    border-right: solid 2.5px #ff0e4e;
+    position: fixed;
+    bottom: 0;
 }
 
 .imgFooter {
-  border-left: solid 2px #ff0e4e;
-  padding-left: 11.1vw;
-  padding-right: 11.9vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  grid-column: span 1;
-  margin: auto;
+    border-left: solid 2px #ff0e4e;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+    margin: auto;
 }
 
 .imgFooterclicked {
-  border-left: solid 2px #ff0e4e;
-  padding-left: 11.1vw;
-  padding-right: 11.9vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  grid-column: span 1;
-  margin: auto;
-  background-color: #ff0e4e;
+    border-left: solid 2px #ff0e4e;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+    margin: auto;
+    background-color: #ff0e4e;
 }
 
 .gridInfosSoiree {
-  display: grid;
-  width: 90vw;
-  grid-template-columns: 1fr 1fr;
-  font-family: Inter;
-  color: #2685ba;
-  margin: auto;
-  text-align: center;
-  grid-row-gap: 1vh;
+    display: grid;
+    width: 90vw;
+    grid-template-columns: 1fr 1fr;
+    font-family: Inter;
+    color: #2685ba;
+    margin: auto;
+    text-align: center;
+    grid-row-gap: 1vh;
 }
 
 .texteInfoSoiree {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-weight: bold;
 }
 
 .inputInfoSoiree {
-  grid-column-start: 2;
-  grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 .return {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
-.returnArrow {
-  color: #ff0e4e;
-  margin-left: 3vw;
-  padding-top: 2vh;
-}
+
 
 .bricolage {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .conteneurLogos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80vw !important;
-  margin: auto;
-  color: #2685ba;
-  font-family: Inter;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw !important;
+    margin: auto;
+    color: #2685ba;
+    font-family: Inter;
 }
 
 .logoLivDrive {
-  background-color: #ff0e4e;
-  margin: auto;
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 90px;
-  height: 90px;
-  align-items: center;
-  display: flex;
+    background-color: #ff0e4e;
+    margin: auto;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    display: flex;
 }
 
 .contenantLogo1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: auto;
 }
 
 .contenantLogo2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
 }
 
 .imgdrive {
-  margin: auto;
+    margin: auto;
 }
 
 .drive {
-  padding-top: 2vh;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: auto;
+    padding-top: 2vh;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: auto;
 }
 
 .livraison {
-  padding-top: 2vh;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: auto;
+    padding-top: 2vh;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
 }
 
 .btnValider {
-  background-color: #2685ba;
-  color: white;
-  border-radius: 5px;
-  border: none;
-  width: 42vw;
-  height: 4vh;
+    background-color: #2685ba;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 42vw;
+    height: 4vh;
 }
 
 .conteneurValider {
-  padding-top: 3vh;
-  margin: auto;
-  width: 42vw;
+    padding-top: 3vh;
+    margin: auto;
+    width: 42vw;
 }
 
 .bricolage2 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .red {
-  color: red;
-  display: inline;
+    color: red;
+    display: inline;
 }
 
 .checkIcone {
-  background-color: #2685ba;
-  color: white;
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 20px;
-  height: 20px;
-  margin-left: 65px;
-  margin-top: 30px;
+    background-color: #2685ba;
+    color: white;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    margin-left: 65px;
+    margin-top: 30px;
 }
 
 .check {
-  margin-left: 0.5vw;
+    margin-left: 0.5vw;
 }
 
 .checkIconeHidden {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .logos {
-  margin-bottom: 3vh !important;
+    margin-bottom: 3vh !important;
 }
 
 .inputSoiree {
-  border: none;
-  border-bottom: 1px solid #2685ba;
+    border: none;
+    border-bottom: 1px solid #2685ba;
 }
 
 /* ANTOINE H */
 
 .navigation {
-  background-color: #ff0e4e;
-  display: grid;
-  grid-template-columns: 30vw 1fr;
-  color: white;
-  font-family: Lemon Milk;
-  align-items: center;
+    background-color: #ff0e4e;
+    display: grid;
+    grid-template-columns: 30vw 1fr;
+    color: white;
+    font-family: Lemon Milk;
+    align-items: center;
 }
 
 .navLogo {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  padding-left: 5vw;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-left: 5vw;
 }
 
 .subTitle {
-  color: #2685ba;
-  text-align: center;
-  font-family: Lemon Milk;
-  margin-top: 5vh;
-  margin-bottom: 6vh;
+    color: #2685ba;
+    text-align: center;
+    font-family: Lemon Milk;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
 }
 
 hr {
-  padding: 0;
-  margin-bottom: 0;
-  color: #ff0e4e;
-  width: 30vw;
-  margin-left: 35vw;
-  margin-right: 35vw;
-  margin-top: 0.5vh !important;
-  height: 1.4px;
-  background-color: #ff0e4e;
-  border-top: none;
+    padding: 0;
+    margin-bottom: 0;
+    color: #ff0e4e;
+    width: 30vw;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    margin-top: 0.5vh !important;
+    height: 1.4px;
+    background-color: #ff0e4e;
+    border-top: none;
 }
 
+
 .paragrapheSubTitle {
-  margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .paragrapheTexte {
-  color: #2685ba;
-  padding-left: 10vw;
-  padding-right: 10vw;
+    color: #2685ba;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .texte {
-  text-align: center;
-  font-family: Inter;
-  margin-bottom: 6vh;
+    text-align: center;
+    font-family: Inter;
+    margin-bottom: 6vh;
 }
 
 .boutonRouge {
@@ -974,7 +1025,7 @@ hr {
 }
 
 .conteneurBoutons {
-  text-align: center;
+    text-align: center;
 }
 
 .footer {
@@ -991,112 +1042,107 @@ hr {
 }
 
 .imgFooter {
-  border-left: solid 2px #ff0e4e;
-  padding-left: 11.1vw;
-  padding-right: 11.9vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  grid-column: span 1;
-  margin: auto;
+    border-left: solid 2px #ff0e4e;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+    margin: auto;
 }
 
 .imgFooterclicked {
-  border-left: solid 2px #ff0e4e;
-  padding-left: 11.1vw;
-  padding-right: 11.9vw;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  grid-column: span 1;
-  margin: auto;
-  background-color: #ff0e4e;
+    border-left: solid 2px #ff0e4e;
+    padding-left: 11.1vw;
+    padding-right: 11.9vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    grid-column: span 1;
+    margin: auto;
+    background-color: #ff0e4e;
 }
 
 .gridInfosSoiree {
-  display: grid;
-  width: 95vw;
-  grid-template-columns: 1fr 1fr;
-  font-family: Inter;
-  color: #2685ba;
-  margin: auto;
-  text-align: center;
-  grid-row-gap: 1vh;
+    display: grid;
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
+    font-family: Inter;
+    color: #2685ba;
+    margin: auto;
+    text-align: center;
+    grid-row-gap: 1vh;
 }
 
 .texteInfoSoiree {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  font-weight: bold;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-weight: bold;
 }
 
 .inputInfoSoiree {
-  grid-column-start: 2;
-  grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 .return {
-  margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
-.returnArrow {
-  color: #ff0e4e;
-  margin-left: 3vw;
-  padding-top: 2vh;
-}
 
 .bricolage {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 .conteneurLogos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 80vw !important;
-  margin: auto;
-  color: #2685ba;
-  font-family: Inter;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw !important;
+    margin: auto;
+    color: #2685ba;
+    font-family: Inter;
 }
 
 .logoLivDrive {
-  background-color: #ff0e4e;
-  margin: auto;
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 90px;
-  height: 90px;
-  align-items: center;
-  display: flex;
+    background-color: #ff0e4e;
+    margin: auto;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    align-items: center;
+    display: flex;
 }
 
 .contenantLogo1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: auto;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: auto;
 }
 
 .contenantLogo2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
 }
 
 .imgdrive {
-  margin: auto;
+    margin: auto;
 }
 
 .drive {
-  padding-top: 2vh;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  margin: auto;
+    padding-top: 2vh;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: auto;
 }
 
 .livraison {
-  padding-top: 2vh;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: auto;
+    padding-top: 2vh;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: auto;
 }
 
 .btnValider {
@@ -1110,143 +1156,143 @@ hr {
 }
 
 .conteneurValider {
-  padding-top: 3vh;
-  margin: auto;
-  width: 42vw;
+    padding-top: 3vh;
+    margin: auto;
+    width: 42vw;
 }
 
 .bricolage2 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .red {
-  color: red;
-  display: inline;
+    color: red;
+    display: inline;
 }
 
 .checkIcone {
-  background-color: #2685ba;
-  color: white;
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 20px;
-  height: 20px;
-  margin-left: 65px;
-  margin-top: 30px;
+    background-color: #2685ba;
+    color: white;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    margin-left: 65px;
+    margin-top: 30px;
 }
 
 .check {
-  margin-left: 0.5vw;
+    margin-left: 0.5vw;
 }
 
 .checkIconeHidden {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .logos {
-  margin-bottom: 3vh !important;
+    margin-bottom: 3vh !important;
 }
 
 .inputSoiree {
-  border: none;
-  border-bottom: 1px solid #2685ba;
+    border: none;
+    border-bottom: 1px solid #2685ba;
 }
 
 input {
-  color: #2685ba;
-  text-align: center !important;
+    color: #2685ba;
+    text-align: center !important;
 }
 
 .tooltipCircle {
-  color: white;
-  display: inline-block;
-  text-align: center;
-  background-color: #ff0e4e;
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 15px;
-  height: 15px;
-  font-size: 12px;
-  margin-left: 1vw;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    background-color: #ff0e4e;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+    margin-left: 1vw;
 }
 
 .modalHidden {
-  visibility: hidden;
-  height: 0;
+    visibility: hidden;
+    height: 0;
 }
 
 .modal {
-  width: 80vw;
-  height: 30vh;
-  color: #2685ba;
-  z-index: 100;
-  position: fixed;
-  top: 25%;
-  left: 8%;
-  background-color: white;
-  border: 1.5px solid #2685ba;
-  text-align: center;
-  vertical-align: middle;
-  display: table;
-  font-family: Inter;
-  padding-left: 2vw;
-  padding-right: 2vw;
+    width: 80vw;
+    height: 30vh;
+    color: #2685ba;
+    z-index: 100;
+    position: fixed;
+    top: 25%;
+    left: 8%;
+    background-color: white;
+    border: 1.5px solid #2685ba;
+    text-align: center;
+    vertical-align: middle;
+    display: table;
+    font-family: Inter;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
 
 .textModal {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .closeModal {
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 22px;
-  height: 22px;
-  background-color: #ff0e4e;
-  position: absolute;
-  bottom: 94%;
-  right: -2%;
-  color: white;
-  text-align: center;
-  font-weight: bold;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 22px;
+    height: 22px;
+    background-color: #ff0e4e;
+    position: absolute;
+    bottom: 94%;
+    right: -2%;
+    color: white;
+    text-align: center;
+    font-weight: bold;
 }
 
 .closeModal:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .cross {
-  position: absolute;
-  top: 9%;
-  left: 28%;
+    position: absolute;
+    top: 9%;
+    left: 28%;
 }
 
 .joinSoiree {
-  font-family: Lemon Milk !important;
-  display: block;
-  margin-top: 5vh;
-  margin-bottom: 4vh;
-  font-size: 22px;
+    font-family: Lemon Milk !important;
+    display: block;
+    margin-top: 5vh;
+    margin-bottom: 4vh;
+    font-size: 22px;
 }
 
 .codeSoiree {
-  margin-bottom: 5vh;
-  font-size: 22px;
-  font-weight: bold;
-  width: 40vw;
-  border: 1px solid #ff0e4e;
-  border-radius: 10px;
+    margin-bottom: 5vh;
+    font-size: 22px;
+    font-weight: bold;
+    width: 40vw;
+    border: 1px solid #ff0e4e;
+    border-radius: 10px;
 }
 
 .mesSoirees {
-  margin-left: 6vw;
+    margin-left: 6vw;
 }
 
 .conteneurListeSoirees {
@@ -1273,74 +1319,80 @@ input {
 }
 
 .sepSoirees {
-  width: 80vw;
-  margin: auto;
-  margin-bottom: 2vh;
+    width: 80vw;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+.sepDetaisSoiree {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 2vh;
 }
 
 .soiree {
-  margin-bottom: 1.5vh;
+    margin-bottom: 1.5vh;
 }
 
 .titreListeSoirees {
-  margin-bottom: 4vh !important;
+    margin-bottom: 4vh !important;
 }
 
 .subTitlePreferences {
-  margin-top: 0 !important;
-  text-align: left !important;
-  margin-left: 5vw;
-  margin-bottom: 2vh !important;
+    margin-top: 0 !important;
+    text-align: left !important;
+    margin-left: 5vw;
+    margin-bottom: 2vh !important;
 }
 
 .gridPreferences {
-  display: grid;
-  margin: auto;
-  text-align: center;
-  width: 100vw;
-  grid-template-columns: 1fr 20vw 20vw 20vw 20vw 1fr;
-  align-items: center;
-  margin-bottom: 5vh;
+    display: grid;
+    margin: auto;
+    text-align: center;
+    width: 100vw;
+    grid-template-columns: 1fr 20vw 20vw 20vw 20vw 1fr;
+    align-items: center;
+    margin-bottom: 5vh;
 }
 
 .photoCategorie {
-  overflow: hidden;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  margin: auto;
-  border: 3px solid #2685ba;
+    overflow: hidden;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    border: 3px solid #2685ba;
 }
 
 .arrowCarrousel {
-  display: inline;
+    display: inline;
 }
 
 .hrPreferences {
-  margin-left: 0;
-  margin-right: 0;
-  width: 25vw;
+    margin-left: 0;
+    margin-right: 0;
+    width: 25vw;
 }
 
 .nomCategorie {
-  text-align: center;
-  font-family: Lemon Milk;
-  font-size: 11px;
-  margin-top: 1vh;
+    text-align: center;
+    font-family: Lemon Milk;
+    font-size: 11px;
+    margin-top: 1vh;
 }
 
 .photoPreference {
-  border: 1px solid #2685ba;
-  border-radius: 20px;
-  margin: 5px;
-  padding-top: 2px;
+    border: 1px solid #2685ba;
+    border-radius: 20px;
+    margin: 5px;
+    padding-top: 2px;
 }
 
 .subTitleMesPreferences {
-  margin-top: 0 !important;
-  margin-bottom: 2vh !important;
+    margin-top: 0 !important;
+    margin-bottom: 2vh !important;
 }
 
 .valider {
