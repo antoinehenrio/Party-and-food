@@ -463,28 +463,20 @@ display: grid;
   background-color: #ff0e4e;
 }
 
-.gridInfosSoiree {
-  display: grid;
-  width: 80vw;
-  grid-template-columns: 1fr 1fr;
-  font-family: Inter;
-  color: #2685ba;
-  margin: auto;
-  text-align: center;
-  grid-row-gap: 1vh;
-}
-
 .texteInfoSoiree {
   grid-column-start: 1;
   grid-column-end: 2;
   display: inline-grid;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .inputInfoSoiree {
   grid-column-start: 2;
   grid-column-end: 3;
+  width: 30vw;
   display: inline-grid;
+  margin: auto;
 }
 
 .return {
@@ -757,17 +749,6 @@ display: grid;
   grid-column: span 1;
   margin: auto;
   background-color: #ff0e4e;
-}
-
-.gridInfosSoiree {
-  display: grid;
-  width: 90vw;
-  grid-template-columns: 1fr 1fr;
-  font-family: Inter;
-  color: #2685ba;
-  margin: auto;
-  text-align: center;
-  grid-row-gap: 1vh;
 }
 
 .texteInfoSoiree {
@@ -1360,6 +1341,10 @@ input {
 
 .mesSoirees {
   margin-left: 40vw;
+}
+
+.creationSoiree {
+  margin-left: 30vw;
 }
 
 /*# sourceMappingURL=style2.css.map */
